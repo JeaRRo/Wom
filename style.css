@@ -1,0 +1,156 @@
+div { 
+	// pour le titre
+	//text-align:center;
+	
+	}
+div li {
+	text-align:left;
+}
+div p {
+	text-align:left;
+}
+h4.Titre{
+	text-align:center;
+}
+#bandeau {
+	width:100%;
+	height:100px;
+	//background-color:#00CCFF;
+	font-size: 0.9em;
+	}
+#menu {
+	width:100%;
+	height:35px;
+	//background-color:#FF6699;
+	
+	}
+#contenu {
+	width:100%;
+
+//	background-color:#FFCC00;
+	}
+#footer {
+   clear:both;
+   margin:10px;
+	width:100%;
+	height:50px;
+//	background-color:#33FF99;
+	border-top : 1px solid #000; 
+	text-align: rigth;
+	}
+#menu ul {
+ padding:0;
+ margin:0;
+ list-style-type:none;
+ //overflow: hidden;
+ background-color: #333;
+ font-size: 0.9em;
+ }
+#menu li {
+ margin-left:4px;
+ float:left; /*pour IE*/
+ }
+#menu li.retour{
+	margin-left:4px;
+ 	float:right; /*pour IE*/
+}
+#menu ul li a {
+ display:inline-block;
+ border-radius: 4px;
+ float:left;
+ width:180px;
+ //background-color:#000000;
+ background-color: #333;
+ color:white;
+ font-weight:bold;
+ text-decoration:none;
+ text-align:center;
+ padding:8px;
+ margin-bottom: 12px;
+}
+#menu ul li a:hover{
+	background-color: #111;
+}
+.emphase {
+    color: red;
+}
+.TableComplet {
+		display: table;
+		width: 100%;
+		font-size: 0.8em;
+}
+.TableRow {
+    	display: table-row;
+    	
+}
+.TableHeading {
+    	display: table-header-group;
+		font-weight: bold;
+		//width: 100%;
+		background-color: #ddd;
+}
+.TableTitre {
+		display: table-caption;
+		font-weight: bold;
+		//width: 100%;
+		background-color: #fff;
+		text-align:center;
+		padding-bottom: 5px;
+}
+.TableCell, .TableHead {
+    	display: table-cell;
+    /*	border: 1px solid #999999; */
+	  	float: left;
+	  	height: 16px;
+
+	  	padding: 3px 0.8%;
+		width:  30%;
+}
+.TableCell1, .TableHead1 {
+    	display: table-cell;
+    /*	border: 1px solid #999999;*/
+	  	float: left;
+	  	height: 16px;
+	  	padding: 2px 0.5%;
+		width:  7%;
+		text-align: center
+}
+.TableCell12, .TableHead12 {
+    	display: table-cell;
+    /*	border: 1px solid #999999;*/
+	  	float: left;
+	  	height: 16px;
+	  	padding: 2px 0.5%;
+		width: 12%;
+		text-align: center
+}
+.TableCell2,.TableHead2 {
+    	display: table-cell;
+    /*	border: 1px solid #999999;*/
+	  	float: left;
+	  	height: 16px;
+	  	padding: 2px 0.5%;
+		width:  30%;
+		overflow: hidden;
+}
+
+.TableCell3, .TableHead3 {
+    	display: table-cell;
+    /*	border: 1px solid #999999;*/
+	  	float: left;
+	  	height: 16px;
+	  	padding: 2px 0.5%;
+//		width:  20%;
+//		overflow: hidden;
+
+}
+.TableHeading {
+    	display: table-header-group;
+    	font-weight: bold;
+}
+.TableBody{
+    	display: table-row-group;
+		}
+.TableBody .TableRow:nth-child(even){
+		background-color: #f7f7f7;
+		}
