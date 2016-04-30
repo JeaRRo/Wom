@@ -1,7 +1,7 @@
-div { 
+div {
 	// pour le titre
 	//text-align:center;
-	
+
 	}
 div li {
 	text-align:left;
@@ -22,7 +22,7 @@ h4.Titre{
 	width:100%;
 	height:35px;
 	//background-color:#FF6699;
-	
+
 	}
 #contenu {
 	width:100%;
@@ -35,7 +35,7 @@ h4.Titre{
 	width:100%;
 	height:50px;
 //	background-color:#33FF99;
-	border-top : 1px solid #000; 
+	border-top : 1px solid #000;
 	text-align: rigth;
 	}
 #menu ul {
@@ -71,6 +71,12 @@ h4.Titre{
 #menu ul li a:hover{
 	background-color: #111;
 }
+#menu ul li a.active {
+    background-color: #717171;
+}
+#menu ul li a.active:hover {
+    background-color: #111;
+}
 .emphase {
     color: red;
 }
@@ -81,7 +87,7 @@ h4.Titre{
 }
 .TableRow {
     	display: table-row;
-    	
+
 }
 .TableHeading {
     	display: table-header-group;
