@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
+        <html>
+    <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <title>Etat comparé des monuments historiques dans les bases Mérimée, OSM et WikiPédia</title>
+    <title> Wom </title>
     <link rel="stylesheet" type="text/css" href="style.css">
-</head></body>
+    </head><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"> </script>
+    <script>
+    $(document).ready(function(){
+     $(".TableRow").click(function(){
+     $(".TableRow").each(function(){
+     $(this).removeClass("active");
+     });
+     $(this).addClass("active");
+     });
+    });
+    </script> </body>
     <div id="bandeau"> <h4 class="Titre">Etat comparé des monuments historiques dans les bases Mérimée, OSM et WikiPédia</h4>
  <p>Les pages de ce site présentent des tableaux comparatifs des monuments historiques dans les bases de données suivantes :
         <ul>
@@ -21,13 +31,13 @@
     <p>
     <p>Pour le moment, et pour tester la faisabilité, seuls les départements de l'Ain, du Rhône et de la Loire sont couverts.
     <p>Ces pages sont complètement statiques. Elles sont générées automatiquement chaque nuit, par un script Python, puis transférées sur le serveur.
-    <p> Dernière construction des pages, le :<b> 01-05-2016 09:54</b></p>
+    <p> Dernière construction des pages, le :<b> 01-05-2016 15:15</b></p>
     
-<div id="menu">
-    <ul>
+    <div id="menu">
+        <ul>
        <li><a href="01_pages/01_merosmwip.html" title="Ain">Ain</a></li>
        <li><a href="42_pages/42_merosmwip.html" title="Loire">Loire</a></li>
        <li><a href="69_pages/69_merosmwip.html" title="Rhône">Rhône</a></li>
    </ul>
-    </div>
-</div>
+        </div>
+        </div>
