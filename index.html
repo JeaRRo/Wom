@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-        <html>
+    <html>
     <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <title> Wom </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    </head><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"> </script>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"> </script>
     <script>
     $(document).ready(function(){
      $(".TableRow").click(function(){
@@ -14,24 +14,28 @@
      $(this).addClass("active");
      });
     });
-    </script> </body>
+    </script>
+    </head> <body>
     <div id="bandeau"> <h4 class="Titre">Etat comparé des monuments historiques dans les bases Mérimée, OSM et WikiPédia</h4>
  <p>Les pages de ce site présentent des tableaux comparatifs des monuments historiques dans les bases de données suivantes :
         <ul>
         <li>Le ministère de la culture propose en "Open-Data" une
         <a href="https://www.data.gouv.fr/fr/datasets/monuments-historiques-liste-des-immeubles-proteges-au-titre-des-monuments-historiques/" title="Base Mérimée" target="blank">
-        Base des immeubles de France</a>, une partie de la base Mérimée.</li>
+        Base des immeubles de France</a>, une partie de la base Mérimée ( les codes PA* ). Les codes IA* et EA* qui n'apparaissent pas dans cette base ouverte ne sont donc pas comptés dans les colonnes Mérimée.</li>
 
         <li>L'encyclopédie "Wikipédia" a des pages dédiées aux monuments historiques par département
-        et/ou par ville, par exemple pour <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Ain" title="L'Ain" target="blank">l'Ain</a>,</li>
+        et/ou par ville, par exemple pour <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Ain" title="L'Ain" target="blank">l'Ain</a>,
+        ou pour <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Bourg-en-Bresse#" title="Bourg-en-Bresse" target="blank">Bourg-en-Bresse</a></li>
         <li>Le site de cartographie participative "OpenStreetMap" répertorie aussi des monuments historiques ... voir
-        <a href="http://wiki.openstreetmap.org/wiki/FR:Key:ref:mhs" title ="sur le Wiki OSM" target="blank">le wiki des tags 'mhs'</a>.</li>
+        <a href="http://wiki.openstreetmap.org/wiki/FR:Key:ref:mhs" title ="sur le Wiki OSM" target="blank">le wiki des tags 'mhs'</a> ou encore la page
+        <a href="https://wiki.openstreetmap.org/wiki/Saint-%C3%89tienne/Patrimoine" title =" St Etienne Patrimoine" target="blank">  St Etienne Patrimoine</a>.</li>
         </ul>
-        <p>
-    <p>
-    <p>Pour le moment, et pour tester la faisabilité, seuls les départements de l'Ain, du Rhône et de la Loire sont couverts.
-    <p>Ces pages sont complètement statiques. Elles sont générées automatiquement chaque nuit, par un script python, puis transférées sur le serveur.
-    <p> Dernière construction des pages, le :<b> 12-05-2016 00:05</b></p>
+        </p>
+    <p>Pour le moment, et pour tester l'intérêt de cet outil, seuls les départements de l'Ain, du Rhône et de la Loire sont couverts.</p>
+    <p>Ces pages sont statiques avec un peu de jQuery. Elles sont générées automatiquement chaque nuit, par un script python sur un Nas, puis poussées sur le serveur.
+     Le code est visible et disponible sur <a href="http://jearro.noip.me/gitlist/Mhs.git" target="blank"> Mhs.git </a>.
+     <a href="http://jearro.noip.me/gitlist/Wom.git" target ="blank">L'historique des pages web</a> est aussi accessible.</p>
+    <p> Dernière construction des pages, le :<b> 14-05-2016 00:05</b></p>
     
     <div id="menu">
         <ul>
@@ -39,5 +43,5 @@
        <li><a href="42_pages/42_merosmwip.html" title="Loire">Loire</a></li>
        <li><a href="69_pages/69_merosmwip.html" title="Rhône">Rhône</a></li>
    </ul>
-        </div>
+            </div>
         </div>
