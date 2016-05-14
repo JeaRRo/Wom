@@ -1,32 +1,69 @@
-div li {
-	text-align:left;
-}
 div p {
 	text-align:left;
 }
 h4.Titre{
 	text-align:center;
 }
-#bandeau {
+div#bandeau {
 	width:100%;
 	height:100px;
-	//background-color:#00CCFF;
 	font-size: 0.9em;
 	}
-
-#contenu {
-	width:100%;
-
-//	background-color:#FFCC00;
+div#container {
+	width:99%;
+	margin: .5%;
+	margin-top: 1%;
 	}
+table#tableau {
+    text-align:center; 
+    margin-left:auto; 
+    margin-right:auto; 
+    width:100%;
+    font-size: 0.9em;
+    //table-layout: fixed;
+    border-collapse: collapse;
+  }
+#titre{
+	font-weight: bold;
+	background-color: #fff;
+	text-align:center;
+	padding-bottom: 5px;
+	//font-size: 0.9em;
+}
+.heading{
+		font-weight: bold;
+		background-color: #ddd;
+		font-size: 0.9em;
+}
+th[data-sort]{
+      cursor:pointer;
+    }
+.desc{
+		text-align:left;
+		font-size: 0.9em;
+		width:40%;
+		}
+.texte{
+		text-align:left;
+		font-size: 0.9em;
+		//width:20%;
+}
+.lien{
+	font-size: 0.9em;
+	text-decoration:none;
+}
 #footer {
    clear:both;
    margin:10px;
 	width:100%;
 	height:50px;
-//	background-color:#33FF99;
 	border-top : 1px solid #000;
 	text-align: rigth;
+	}
+#menu {
+	width:100%;
+	height:35px;
+	//background-color:#FF6699;
 	}
 #menu ul {
  padding:0;
@@ -35,17 +72,12 @@ h4.Titre{
  //overflow: hidden;
  background-color: #333;
  font-size: 0.87em;
- 
  }
 #menu li {
  margin-left:4px;
  float:left; /*pour IE*/
  }
-#menu {
-	width:100%;
-	height:35px;
-	//background-color:#FF6699;
-	}
+
 #menu li.retour{
 	margin-left:4px;
  	float:right; /*pour IE*/
@@ -76,84 +108,10 @@ h4.Titre{
 .emphase {
     color: red;
 }
-.TableComplet {
-		display: table;
-		width: 100%;
-		font-size: 0.8em;
-}
-.TableRow {
-    	display: table-row;
-}
 
-.TableHeading {
-    	display: table-header-group;
-		font-weight: bold;
-		//width: 100%;
-		background-color: #ddd;
-}
-.TableTitre {
-		display: table-caption;
-		font-weight: bold;
-		//width: 100%;
-		background-color: #fff;
-		text-align:center;
-		padding-bottom: 5px;
-}
-.TableCell, .TableHead {
-    	display: table-cell;
-    /*	border: 1px solid #999999; */
-	  	float: left;
-	  	height: 16px;
-	  	padding: 3px 0.8%;
-		//width:  30%;
-}
-.TableCell1, .TableHead1 {
-    	display: table-cell;
-    /*	border: 1px solid #999999;*/
-	  	float: left;
-	  	height: 16px;
-	  	padding: 2px 0.2%;
-		width:  7%;
-		text-align: center
-}
-.TableCell12, .TableHead12 {
-    	display: table-cell;
-    /*	border: 1px solid #999999;*/
-	  	float: left;
-	  	height: 16px;
-	  	padding: 2px 0.2%;
-		width: 12%;
-		text-align: center
-}
-.TableCell2,.TableHead2 {
-    	display: table-cell;
-    /*	border: 1px solid #999999;*/
-	  	float: left;
-	  	height: 16px;
-	  	padding: 2px 0.5%;
-		width:  40%;
-		overflow: hidden;
-}
-
-.TableCell3, .TableHead3 {
-    	display: table-cell;
-    /*	border: 1px solid #999999;*/
-	  	float: left;
-	  	height: 16px;
-	  	padding: 2px 0.2%;
-//		width:  20%;
-		overflow: hidden;
-}
-.TableHeading {
-    	display: table-header-group;
-    	font-weight: bold;
-}
-.TableBody{
-    	display: table-row-group;
-		}
-.TableBody .TableRow:nth-child(even){
+tbody tr:nth-child(even){
 		background-color: #f7f7f7;
 		}
-.TableBody .TableRow.active {
+tbody tr.active {
 	background-color: #DDD;
 }

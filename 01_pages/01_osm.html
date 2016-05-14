@@ -4,40 +4,71 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"> </script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                <script src="../js/stupidtable.min.js?dev"></script>
     <script>
     $(document).ready(function(){
-     $(".TableRow").click(function(){
-     $(".TableRow").each(function(){
+     $("tr").click(function(){
+     $("tr").each(function(){
      $(this).removeClass("active");
      });
      $(this).addClass("active");
      });
     });
     </script>
+     <script>
+    $(function(){
+        var table = $("table").stupidtable();
+
+        table.on("beforetablesort", function (event, data) {
+          // Apply a "disabled" look to the table while sorting.
+          // Using addClass for "testing" as it takes slightly longer to render.
+          $("#msg").text("Sorting...");
+          $("table").addClass("disabled");
+        });
+
+        table.on("aftertablesort", function (event, data) {
+          // Reset loading message.
+          $("#msg").html("&nbsp;");
+          $("table").removeClass("disabled");
+
+          var th = $(this).find("th");
+          th.find(".arrow").remove();
+          var dir = $.fn.stupidtable.dir;
+
+          var arrow = data.direction === dir.ASC ? "&uarr;" : "&darr;";
+          th.eq(data.column).append('<span class="arrow"> ' + arrow +'</span>');
+        });
+    });
+    </script>
+
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Ain dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Ain</b>, la base Mérimée Ouverte décrit 378 monuments historiques.</p>
          <p>Ils sont 150 dans wikipédia (pages départementales), et OSM en connait 190.</p>
 </div><div id="menu">
 <ul>
-<li><a  href="01_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">180</span> Mérimée, Osm, Wp</a></li><li><a  href="01_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">117</span> Mérimée, Wp</a></li><li><a  href="01_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">8</span> Mérimée, Osm</a></li><li><a class="active" href="01_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a href="01_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">73</span> Mérimée</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
+<li><a  href="01_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">181</span> Mérimée, Osm, Wp</a></li><li><a  href="01_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">117</span> Mérimée, Wp</a></li><li><a  href="01_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">7</span> Mérimée, Osm</a></li><li><a class="active" href="01_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a href="01_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">73</span> Mérimée</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
         </div>
-     </div>
-    <div class="TableComplet" >
-    <div class="TableTitre"> Monuments historiques présents seulement dans OpenStreetMap</div>
-    <div class="TableHeading">
-        <div class="TableHead2">    Description</div>
-        <div class="TableHead1">Mérimée</div>
-        <div class="TableHead12">OSM</div>
-        <div class="TableHead1">WP</div>
-        <div class="TableHead3">    Remarques : erreurs ou manques </div>
+    <div id="container">
+    <table id="tableau">
+    <caption id='titre'> Monuments historiques présents seulement dans OpenStreetMap</caption>
+    <thead class='heading'>
+        <tr>
+            <th data-sort="string">Description</th>
+            <th data-sort="string">Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th colspan="2">Remarques : erreurs ou manques</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Massieux
+ - <b>Église Saint-Barthélémy </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000159" target="blank" title="La fiche dans la base Mérimée">IA01000159</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/127256647" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=127256647" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=w127256647" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Tramoyes
+ - <b>Tombeau des familles Togni et Simonet </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000284" target="blank" title="La fiche dans la base Mérimée">IA01000284</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2804216849" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2804216849" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=n2804216849" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>heritage, mhs:inscription_date, source, wikipedia </td> <td class="texte"></td> </tr> </tbody>
+    </table>
     </div>
-    <div class="TableBody">
-    <div class="TableRow">           <div class="TableCell2"> <b>Église Saint-Barthélémy </b></div> <div class="TableCell1"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000159" target="blank" title="La fiche dans la base Mérimée">IA01000159</a></div><div class="TableCell12"><a href="http://www.openstreetmap.org/browse/way/127256647" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=127256647" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=w127256647" target="blank" title="Editer avec Josm"> Josm </a> </div>
-            <div class="TableCell1">  ---- </div><div class="TableCell3"> -Osm: heritage, heritage:operator, mhs:inscription_date, wikipedia </div> <div class="TableCell3">  </div></div><div class="TableRow">           <div class="TableCell2"> <b>Tombeau des familles Togni et Simonet </b></div> <div class="TableCell1"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000284" target="blank" title="La fiche dans la base Mérimée">IA01000284</a></div><div class="TableCell12"><a href="http://www.openstreetmap.org/browse/node/2804216849" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&node=2804216849" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=n2804216849" target="blank" title="Editer avec Josm"> Josm </a> </div>
-            <div class="TableCell1">  ---- </div><div class="TableCell3"> -Osm: heritage, mhs:inscription_date, source, wikipedia </div> <div class="TableCell3">  </div></div><div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
-        </body
-    </html>
     
