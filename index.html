@@ -4,66 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="../js/jquery-ui.css"><script src="../js/jquery.js"></script><script src="../js/stupidtable.min.js?dev"></script>
-                <script src="../js/jquery-ui.js"></script>
-                
-    <script>
-    $(document).ready(function(){
-         $("tr").click(function(){
-             $("tr").each(function(){
-             $(this).removeClass("active");
-             });
-             $(this).addClass("active");
-         });
-
-        $(".infoBloc").click(function(){
-            $("#"+this.id.slice(5)).dialog({
-                draggable: false,
-                resizable: false,
-                width:400,
-                height:250,
-                modal: true,
-                overlay: {
-                    backgroundColor: '#000',
-                    opacity: 0.5,
-                },
-                buttons: {
-                    'Fermer': function() {
-                        $(this).dialog('close');
-                    }
-                }
-            });
-            return false;
-        });
-    });
-    </script>
-     <script>
-    $(function(){
-        var table = $("table").stupidtable();
-
-        table.on("beforetablesort", function (event, data) {
-          // Apply a "disabled" look to the table while sorting.
-          // Using addClass for "testing" as it takes slightly longer to render.
-          $("#msg").text("Sorting...");
-          $("table").addClass("disabled");
-        });
-
-        table.on("aftertablesort", function (event, data) {
-          // Reset loading message.
-          $("#msg").html("&nbsp;");
-          $("table").removeClass("disabled");
-
-          var th = $(this).find("th");
-          th.find(".arrow").remove();
-          var dir = $.fn.stupidtable.dir;
-
-          var arrow = data.direction === dir.ASC ? "&uarr;" : "&darr;";
-          th.eq(data.column).append('<span class="arrow"> ' + arrow +'</span>');
-        });
-    });
-    </script>
-
-    </head> <body>
+	   </head> <body>
     <div id="bandeau"> <h4 class="Titre">Etat comparé des monuments historiques dans les bases Mérimée, OSM et WikiPédia</h4>
  <p>Les pages de ce site présentent des tableaux comparatifs des monuments historiques dans les bases de données suivantes :
         <ul>
@@ -83,7 +24,7 @@
     <p>Ces pages sont statiques avec un peu de jQuery. Elles sont générées automatiquement chaque nuit, par un script python sur un Nas, puis poussées sur le serveur.
      Le code est visible et disponible sur <a href="https://jearro.noip.me/gitlist/Mhs.git" target="blank"> Mhs.git </a>.
      <a href="https://jearro.noip.me/gitlist/Wom.git" target ="blank">L'historique des pages web</a> est aussi accessible.</p>
-    <p> Dernière construction des pages, le :<b> 20-05-2016 16:23</b></p>
+    <p> Dernière construction des pages, le :<b> 21-05-2016 00:05</b></p>
     
     <div id="menu">
         <ul>
