@@ -108,10 +108,30 @@ th[data-sort]{
 .emphase {
     color: red;
 }
-
 tbody tr:nth-child(even){
 		background-color: #f7f7f7;
 		}
 tbody tr.active {
 	background-color: #DDD;
 }
+ td.infoBloc:hover{
+     cursor:pointer;
+ }
+ td.infoBloc{
+ 	font-size: 0.9em;
+ }
+ div.dialogBloc {
+     display:none;
+ }
+ .ui-dialog-content ul{
+ 		padding-left: 40px;
+ 		padding-top: 2px;
+ 	}
+ .ui-dialog-titlebar{
+      display:none;
+ }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+   float: right;
+}
+
+

@@ -4,16 +4,37 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                <script src="../js/stupidtable.min.js?dev"></script>
+	<link rel="stylesheet" type="text/css" href="../js/jquery-ui.css"><script src="../js/jquery.js"></script><script src="../js/stupidtable.min.js?dev"></script>
+                <script src="../js/jquery-ui.js"></script>
+                
     <script>
     $(document).ready(function(){
-     $("tr").click(function(){
-     $("tr").each(function(){
-     $(this).removeClass("active");
-     });
-     $(this).addClass("active");
-     });
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("active");
+             });
+             $(this).addClass("active");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                draggable: false,
+                resizable: false,
+                width:400,
+                height:250,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+                buttons: {
+                    'Fermer': function() {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+            return false;
+        });
     });
     </script>
      <script>
@@ -44,10 +65,10 @@
 
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Loire dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Loire</b>, la base Mérimée Ouverte décrit 338 monuments historiques.</p>
-         <p>Ils sont 246 dans wikipédia (pages départementales), et OSM en connait 83.</p>
+         <p>Ils sont 338 dans wikipédia (pages départementales), et OSM en connait 83.</p>
 </div><div id="menu">
 <ul>
-<li><a  href="42_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">77</span> Mérimée, Osm, Wp</a></li><li><a class="active" href="42_osmwip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a href="42_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">177</span> Mérimée, Wp</a></li><li><a href="42_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">1</span> Wp </a></li><li><a href="42_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">1</span> Mérimée, Osm</a></li><li><a href="42_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">3</span> Osm</a></li><li><a href="42_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">83</span> Mérimée</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
+<li><a  href="42_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">78</span> Mérimée, Osm, Wp</a></li><li><a class="active" href="42_osmwip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a href="42_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">258</span> Mérimée, Wp</a></li><li><a href="42_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Wp </a></li><li><a href="42_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">3</span> Osm</a></li><li><a href="42_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">2</span> Mérimée</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
         </div>
     <div id="container">
     <table id="tableau">
@@ -63,10 +84,10 @@
     </thead>
     <tbody>
     <tr>           <td class="desc">Saint-Etienne
- - <b>Hôtel de Ville </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA42000040" target="blank" title="La fiche dans la base Mérimée">IA42000040</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/5201020" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
+ - <b>Hôtel de Ville </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA42000040" target="blank" title="La fiche dans la base Mérimée">IA42000040</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/5201020" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&relation=5201020" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=r5201020" target="blank" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Hôtel de ville de Saint-Étienne" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, source </td> <td class="texte"></td> </tr><tr>           <td class="desc">Sail-sous-Couzan
- - <b>Château de Couzan </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA42000637" target="blank" title="La fiche dans la base Mérimée">IA42000637</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2659456166" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
+ - <b>Château de Couzan </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA42000637" target="blank" title="La fiche dans la base Mérimée">IA42000637</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2659456166" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&node=2659456166" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=n2659456166" target="blank" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Couzan" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>source </td> <td class="texte"></td> </tr> </tbody>
     </table>

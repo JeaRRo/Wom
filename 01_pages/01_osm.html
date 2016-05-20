@@ -4,16 +4,37 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                <script src="../js/stupidtable.min.js?dev"></script>
+	<link rel="stylesheet" type="text/css" href="../js/jquery-ui.css"><script src="../js/jquery.js"></script><script src="../js/stupidtable.min.js?dev"></script>
+                <script src="../js/jquery-ui.js"></script>
+                
     <script>
     $(document).ready(function(){
-     $("tr").click(function(){
-     $("tr").each(function(){
-     $(this).removeClass("active");
-     });
-     $(this).addClass("active");
-     });
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("active");
+             });
+             $(this).addClass("active");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                draggable: false,
+                resizable: false,
+                width:400,
+                height:250,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+                buttons: {
+                    'Fermer': function() {
+                        $(this).dialog('close');
+                    }
+                }
+            });
+            return false;
+        });
     });
     </script>
      <script>
@@ -44,10 +65,10 @@
 
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Ain dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Ain</b>, la base Mérimée Ouverte décrit 378 monuments historiques.</p>
-         <p>Ils sont 150 dans wikipédia (pages départementales), et OSM en connait 190.</p>
+         <p>Ils sont 379 dans wikipédia (pages départementales), et OSM en connait 192.</p>
 </div><div id="menu">
 <ul>
-<li><a  href="01_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">181</span> Mérimée, Osm, Wp</a></li><li><a  href="01_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">117</span> Mérimée, Wp</a></li><li><a  href="01_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">7</span> Mérimée, Osm</a></li><li><a class="active" href="01_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a href="01_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">73</span> Mérimée</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
+<li><a  href="01_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">190</span> Mérimée, Osm, Wp</a></li><li><a  href="01_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">188</span> Mérimée, Wp</a></li><li><a  href="01_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">1</span> Wp </a></li><li><a class="active" href="01_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
         </div>
     <div id="container">
     <table id="tableau">
@@ -63,10 +84,10 @@
     </thead>
     <tbody>
     <tr>           <td class="desc">Massieux
- - <b>Église Saint-Barthélémy </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000159" target="blank" title="La fiche dans la base Mérimée">IA01000159</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/127256647" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
+ - <b>Église Saint-Barthélémy </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000159" target="blank" title="La fiche dans la base Mérimée">IA01000159</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/127256647" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=127256647" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=w127256647" target="blank" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Tramoyes
- - <b>Tombeau des familles Togni et Simonet </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000284" target="blank" title="La fiche dans la base Mérimée">IA01000284</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2804216849" target="blank" title="Voir sur openstreetmap.org"> ORG </a> -
+ - <b>Tombeau des familles Togni et Simonet </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA01000284" target="blank" title="La fiche dans la base Mérimée">IA01000284</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2804216849" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&node=2804216849" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?new_layer=true&objects=n2804216849" target="blank" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>heritage, mhs:inscription_date, source, wikipedia </td> <td class="texte"></td> </tr> </tbody>
     </table>
