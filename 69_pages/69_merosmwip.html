@@ -3,21 +3,23 @@
     <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
-	<link rel="stylesheet" type="text/css" href="../js/jquery-ui.css"><script src="../js/jquery.js"></script><script src="../js/stupidtable.min.js?dev"></script>
-                <script src="../js/jquery-ui.js"></script>
-                
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+	           <link rel="stylesheet" type="text/css" href="../css/style.css" />
+	           <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables_mod.css"  /><script src="../js/jquery.js"></script>
+	           <script src="../js/jquery.dataTables.min.js"></script>
+               <script src="../js/jquery-ui.js"></script>  
     <script>
     $(document).ready(function(){
          $("tr").click(function(){
              $("tr").each(function(){
-             $(this).removeClass("active");
+             $(this).removeClass("selected");
              });
-             $(this).addClass("active");
+             $(this).addClass("selected");
          });
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
+				title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:400,
@@ -27,42 +29,36 @@
                     backgroundColor: '#000',
                     opacity: 0.5,
                 },
-                buttons: {
-                    'Fermer': function() {
-                        $(this).dialog('close');
-                    }
-                }
             });
             return false;
         });
+
+		$("#table_data").DataTable({
+			"columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+			"scrollX": true,
+			"pageLength": 25,
+			"language": {
+					"search": "Rechercher :",
+					"lengthMenu": "Voir _MENU_ monuments/page",
+					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
+					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+					"infoEmpty": "Aucun résultat",
+					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+					"paginate": {
+						"first":      "Première",
+						"last":       "Dernière",
+						"next":       "Suivante",
+						"previous":   "Précédente"
+							},
+				}
+            });
     });
     </script>
-     <script>
-    $(function(){
-        var table = $("table").stupidtable();
-
-        table.on("beforetablesort", function (event, data) {
-          // Apply a "disabled" look to the table while sorting.
-          // Using addClass for "testing" as it takes slightly longer to render.
-          $("#msg").text("Sorting...");
-          $("table").addClass("disabled");
-        });
-
-        table.on("aftertablesort", function (event, data) {
-          // Reset loading message.
-          $("#msg").html("&nbsp;");
-          $("table").removeClass("disabled");
-
-          var th = $(this).find("th");
-          th.find(".arrow").remove();
-          var dir = $.fn.stupidtable.dir;
-
-          var arrow = data.direction === dir.ASC ? "&uarr;" : "&darr;";
-          th.eq(data.column).append('<span class="arrow"> ' + arrow +'</span>');
-        });
-    });
-    </script>
-
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques du Rhône dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département du Rhône</b>, la base Mérimée Ouverte décrit 516 monuments historiques.</p>
          <p>Ils sont 514 dans wikipédia (pages départementales), et OSM en connait 91.</p>
@@ -71,15 +67,16 @@
 <li><a class="active" href="69_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">91</span> Mérimée, Osm, Wp</a></li><li><a href="69_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">423</span> Mérimée, Wp</a></li><li><a href="69_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">2</span> Mérimée</a></li><li class="retour"><a href="../index.html" title="Autres départements" > Menu général </a></li></ul>
         </div>
     <div id="container">
-    <table id="tableau">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
     <caption id='titre'> Monuments historiques présents dans Mérimée, OpenStreetMap et Wikipédia</caption>
     <thead class='heading'>
         <tr>
-            <th data-sort="string">Description</th>
-            <th data-sort="string">Mérimée</th>
+            <th>Description</th>
+            <th>Mérimée</th>
             <th>OSM</th>
             <th>WP</th>
-            <th colspan="2">Remarques : erreurs ou manques</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
         </tr>
     </thead>
     <tbody>
