@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+	           <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+				title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:350,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+		$("#table_data").DataTable({
+			"columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+			"scrollX": true,
+			"pageLength": 25,
+			"language": {
+					"search": "Rechercher :",
+					"lengthMenu": "Voir _MENU_ monuments/page",
+					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
+					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+					"infoEmpty": "Aucun résultat",
+					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+					"paginate": {
+						"first":      "Première",
+						"last":       "Dernière",
+						"next":       "Suivante",
+						"previous":   "Précédente"
+							},
+				}
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Aveyron dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Aveyron</b>, la base Mérimée Ouverte décrit 383 monuments historiques.</p>
+         <p>Ils sont 388 dans wikipédia (pages départementales), et OSM en connait 105.</p>
+</div><div id="menu">
+<ul>
+<li><a  href="12_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">100</span> Mérimée, Osm, Wp</a></li><li><a  href="12_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a  href="12_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">278</span> Mérimée, Wp</a></li><li><a  href="12_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">9</span> Wp </a></li><li><a  href="12_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">3</span> Osm</a></li><li><a class="active" href="12_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">5</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Villefranche-de-Rouergue - <b>Maison Almaric</b> - Notre-Dame (place)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00094207" target="blank" title="La fiche dans la base Mérimée">PA00094207</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00094207</li><li>wikidata=Q22937760</li><li>heritage:operator=mhs</li><li><b>Classements multiples</b> : 1932/12/18 : inscrit MH ; 1996/10/31 : classé MH</li><li><b>Import sans classement !</b> </li><li></li><li>name=Maison Almaric</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Bournazel - <b>Ancien jardin du château de Bournazel</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA12000049" target="blank" title="La fiche dans la base Mérimée">PA12000049</a></td><td id="info_bloc1" class="infoBloc" > Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><li>ref:mhs=PA12000049</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2013-02-14 </li><li></li><li>name=Ancien jardin du château de Bournazel</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Monastère (Le) - <b>Abbaye bénédictine Saint-Sernin</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA12000052" target="blank" title="La fiche dans la base Mérimée">PA12000052</a></td><td id="info_bloc2" class="infoBloc" > Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><li>ref:mhs=PA12000052</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-03-24 </li><li></li><li>name=Abbaye bénédictine Saint-Sernin</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Monastère (Le) - <b>Eglise paroissiale Saint-Etienne et Saint-Blaise</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA12000053" target="blank" title="La fiche dans la base Mérimée">PA12000053</a></td><td id="info_bloc3" class="infoBloc" > Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><li>ref:mhs=PA12000053</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-03-24 </li><li></li><li>name=Eglise paroissiale Saint-Etienne et Saint-Blaise</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Montjaux - <b>Eglise Saint-Martin d'Ayguebonne</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA12000054" target="blank" title="La fiche dans la base Mérimée">PA12000054</a></td><td id="info_bloc4" class="infoBloc" > Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><li>ref:mhs=PA12000054</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-12-31 </li><li></li><li>name=Eglise Saint-Martin d'Ayguebonne</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

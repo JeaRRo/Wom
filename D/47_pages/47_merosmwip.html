@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+	           <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+				title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:350,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+		$("#table_data").DataTable({
+			"columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+			"scrollX": true,
+			"pageLength": 25,
+			"language": {
+					"search": "Rechercher :",
+					"lengthMenu": "Voir _MENU_ monuments/page",
+					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
+					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+					"infoEmpty": "Aucun résultat",
+					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+					"paginate": {
+						"first":      "Première",
+						"last":       "Dernière",
+						"next":       "Suivante",
+						"previous":   "Précédente"
+							},
+				}
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de Lot-et-Garonne dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de Lot-et-Garonne</b>, la base Mérimée Ouverte décrit 384 monuments historiques.</p>
+         <p>Ils sont 387 dans wikipédia (pages départementales), et OSM en connait 12.</p>
+</div><div id="menu">
+<ul>
+<li><a class="active" href="47_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">9</span> Mérimée, Osm, Wp</a></li><li><a href="47_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a href="47_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">373</span> Mérimée, Wp</a></li><li><a href="47_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">5</span> Wp </a></li><li><a href="47_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li><a href="47_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">2</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans Mérimée, OpenStreetMap et Wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Agen - <b>Cathédrale Saint-Caprais</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084035" target="blank" title="La fiche dans la base Mérimée">PA00084035</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/65309666" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=65309666" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w65309666" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d%27Agen#Cathedrale_Saint-Caprais" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Cathédrale Saint-Caprais d'Agen" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w65309666&addtags=wikidata=Q2942319" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q2942319 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Hautefage-la-Tour - <b>Eglise Notre-Dame</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084136" target="blank" title="La fiche dans la base Mérimée">PA00084136</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/6040644" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&relation=6040644" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r6040644" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(A-L)#H" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, <a href="http://localhost:8111/load_object?objects=r6040644&addtags=wikidata=Q19833225" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q19833225 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Laplume - <b>Eglise Saint-Barthélemy</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084149" target="blank" title="La fiche dans la base Mérimée">PA00084149</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/182202075" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=182202075" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w182202075" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(A-L)#Eglise_Saint-Barthelemy_Laplume" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Barthélemy de Laplume" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w182202075&addtags=wikidata=Q3581036" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3581036 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Marmande - <b>Eglise Notre-Dame et son cloître</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084163" target="blank" title="La fiche dans la base Mérimée">PA00084163</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/155591116" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=155591116" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w155591116" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(M-Z)#Eglise_Notre-Dame_Marmande" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Église Notre-Dame de Marmande" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w155591116&addtags=wikidata=Q3580616" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3580616 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Prayssas - <b>Eglise Saint-Jean</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084212" target="blank" title="La fiche dans la base Mérimée">PA00084212</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/285987327" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=285987327" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n285987327" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(M-Z)#Eglise_Saint-Jean_Prayssas" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=n285987327&addtags=wikidata=Q3582101" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3582101 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Puymirol - <b>Eglise Notre-Dame du Grand-Castel</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084215" target="blank" title="La fiche dans la base Mérimée">PA00084215</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/198577584" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=198577584" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w198577584" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(M-Z)#Eglise_Notre-Dame_Grand-Castel" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Église Notre-Dame du Grand-Castel de Puymirol" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w198577584&addtags=wikidata=Q17486792" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q17486792 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Saint-Pé-Saint-Simon - <b>Eglise de Saint-Simon</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084239" target="blank" title="La fiche dans la base Mérimée">PA00084239</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/191191554" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=191191554" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w191191554" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(M-Z)#Eglise_Saint-Simon_Saint-Simon" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Église de Saint-Simon de Saint-Pé-Saint-Simon" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w191191554&addtags=wikidata=Q20641730" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q20641730 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Penne-d'Agenais - <b>Château de Noaillac</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084289" target="blank" title="La fiche dans la base Mérimée">PA00084289</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/192102519" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=192102519" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w192102519" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(M-Z)#Chateau_Noaillac" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Château_de_Noaillac" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w192102519&addtags=wikidata=Q20083768" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q20083768 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Puymirol - <b>Château de Pech-Redon</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084299" target="blank" title="La fiche dans la base Mérimée">PA00084299</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/421201853" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=421201853" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w421201853" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Lot-et-Garonne_(M-Z)#Chateau_Pech-Redon" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Château de Pech-Redon" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w421201853&addtags=wikidata=Q22920537" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q22920537 </a> </td> <td class="texte"> <b> Wp : </b>Page monument absente, Image absente </td> </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

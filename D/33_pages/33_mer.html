@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+	           <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+				title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:350,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+		$("#table_data").DataTable({
+			"columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+			"scrollX": true,
+			"pageLength": 25,
+			"language": {
+					"search": "Rechercher :",
+					"lengthMenu": "Voir _MENU_ monuments/page",
+					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
+					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+					"infoEmpty": "Aucun résultat",
+					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+					"paginate": {
+						"first":      "Première",
+						"last":       "Dernière",
+						"next":       "Suivante",
+						"previous":   "Précédente"
+							},
+				}
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Gironde dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Gironde</b>, la base Mérimée Ouverte décrit 1014 monuments historiques.</p>
+         <p>Ils sont 1004 dans wikipédia (pages départementales), et OSM en connait 340.</p>
+</div><div id="menu">
+<ul>
+<li><a  href="33_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">332</span> Mérimée, Osm, Wp</a></li><li><a  href="33_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">666</span> Mérimée, Wp</a></li><li><a  href="33_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">6</span> Wp </a></li><li><a  href="33_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">4</span> Mérimée, Osm</a></li><li><a  href="33_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">4</span> Osm</a></li><li><a class="active" href="33_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">12</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Bordeaux - <b>Ancien cinéma Rex</b> - Croix-de-Seguey (rue) 163</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083164" target="blank" title="La fiche dans la base Mérimée">PA00083164</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083164</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Ancien cinéma Rex</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Bordeaux - <b>Maison</b> - Porte-Dijeaux (rue) 109</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083467" target="blank" title="La fiche dans la base Mérimée">PA00083467</a></td><td id="info_bloc1" class="infoBloc" > Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083467</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1927-11-15 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lège-Cap-Ferret - <b>Maison du lotissement Le Corbusier</b> - Médoc (avenue du) 35</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083877" target="blank" title="La fiche dans la base Mérimée">PA00083877</a></td><td id="info_bloc2" class="infoBloc" > Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083877</li><li>wikidata=Q3260028</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-05-30 </li><li></li><li>name=Maison du lotissement Le Corbusier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lège-Cap-Ferret - <b>Maison du lotissement Le Corbusier</b> - Médoc (avenue du) 37</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083878" target="blank" title="La fiche dans la base Mérimée">PA00083878</a></td><td id="info_bloc3" class="infoBloc" > Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083878</li><li>wikidata=Q3260028</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-05-30 </li><li></li><li>name=Maison du lotissement Le Corbusier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lège-Cap-Ferret - <b>Maison du lotissement Le Corbusier</b> - Médoc (avenue du) 39</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083879" target="blank" title="La fiche dans la base Mérimée">PA00083879</a></td><td id="info_bloc4" class="infoBloc" > Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083879</li><li>wikidata=Q3260028</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-05-30 </li><li></li><li>name=Maison du lotissement Le Corbusier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lège-Cap-Ferret - <b>Maison du lotissement Le Corbusier</b> - Médoc (avenue du) 41</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083880" target="blank" title="La fiche dans la base Mérimée">PA00083880</a></td><td id="info_bloc5" class="infoBloc" > Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083880</li><li>wikidata=Q3260028</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-05-30 </li><li></li><li>name=Maison du lotissement Le Corbusier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lège-Cap-Ferret - <b>Maison du lotissement Le Corbusier</b> - Médoc (avenue du) 43</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083881" target="blank" title="La fiche dans la base Mérimée">PA00083881</a></td><td id="info_bloc6" class="infoBloc" > Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083881</li><li>wikidata=Q3260028</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-05-30 </li><li></li><li>name=Maison du lotissement Le Corbusier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lège-Cap-Ferret - <b>Maison du lotissement Le Corbusier</b> - Médoc (avenue du) 43bis</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083882" target="blank" title="La fiche dans la base Mérimée">PA00083882</a></td><td id="info_bloc7" class="infoBloc" > Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                            <ul><li>ref:mhs=PA00083882</li><li>wikidata=Q3260028</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-05-30 </li><li></li><li>name=Maison du lotissement Le Corbusier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Arcachon - <b>Casino mauresque</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA33000079" target="blank" title="La fiche dans la base Mérimée">PA33000079</a></td><td id="info_bloc8" class="infoBloc" > Tags pour OSM   <div id="bloc8" class="dialogBloc">
+                            <ul><li>ref:mhs=PA33000079</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Casino mauresque</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Libourne - <b>Monument aux morts de la guerre de 1914-1918, situé Jardin du Poilu</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA33000177" target="blank" title="La fiche dans la base Mérimée">PA33000177</a></td><td id="info_bloc9" class="infoBloc" > Tags pour OSM   <div id="bloc9" class="dialogBloc">
+                            <ul><li>ref:mhs=PA33000177</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-10-21 </li><li></li><li>name=Monument aux morts de la guerre de 1914-1918, situé Jardin du Poilu</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sainte-Foy-la-Grande - <b>Monument aux morts de la guerre de 1914-1918</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA33000180" target="blank" title="La fiche dans la base Mérimée">PA33000180</a></td><td id="info_bloc10" class="infoBloc" > Tags pour OSM   <div id="bloc10" class="dialogBloc">
+                            <ul><li>ref:mhs=PA33000180</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-10-21 </li><li></li><li>name=Monument aux morts de la guerre de 1914-1918</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Villegouge - <b>Monument aux morts de la guerre de 1914-1918, situé devant l'église</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA33000182" target="blank" title="La fiche dans la base Mérimée">PA33000182</a></td><td id="info_bloc11" class="infoBloc" > Tags pour OSM   <div id="bloc11" class="dialogBloc">
+                            <ul><li>ref:mhs=PA33000182</li><li>wikidata=</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-10-21 </li><li></li><li>name=Monument aux morts de la guerre de 1914-1918, situé devant l'église</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

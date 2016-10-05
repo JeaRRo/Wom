@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+	           <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+				title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:350,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+		$("#table_data").DataTable({
+			"columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+			"scrollX": true,
+			"pageLength": 25,
+			"language": {
+					"search": "Rechercher :",
+					"lengthMenu": "Voir _MENU_ monuments/page",
+					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
+					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+					"infoEmpty": "Aucun résultat",
+					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+					"paginate": {
+						"first":      "Première",
+						"last":       "Dernière",
+						"next":       "Suivante",
+						"previous":   "Précédente"
+							},
+				}
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Guadeloupe dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Guadeloupe</b>, la base Mérimée Ouverte décrit 104 monuments historiques.</p>
+         <p>Ils sont 107 dans wikipédia (pages départementales), et OSM en connait 6.</p>
+</div><div id="menu">
+<ul>
+<li><a class="active" href="971_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">6</span> Mérimée, Osm, Wp</a></li><li><a href="971_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">82</span> Mérimée, Wp</a></li><li><a href="971_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">19</span> Wp </a></li><li><a href="971_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">16</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans Mérimée, OpenStreetMap et Wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Capesterre-de-Marie-Galante - <b>Moulin Bézard</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105857" target="blank" title="La fiche dans la base Mérimée">PA00105857</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1028688439" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=1028688439" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1028688439" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Moulin_Bezard" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Moulin Bézard" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=n1028688439&addtags=wikidata=Q15952820" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q15952820 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Grand-Bourg - <b>Sucrerie Trianon</b> - sur l'île de Marie-Galante</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105860" target="blank" title="La fiche dans la base Mérimée">PA00105860</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/330863459" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=330863459" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w330863459" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Sucrerie_Trianon" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, <a href="http://localhost:8111/load_object?objects=w330863459&addtags=wikidata=Q20669924" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q20669924 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Terre-de-Haut - <b>Eglise</b> - Sur les îles Saintes</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105873" target="blank" title="La fiche dans la base Mérimée">PA00105873</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/3621742" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&relation=3621742" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r3621742" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Eglise_Notre-Dame_Assomption_Terre-Haut" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, <a href="http://localhost:8111/load_object?objects=r3621742&addtags=wikidata=Q3580717" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3580717 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Grand-Bourg - <b>Moulin Murat</b> - sur l'île de Marie-Galante</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105880" target="blank" title="La fiche dans la base Mérimée">PA00105880</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1028688429" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=1028688429" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1028688429" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Moulin_Murat" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Moulin Murat" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=n1028688429&addtags=wikidata=Q14627604" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q14627604 </a> </td> <td class="texte"> <b> Wp : </b>Image absente </td> </tr><tr>           <td class="desc">Désirade (La) - <b>Phare de l'îlet de Petite-Terre</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100011" target="blank" title="La fiche dans la base Mérimée">PA97100011</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/521604098" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=521604098" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n521604098" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Phare_de_ilet_de_Petite_Terre" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Phare de l'îlet de Petite-Terre" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=n521604098&addtags=wikidata=Q3378457" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3378457 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Basse-Terre - <b>Aqueduc et réservoir de Petite Guinée</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100013" target="blank" title="La fiche dans la base Mérimée">PA97100013</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3169514768" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=3169514768" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3169514768" target="blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Aqueduc_reservoir_Petite_Guinee" target="blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Aqueduc et réservoir de Petite Guinée" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=n3169514768&addtags=wikidata=Q2859239" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q2859239 </a> </td> <td class="texte"></td> </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    
