@@ -2,7 +2,9 @@ function openlink() {
   var obj = document.getElementById("tags");
   var dep = obj.value.split(' ')[0];
   //alert(dep)
-  var address_web = $(location).attr('origin')+'/D/'+dep+'_pages/'+dep+'_merwip.html';
+  var path = $(location).attr('pathname').split('/')[1]
+  var address_web = $(location).attr('origin')+'/'+path+'/D/'+dep+'_pages/'+dep+'_merwip.html'; 
+
   $.ajax({
       type: 'HEAD',
       url: address_web,
