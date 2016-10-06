@@ -2,9 +2,7 @@ function openlink() {
   var obj = document.getElementById("tags");
   var dep = obj.value.split(' ')[0];
   //alert(dep)
-  // commuter les lignes suivantes test/prod
-  //var address_web = 'http://localhost:8000/D/'+dep+'_pages/'+dep+'_merwip.html';
-  var address_web = 'http://jearro.fr/wom/D/'+dep+'_pages/'+dep+'_merwip.html' :
+  var address_web = $(location).attr('origin')+'/D/'+dep+'_pages/'+dep+'_merwip.html';
   $.ajax({
       type: 'HEAD',
       url: address_web,
