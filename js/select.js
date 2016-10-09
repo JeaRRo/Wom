@@ -1,10 +1,15 @@
 function openlink() {
   var obj = document.getElementById("tags");
   var dep = obj.value.split(' ')[0];
+  var address_web =""
   //alert(dep)
   var path = $(location).attr('pathname').split('/')[1]
-  var address_web = $(location).attr('origin')+'/'+path+'/D/'+dep+'_pages/'+dep+'_merwip.html'; 
-
+  if (path === 'index.html') {
+      address_web = $(location).attr('origin')+'/D/'+dep+'_pages/'+dep+'_merwip.html';
+  }
+  else {
+      address_web = $(location).attr('origin')+'/'+path+'/D/'+dep+'_pages/'+dep+'_merwip.html'; 
+  }
   $.ajax({
       type: 'HEAD',
       url: address_web,
