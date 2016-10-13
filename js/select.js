@@ -1,15 +1,14 @@
 function openlink() {
   var obj = document.getElementById("tags");
   var dep = obj.value.split(' ')[0];
-  var address_web =""
-  //alert(dep)
-  var path = $(location).attr('pathname').split('/')[1]
-  if (path === 'index.html') {
-      address_web = $(location).attr('origin')+'/D/'+dep+'_pages/'+dep+'_merwip.html';
-  }
+  //console.log(dep)
+  if (dep == "") {alert( "Vous devez saisir un code ou un nom de département. ");
+                    return;}
   else {
-      address_web = $(location).attr('origin')+'/'+path+'/D/'+dep+'_pages/'+dep+'_merwip.html'; 
+    var address_web = $(location).attr('origin')+'/D/'+dep+'_pages/'+dep+'_merwip.html';
+    //console.log(address_web)
   }
+
   $.ajax({
       type: 'HEAD',
       url: address_web,
@@ -19,12 +18,24 @@ function openlink() {
       },
       error: function() {
           // page does not exist
-          if (dep == "") {alert( "Vous devez saisir un code ou un nom de département. "); }
-          else { alert("Les pages du département "+dep + " n'existent pas encore ! désolé.")    };
-      }
-  });
+          if (address_web.search('merwip') !== -1) {
+              address_web = address_web.replace('merwip','merosmwip');}
+              //console.log(address_web.replace('merwip','merosmwip') );
 
+              $.ajax({
+                  type: 'HEAD',
+                  url: address_web,
+                  success: function() {
+                      // page exists
+                      window.location.href = address_web;
+                  },
+                  error: function() {
+                      alert("Les pages du département "+dep + " n'existent pas encore ! désolé.");    }
+              });
+          }
+      });
 }
+
 $( function() {
   var listDep = ['01 - Ain', '02 - Aisne', '03 - Allier', '04 - Alpes-de-Haute-Provence', '05 - Hautes-Alpes', '06 - Alpes-Maritimes',
   '07 - Ardèche', '08 - Ardennes', '09 - Ariège', '10 - Aube', '11 - Aude', '12 - Aveyron', '13 - Bouches-du-Rhône', '14 - Calvados',
