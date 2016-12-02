@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,38 +33,38 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Sarthe dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Sarthe</b>, la base Mérimée Ouverte décrit <b>412 </b>monuments historiques.
-         <b>239 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>144 </b> de ces monuments.
+         <b>83 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>144 </b> de ces monuments.
 </div><div id="menu">
 <ul>
-<li><a  href="72_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">142</span> Mérimée, Osm, Wp</a></li><li><a  href="72_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">270</span> Mérimée, Wp</a></li><li><a class="active" href="72_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">4</span> Wp </a></li><li><a href="72_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+<li><a  href="72_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">132</span> Mérimée, Osm, Wp</a></li><li><a  href="72_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">162</span> Mérimée, Wp</a></li><li><a class="active" href="72_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">3</span> Wp </a></li><li><a href="72_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">10</span> Mérimée, Osm</a></li><li><a href="72_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a href="72_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">108</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
         </div>
     <div id="container">
     <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
@@ -80,7 +80,7 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Saint-Martin-des-Monts - <b>Église Saint-Martin</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_Mamers#.C3.89glise_Saint-Martin" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Martin_de_Saint-Martin-des-Monts&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Saint-Rémy-du-Val - <b>Ensemble castral</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_Mamers#Ensemble_castral" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Ensemble_castral_de_Saint-R%C3%A9my-du-Val&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent </td>  </tr><tr>           <td class="desc">Thorée-les-Pins - <b>Chapelle Saint-Jean-Baptiste</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_la_Flèche#Chapelle_Saint-Jean-Baptiste" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Mans - <b>Hôtel Belin de Béru</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Mans#H.C3.B4tel_Belin_de_B.C3.A9ru" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=H%C3%B4tel_Belin_de_B%C3%A9ru&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr> </tbody>
+    <tr>           <td class="desc">Saint-Martin-des-Monts - <b>Église Saint-Martin</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_Mamers#.C3.89glise_Saint-Martin" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Martin_de_Saint-Martin-des-Monts&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Saint-Rémy-du-Val - <b>Ensemble castral</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_Mamers#Ensemble_castral" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Ensemble_castral_de_Saint-R%C3%A9my-du-Val&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent </td>  </tr><tr>           <td class="desc">Mans - <b>Hôtel Belin de Béru</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Mans#H.C3.B4tel_Belin_de_B.C3.A9ru" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=H%C3%B4tel_Belin_de_B%C3%A9ru&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

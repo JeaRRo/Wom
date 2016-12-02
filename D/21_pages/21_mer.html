@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,9 +80,9 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Bèze - <b>Maison du 13e siècle, sur la place publique</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112137" target="blank" title="La fiche dans la base Mérimée">PA00112137</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
+    <tr>           <td class="desc">Bèze - <b>Maison du 13e siècle, sur la place publique</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112137" target="_blank" title="La fiche dans la base Mérimée">PA00112137</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
                             <ul><li>ref:mhs=PA00112137</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1914-09-15 </li><li></li><li>name=Maison du 13e siècle, sur la place publique</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
-                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Chanceaux - <b>Maison Brigaude</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112177" target="blank" title="La fiche dans la base Mérimée">PA00112177</a></td><td id="info_bloc1" class="infoBloc" > Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Chanceaux - <b>Maison Brigaude</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112177" target="_blank" title="La fiche dans la base Mérimée">PA00112177</a></td><td id="info_bloc1" class="infoBloc" > Tags pour OSM   <div id="bloc1" class="dialogBloc">
                             <ul><li>ref:mhs=PA00112177</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Maison Brigaude</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
                         </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
     </table>

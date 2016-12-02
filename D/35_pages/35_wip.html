@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,7 +80,7 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Rennes - <b>Église Sainte-Thérèse-de-l'Enfant-Jésus</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=EA35000005" target="blank" title="La fiche dans la base Mérimée">EA35000005</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Rennes#" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Aubin-du-Cormier - <b>Église Saint-Aubin</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00006930" target="blank" title="La fiche dans la base Mérimée">IA00006930</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Aubin_Saint-Aubin-Cormier" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Noyal-Châtillon-sur-Seiche - <b>Domaine de Mouillemuse</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00008020" target="blank" title="La fiche dans la base Mérimée">IA00008020</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Domaine_Mouillemuse" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Manoir_de_Mouillemuse&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">Saint-Gonlay - <b>Église Saint-Guillaume</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00130764" target="blank" title="La fiche dans la base Mérimée">IA00130764</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Guillaume_Saint-Gonlay" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Guillaume_de_Saint-Gonlay&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">La Fresnais - <b>Église Saint-Méen-et-Sainte-Croix</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002419" target="blank" title="La fiche dans la base Mérimée">IA35002419</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">La Chapelle-Bouëxic - <b>Château du Bouëxic</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002628" target="blank" title="La fiche dans la base Mérimée">IA35002628</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Chateau_Bouexic" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">La Chapelle-Bouëxic - <b>Église Saint-Joseph</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002629" target="blank" title="La fiche dans la base Mérimée">IA35002629</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Joseph_Chapelle-Bouexic" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Joseph_de_La_Chapelle-Bou%C3%ABxic&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">Saint-Malo-de-Phily - <b>Église Saint-Malo</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35007385" target="blank" title="La fiche dans la base Mérimée">IA35007385</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Malo_Saint-Malo-Phily" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Longaulnay - <b>Château de Caradeuc[16]</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00089458" target="blank" title="La fiche dans la base Mérimée">PA00089458</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Ch.C3.A2teau_Caradeuc" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente </td>  </tr> </tbody>
+    <tr>           <td class="desc">Rennes - <b>Église Sainte-Thérèse-de-l'Enfant-Jésus</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=EA35000005" target="_blank" title="La fiche dans la base Mérimée">EA35000005</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Rennes#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Aubin-du-Cormier - <b>Église Saint-Aubin</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00006930" target="_blank" title="La fiche dans la base Mérimée">IA00006930</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Aubin_Saint-Aubin-Cormier" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Noyal-Châtillon-sur-Seiche - <b>Domaine de Mouillemuse</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00008020" target="_blank" title="La fiche dans la base Mérimée">IA00008020</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Domaine_Mouillemuse" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Manoir_de_Mouillemuse&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">Saint-Gonlay - <b>Église Saint-Guillaume</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00130764" target="_blank" title="La fiche dans la base Mérimée">IA00130764</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Guillaume_Saint-Gonlay" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Guillaume_de_Saint-Gonlay&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">La Fresnais - <b>Église Saint-Méen-et-Sainte-Croix</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002419" target="_blank" title="La fiche dans la base Mérimée">IA35002419</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">La Chapelle-Bouëxic - <b>Château du Bouëxic</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002628" target="_blank" title="La fiche dans la base Mérimée">IA35002628</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Chateau_Bouexic" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">La Chapelle-Bouëxic - <b>Église Saint-Joseph</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002629" target="_blank" title="La fiche dans la base Mérimée">IA35002629</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Joseph_Chapelle-Bouexic" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Joseph_de_La_Chapelle-Bou%C3%ABxic&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">Saint-Malo-de-Phily - <b>Église Saint-Malo</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35007385" target="_blank" title="La fiche dans la base Mérimée">IA35007385</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Malo_Saint-Malo-Phily" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Longaulnay - <b>Château de Caradeuc[16]</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00089458" target="_blank" title="La fiche dans la base Mérimée">PA00089458</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Ch.C3.A2teau_Caradeuc" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente </td>  </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

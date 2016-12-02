@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -81,15 +81,15 @@
     </thead>
     <tbody>
     <tr>           <td class="desc">Lavelanet
- - <b>Chapelle de la Gleysette </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00093803" target="blank" title="La fiche dans la base Mérimée">PA00093803</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62708412" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=62708412" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62708412" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Chapelle du cimetière de Bensa" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w62708412&addtags=wikidata=Q22936917" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q22936917 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Sauveterre
- - <b>Château de Sauveterre </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA81000019" target="blank" title="La fiche dans la base Mérimée">PA81000019</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62844296" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=62844296" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62844296" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Sauveterre" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w62844296&addtags=wikidata=Q21294322" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q21294322 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Sauveterre
- - <b>Église Sainte-Croix </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA81000020" target="blank" title="La fiche dans la base Mérimée">PA81000020</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62843299" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=62843299" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62843299" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Sainte-Croix de Sauveterre" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w62843299&addtags=wikidata=Q21200957" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q21200957 </a> </td> <td class="texte"></td> </tr> </tbody>
+ - <b>Chapelle de la Gleysette </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00093803" target="_blank" title="La fiche dans la base Mérimée">PA00093803</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62708412" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=62708412" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62708412" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Chapelle du cimetière de Bensa" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w62708412&addtags=wikidata=Q22936917" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q22936917 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Sauveterre
+ - <b>Château de Sauveterre </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA81000019" target="_blank" title="La fiche dans la base Mérimée">PA81000019</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62844296" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=62844296" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62844296" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Sauveterre" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w62844296&addtags=wikidata=Q21294322" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q21294322 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Sauveterre
+ - <b>Église Sainte-Croix </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA81000020" target="_blank" title="La fiche dans la base Mérimée">PA81000020</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62843299" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=62843299" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62843299" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Sainte-Croix de Sauveterre" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b><a href="http://localhost:8111/load_object?objects=w62843299&addtags=wikidata=Q21200957" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q21200957 </a> </td> <td class="texte"></td> </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

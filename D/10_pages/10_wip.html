@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,7 +80,7 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Géraudot - <b>Église de Géraudot</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#Eglise_G.C3.A9raudot" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">Nogent-sur-Seine - <b>Ancien tribunal et prison de Nogent-sur-Seine</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Ancien_tribunal_et_prison_de_Nogent-sur-Seine&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Troyes - <b>Ancien cimetière de l'église de la Madeleine</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Troyes#Ancien_cimeti.C3.A8re_l.27eglise_de_la_Madeleine" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr> </tbody>
+    <tr>           <td class="desc">Géraudot - <b>Église de Géraudot</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#Eglise_G.C3.A9raudot" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">Nogent-sur-Seine - <b>Ancien tribunal et prison de Nogent-sur-Seine</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Ancien_tribunal_et_prison_de_Nogent-sur-Seine&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Troyes - <b>Ancien cimetière de l'église de la Madeleine</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Troyes#Ancien_cimeti.C3.A8re_l.27eglise_de_la_Madeleine" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

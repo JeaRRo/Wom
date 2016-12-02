@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -81,12 +81,12 @@
     </thead>
     <tbody>
     <tr>           <td class="desc">Monségur
-</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083637" target="blank" title="La fiche dans la base Mérimée">PA00083637</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/191416285" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=191416285" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w191416285" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Notre-Dame de Monségur" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>name, <a href="http://localhost:8111/load_object?objects=w191416285&addtags=wikidata=Q3580621" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3580621 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Monségur
-</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083913" target="blank" title="La fiche dans la base Mérimée">PA00083913</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/191415878" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=191415878" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w191415878" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Maison, 24 rue Porte-de-la-Réole" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>name, <a href="http://localhost:8111/load_object?objects=w191415878&addtags=wikidata=Q3278538" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3278538 </a> </td> <td class="texte"></td> </tr> </tbody>
+</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083637" target="_blank" title="La fiche dans la base Mérimée">PA00083637</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/191416285" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=191416285" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w191416285" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Notre-Dame de Monségur" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>name, <a href="http://localhost:8111/load_object?objects=w191416285&addtags=wikidata=Q3580621" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3580621 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Monségur
+</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00083913" target="_blank" title="La fiche dans la base Mérimée">PA00083913</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/191415878" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=191415878" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w191415878" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Maison, 24 rue Porte-de-la-Réole" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>name, <a href="http://localhost:8111/load_object?objects=w191415878&addtags=wikidata=Q3278538" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3278538 </a> </td> <td class="texte"></td> </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

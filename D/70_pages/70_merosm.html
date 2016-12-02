@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,23 +80,23 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Vesoul - <b>Hôtel de Magnoncourt</b> - Mailly (rue de) 1 ; Vendémiaire (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102289" target="blank" title="La fiche dans la base Mérimée">PA00102289</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114028502" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114028502" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114028502" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114028502&addtags=wikidata=Q3145883" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145883 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Maison</b> - Baron-Bouvier (rue) 2</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102290" target="blank" title="La fiche dans la base Mérimée">PA00102290</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114030310" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114030310" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114030310" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia, <a href="http://localhost:8111/load_object?objects=w114030310&addtags=wikidata=Q3145908" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145908 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Palais de Justice</b> - Palais (place du) 4</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102292" target="blank" title="La fiche dans la base Mérimée">PA00102292</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114028938" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114028938" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114028938" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114028938&addtags=wikidata=Q3361026" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3361026 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Synagogue (ancienne)</b> - Moulin-des-Prés (rue du) 11bis</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102293" target="blank" title="La fiche dans la base Mérimée">PA00102293</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114027471" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114027471" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114027471" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia, <a href="http://localhost:8111/load_object?objects=w114027471&addtags=wikidata=Q3508097" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3508097 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Hôtel Pétremand</b> - Palais (petite-rue du) 2</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102327" target="blank" title="La fiche dans la base Mérimée">PA00102327</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114029830" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114029830" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114029830" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114029830&addtags=wikidata=Q3145644" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145644 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Maison Ebaudy de Rochetaillé</b> - Roger-Salengro (rue) 4 et 6</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA70000010" target="blank" title="La fiche dans la base Mérimée">PA70000010</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114025646" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114025646" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114025646" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114025646&addtags=wikidata=Q3280292" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3280292 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Hôtel dit de Simon Renard</b> - Boucheries (rue des) 14</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA70000081" target="blank" title="La fiche dans la base Mérimée">PA70000081</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114026061" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114026061" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114026061" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114026061&addtags=wikidata=Q3145672" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145672 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Hôtel Lyautey de Genevreuille</b> - Roger-Salengro (rue) 12</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA70000092" target="blank" title="La fiche dans la base Mérimée">PA70000092</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114030179" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=114030179" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114030179" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114030179&addtags=wikidata=Q3145575" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145575 </a> </td> <td class="texte"></td> </tr> </tbody>
+    <tr>           <td class="desc">Vesoul - <b>Hôtel de Magnoncourt</b> - Mailly (rue de) 1 ; Vendémiaire (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102289" target="_blank" title="La fiche dans la base Mérimée">PA00102289</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114028502" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114028502" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114028502" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114028502&addtags=wikidata=Q3145883" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145883 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Maison</b> - Baron-Bouvier (rue) 2</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102290" target="_blank" title="La fiche dans la base Mérimée">PA00102290</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114030310" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114030310" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114030310" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia, <a href="http://localhost:8111/load_object?objects=w114030310&addtags=wikidata=Q3145908" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145908 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Palais de Justice</b> - Palais (place du) 4</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102292" target="_blank" title="La fiche dans la base Mérimée">PA00102292</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114028938" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114028938" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114028938" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114028938&addtags=wikidata=Q3361026" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3361026 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Synagogue (ancienne)</b> - Moulin-des-Prés (rue du) 11bis</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102293" target="_blank" title="La fiche dans la base Mérimée">PA00102293</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114027471" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114027471" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114027471" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia, <a href="http://localhost:8111/load_object?objects=w114027471&addtags=wikidata=Q3508097" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3508097 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Hôtel Pétremand</b> - Palais (petite-rue du) 2</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102327" target="_blank" title="La fiche dans la base Mérimée">PA00102327</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114029830" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114029830" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114029830" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114029830&addtags=wikidata=Q3145644" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145644 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Maison Ebaudy de Rochetaillé</b> - Roger-Salengro (rue) 4 et 6</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA70000010" target="_blank" title="La fiche dans la base Mérimée">PA70000010</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114025646" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114025646" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114025646" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114025646&addtags=wikidata=Q3280292" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3280292 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Hôtel dit de Simon Renard</b> - Boucheries (rue des) 14</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA70000081" target="_blank" title="La fiche dans la base Mérimée">PA70000081</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114026061" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114026061" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114026061" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114026061&addtags=wikidata=Q3145672" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145672 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vesoul - <b>Hôtel Lyautey de Genevreuille</b> - Roger-Salengro (rue) 12</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA70000092" target="_blank" title="La fiche dans la base Mérimée">PA70000092</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/114030179" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=114030179" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w114030179" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w114030179&addtags=wikidata=Q3145575" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3145575 </a> </td> <td class="texte"></td> </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,9 +80,9 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">1er - <b>Chancellerie d'Orléans</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_1er_arrondissement_de_Paris#chancellerie_Orleans" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">2e - <b></b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_2e_arrondissement_de_Paris#Immeuble" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">7e - <b>Basilique Sainte-Clotilde de Paris</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_7e_arrondissement_de_Paris#" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">7e - <b>Hôtel de Nointel</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_7e_arrondissement_de_Paris#Hotel_Nointel" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=H%C3%B4tel_de_Nointel&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">8e - <b>Hôtel particulier</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_8e_arrondissement_de_Paris#Hotel" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">14e - <b></b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_14e_arrondissement_de_Paris#" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent </td>  </tr><tr>           <td class="desc">14e - <b>Maison de Jean Lurçat</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_14e_arrondissement_de_Paris#Maison_Jean_Lur.C3.A7at" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Maison_de_Jean_Lur%C3%A7at&action=edit&redlink=1" target="blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent </td>  </tr><tr>           <td class="desc">19e - <b>Église Saint-Jean-Baptiste de Belleville</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_19e_arrondissement_de_Paris#Eglise_Saint-Jean-Baptiste_Belleville" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">9e - <b></b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088952" target="blank" title="La fiche dans la base Mérimée">PA00088952</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_9e_arrondissement_de_Paris#" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente </td>  </tr><tr>           <td class="desc">19e - <b>Regard de la Lanterne</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA75200003
-PA00086774" target="blank" title="La fiche dans la base Mérimée">PA75200003
-PA00086774</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_19e_arrondissement_de_Paris#Regard_Lanterne" target="blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    <tr>           <td class="desc">1er - <b>Chancellerie d'Orléans</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_1er_arrondissement_de_Paris#chancellerie_Orleans" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">2e - <b></b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_2e_arrondissement_de_Paris#Immeuble" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">7e - <b>Basilique Sainte-Clotilde de Paris</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_7e_arrondissement_de_Paris#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">7e - <b>Hôtel de Nointel</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_7e_arrondissement_de_Paris#Hotel_Nointel" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=H%C3%B4tel_de_Nointel&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">8e - <b>Hôtel particulier</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_8e_arrondissement_de_Paris#Hotel" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">14e - <b></b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_14e_arrondissement_de_Paris#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent </td>  </tr><tr>           <td class="desc">14e - <b>Maison de Jean Lurçat</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_14e_arrondissement_de_Paris#Maison_Jean_Lur.C3.A7at" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Maison_de_Jean_Lur%C3%A7at&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent </td>  </tr><tr>           <td class="desc">19e - <b>Église Saint-Jean-Baptiste de Belleville</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_19e_arrondissement_de_Paris#Eglise_Saint-Jean-Baptiste_Belleville" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">9e - <b></b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088952" target="_blank" title="La fiche dans la base Mérimée">PA00088952</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_9e_arrondissement_de_Paris#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente </td>  </tr><tr>           <td class="desc">19e - <b>Regard de la Lanterne</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA75200003
+PA00086774" target="_blank" title="La fiche dans la base Mérimée">PA75200003
+PA00086774</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_19e_arrondissement_de_Paris#Regard_Lanterne" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>

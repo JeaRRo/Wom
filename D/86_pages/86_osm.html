@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,16 +80,16 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc"> - <b>Hôtel-Dieu </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046443" target="blank" title="La fiche dans la base Mérimée">IA00046443</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554164" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=63554164" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63554164" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w63554164&addtags=wikidata=Q3348983" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3348983 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046502" target="blank" title="La fiche dans la base Mérimée">IA00046502</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554843" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=63554843" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63554843" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Tour du Château </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046513" target="blank" title="La fiche dans la base Mérimée">IA00046513</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1401882510" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&node=1401882510" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1401882510" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Sous Préfecture </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046520" target="blank" title="La fiche dans la base Mérimée">IA00046520</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63555829" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=63555829" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63555829" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Le Vieux Pont </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046608" target="blank" title="La fiche dans la base Mérimée">IA00046608</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/39271145" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=39271145" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w39271145" target="blank" title="Editer avec Josm"> Josm </a> </td>
+    <tr>           <td class="desc"> - <b>Hôtel-Dieu </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046443" target="_blank" title="La fiche dans la base Mérimée">IA00046443</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554164" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=63554164" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63554164" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w63554164&addtags=wikidata=Q3348983" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3348983 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046502" target="_blank" title="La fiche dans la base Mérimée">IA00046502</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554843" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=63554843" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63554843" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Tour du Château </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046513" target="_blank" title="La fiche dans la base Mérimée">IA00046513</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1401882510" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=1401882510" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1401882510" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Sous Préfecture </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046520" target="_blank" title="La fiche dans la base Mérimée">IA00046520</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63555829" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=63555829" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63555829" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Le Vieux Pont </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046608" target="_blank" title="La fiche dans la base Mérimée">IA00046608</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/39271145" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=39271145" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w39271145" target="_blank" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr> </tbody>
     </table>
     </div>

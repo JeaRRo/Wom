@@ -4,9 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
 	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-	           <link rel="stylesheet" type="text/css" href="../../css/style.css" />
-	           <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
-	           <script src="../../js/jquery.dataTables.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
                <script src="../../js/jquery-ui.min.js"></script>  
     <script>
     $(document).ready(function(){
@@ -19,7 +19,7 @@
 
         $(".infoBloc").click(function(){
             $("#"+this.id.slice(5)).dialog({
-				title: "Pour créer le monument dans OSM",
+                title: "Pour créer le monument dans OSM",
                 draggable: false,
                 resizable: false,
                 width:550,
@@ -33,29 +33,29 @@
             return false;
         });
 
-		$("#table_data").DataTable({
-			"columnDefs": [
+            $("#table_data").DataTable({
+                "columnDefs": [
             {
                 "targets": [ 2 ],
                 "searchable": false,
                 "sortable" : false,
             }],
-			"scrollX": true,
-			"pageLength": 25,
-			"language": {
-					"search": "Rechercher :",
-					"lengthMenu": "Voir _MENU_ monuments/page",
-					"zeroRecords": "Aucun résultat pour cette recherche - désolé",
-					"info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
-					"infoEmpty": "Aucun résultat",
-					"infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
-					"paginate": {
-						"first":      "Première",
-						"last":       "Dernière",
-						"next":       "Suivante",
-						"previous":   "Précédente"
-							},
-				}
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
             });
     });
     </script>
@@ -80,23 +80,23 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc"> - <b>Église Saint-Sauveur </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA29000017" target="blank" title="La fiche dans la base Mérimée">IA29000017</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53868404" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=53868404" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53868404" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Sauveur du Faou" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w53868404&addtags=wikidata=Q3584465" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3584465 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Tour Vauban </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA29001320" target="blank" title="La fiche dans la base Mérimée">IA29001320</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53971170" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=53971170" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53971170" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Tour Vauban" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Saint-Houardon </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA29003559" target="blank" title="La fiche dans la base Mérimée">IA29003559</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/89802844" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=89802844" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w89802844" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Houardon de Landerneau" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w89802844&addtags=wikidata=Q3581808" target="blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3581808 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Fort Montbarey </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29001752" target="blank" title="La fiche dans la base Mérimée">MERIMEEIA29001752</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/37178906" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=37178906" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w37178906" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Fort Montbarey" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Château de Trémazan </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29002168" target="blank" title="La fiche dans la base Mérimée">MERIMEEIA29002168</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/106576831" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=106576831" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w106576831" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Trémazan" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Saint-Pierre </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29003444" target="blank" title="La fiche dans la base Mérimée">MERIMEEIA29003444</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53886565" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=53886565" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53886565" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Pierre d'Hanvec" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Notre-Dame-du-Scapulaire </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29003521" target="blank" title="La fiche dans la base Mérimée">MERIMEEIA29003521</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53693221" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=53693221" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53693221" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Portsall" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Manoir de Boultous </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29004044" target="blank" title="La fiche dans la base Mérimée">MERIMEEIA29004044</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/198478612" target="blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
-            <a href="http://www.openstreetmap.org/edit?editor=id&way=198478612" target="blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w198478612" target="blank" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Saint-Pol-Roux" target="blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr> </tbody>
+    <tr>           <td class="desc"> - <b>Église Saint-Sauveur </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA29000017" target="_blank" title="La fiche dans la base Mérimée">IA29000017</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53868404" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=53868404" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53868404" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Sauveur du Faou" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w53868404&addtags=wikidata=Q3584465" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3584465 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Tour Vauban </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA29001320" target="_blank" title="La fiche dans la base Mérimée">IA29001320</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53971170" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=53971170" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53971170" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Tour Vauban" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Saint-Houardon </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA29003559" target="_blank" title="La fiche dans la base Mérimée">IA29003559</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/89802844" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=89802844" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w89802844" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Houardon de Landerneau" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w89802844&addtags=wikidata=Q3581808" target="__blank" title="Ajout code wikidata avec Josm (Remote control)"> Q3581808 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Fort Montbarey </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29001752" target="_blank" title="La fiche dans la base Mérimée">MERIMEEIA29001752</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/37178906" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=37178906" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w37178906" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Fort Montbarey" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Château de Trémazan </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29002168" target="_blank" title="La fiche dans la base Mérimée">MERIMEEIA29002168</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/106576831" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=106576831" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w106576831" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Trémazan" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Saint-Pierre </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29003444" target="_blank" title="La fiche dans la base Mérimée">MERIMEEIA29003444</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53886565" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=53886565" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53886565" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Pierre d'Hanvec" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Notre-Dame-du-Scapulaire </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29003521" target="_blank" title="La fiche dans la base Mérimée">MERIMEEIA29003521</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/53693221" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=53693221" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w53693221" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Portsall" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Manoir de Boultous </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=MERIMEEIA29004044" target="_blank" title="La fiche dans la base Mérimée">MERIMEEIA29004044</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/198478612" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=198478612" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w198478612" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Saint-Pol-Roux" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr> </tbody>
     </table>
     </div>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
