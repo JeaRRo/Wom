@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Objets OSM multiples avec ref:mhs unique</title>
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  />
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#table_double").DataTable({
+            "columnDefs": [
+        {
+            "targets": [ 2 ],
+            "searchable": false,
+            "sortable" : false,
+        }],
+        "order": [[ 1, 'asc' ]],
+        "scrollX": true,
+        "pageLength": 25,
+        "language": {
+                "search": "Rechercher :",
+                "lengthMenu": "Voir _MENU_ monuments/page",
+                "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                "infoEmpty": "Aucun résultat",
+                "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                "paginate": {
+                    "first":      "Première",
+                    "last":       "Dernière",
+                    "next":       "Suivante",
+                    "previous":   "Précédente"
+                    },
+                    }
+        });
+        $("tr").click(function(){
+            $("tr").each(function(){
+            $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+        });
+});
+    </script>
+    <body>
+        <div id="bandeau"> <h4 class='Titre'> </h4></div>
+        <div id="menu">
+            <ul>
+                <li class="retour"><a href="11_merosmwip.html" title="" >Retour</a></li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    <table id="table_double" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Liste des Ref:Mhs correspondant à plusieurs objets OSM du département 11 </caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>lien WP</th>
+        </tr>
+    </thead>
+    
+<tbody><tr>
+ <td class="desc">Carcassonne - <b>Pont-Vieux</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102615" target="_blank" title="La fiche dans la base Mérimée">PA00102615</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/1797189" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&relation=1797189" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r1797189" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Carcassonne#Pont_Vieux" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102615" target="_blank" title="La fiche dans la base Mérimée">PA00102615</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/242105050" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=242105050" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w242105050" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Lagrasse - <b>Ancienne abbaye Sainte-Marie d'Orbieu</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102711" target="_blank" title="La fiche dans la base Mérimée">PA00102711</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/184266392" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=184266392" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w184266392" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aude#Abbaye_Sainte-Marie_Orbieu" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102711" target="_blank" title="La fiche dans la base Mérimée">PA00102711</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/198641298" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=198641298" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w198641298" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102711" target="_blank" title="La fiche dans la base Mérimée">PA00102711</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/234090417" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=234090417" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w234090417" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102711" target="_blank" title="La fiche dans la base Mérimée">PA00102711</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/234090420" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=234090420" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w234090420" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102711" target="_blank" title="La fiche dans la base Mérimée">PA00102711</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/422967480" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=422967480" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w422967480" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Narbonne - <b>Collège Beauséjour</b> - Michelet (rue) 15</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102794" target="_blank" title="La fiche dans la base Mérimée">PA00102794</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/92057676" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=92057676" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w92057676" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Narbonne#College_Beausejour" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Collège Beauséjour" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102794" target="_blank" title="La fiche dans la base Mérimée">PA00102794</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/92071415" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=92071415" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w92071415" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Pieusse - <b>Ancienne église rurale de Saint-André</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102859" target="_blank" title="La fiche dans la base Mérimée">PA00102859</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1736041575" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=1736041575" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1736041575" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aude#Eglise_Saint-Andre_Pieusse" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Église rurale de Saint-André (ancienne)" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102859" target="_blank" title="La fiche dans la base Mérimée">PA00102859</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2013487161" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2013487161" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2013487161" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Polycarpe - <b>Vestiges de l'abbaye et son aqueduc</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102933" target="_blank" title="La fiche dans la base Mérimée">PA00102933</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/465784" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&relation=465784" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r465784" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aude#Abbaye_Saint-Polycarpe" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00102933" target="_blank" title="La fiche dans la base Mérimée">PA00102933</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/6903055" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&relation=6903055" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r6903055" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Montferrand - <b>Canal du Midi</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000005" target="_blank" title="La fiche dans la base Mérimée">PA11000005</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/249434910" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=249434910" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n249434910" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aude#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000005" target="_blank" title="La fiche dans la base Mérimée">PA11000005</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/249506572" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=249506572" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n249506572" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000005" target="_blank" title="La fiche dans la base Mérimée">PA11000005</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1731911428" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=1731911428" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1731911428" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Sallèles-d'Aude - <b>Château</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000028" target="_blank" title="La fiche dans la base Mérimée">PA11000028</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2459312819" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2459312819" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2459312819" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aude#Chateau_Salleles" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Château" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000028" target="_blank" title="La fiche dans la base Mérimée">PA11000028</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2459312820" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2459312820" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2459312820" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Narbonne - <b>Monument commémoratif d'Ernest Ferroul</b> - Frédéric-Mistral (boulevard)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000038" target="_blank" title="La fiche dans la base Mérimée">PA11000038</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2512682825" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2512682825" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2512682825" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Narbonne#Monument_Commemoratif_Ernest_Ferroul" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Monument commémoratif d'Ernest Ferroul" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA11000038" target="_blank" title="La fiche dans la base Mérimée">PA11000038</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3802879867" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3802879867" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3802879867" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+
+</tbody> 
+ </table> 
+</div>
+<div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

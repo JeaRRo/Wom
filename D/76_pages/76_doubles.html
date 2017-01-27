@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Objets OSM multiples avec ref:mhs unique</title>
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  />
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#table_double").DataTable({
+            "columnDefs": [
+        {
+            "targets": [ 2 ],
+            "searchable": false,
+            "sortable" : false,
+        }],
+        "order": [[ 1, 'asc' ]],
+        "scrollX": true,
+        "pageLength": 25,
+        "language": {
+                "search": "Rechercher :",
+                "lengthMenu": "Voir _MENU_ monuments/page",
+                "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                "infoEmpty": "Aucun résultat",
+                "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                "paginate": {
+                    "first":      "Première",
+                    "last":       "Dernière",
+                    "next":       "Suivante",
+                    "previous":   "Précédente"
+                    },
+                    }
+        });
+        $("tr").click(function(){
+            $("tr").each(function(){
+            $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+        });
+});
+    </script>
+    <body>
+        <div id="bandeau"> <h4 class='Titre'> </h4></div>
+        <div id="menu">
+            <ul>
+                <li class="retour"><a href="76_merosmwip.html" title="" >Retour</a></li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    <table id="table_double" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Liste des Ref:Mhs correspondant à plusieurs objets OSM du département 76 </caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>lien WP</th>
+        </tr>
+    </thead>
+    
+<tbody><tr>
+ <td class="desc">Arques-la-Bataille - <b>Ruines du château</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00100544" target="_blank" title="La fiche dans la base Mérimée">PA00100544</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/336151537" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=336151537" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w336151537" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_Dieppe#Chateau_Arques-Bataille" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:château d'Arques-la-Bataille" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00100544" target="_blank" title="La fiche dans la base Mérimée">PA00100544</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3858680459" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3858680459" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3858680459" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Gonfreville-l'Orcher - <b>Château d'Orcher</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00100674" target="_blank" title="La fiche dans la base Mérimée">PA00100674</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/129957809" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=129957809" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w129957809" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_du_Havre#Chateau_Orcher" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Château d'Orcher" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00100674" target="_blank" title="La fiche dans la base Mérimée">PA00100674</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3681384059" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3681384059" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3681384059" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Havre (Le) - <b>Ancien prieuré de Graville ou ancienne abbaye de Sainte-Honorine</b> - Prieuré (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00100694" target="_blank" title="La fiche dans la base Mérimée">PA00100694</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/76087045" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=76087045" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w76087045" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Havre#Prieur.C3.A9_Graville" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Abbaye de Graville" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00100694" target="_blank" title="La fiche dans la base Mérimée">PA00100694</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3681384058" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3681384058" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3681384058" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Montivilliers - <b>Manoir d'Epaville</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00101124" target="_blank" title="La fiche dans la base Mérimée">PA00101124</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/118831270" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=118831270" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w118831270" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_du_Havre#Manoir_Epaville" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00101124" target="_blank" title="La fiche dans la base Mérimée">PA00101124</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3681362096" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3681362096" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3681362096" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Sotteville-lès-Rouen - <b>Grues hydrauliques</b> - Gaston-Contremoulins (rue) 1</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA76000020" target="_blank" title="La fiche dans la base Mérimée">PA76000020</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1846760789" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=1846760789" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1846760789" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'arrondissement_de_Rouen#Grues_Hydrauliques_Sotteville-Rouen" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA76000020" target="_blank" title="La fiche dans la base Mérimée">PA76000020</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4546873104" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=4546873104" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4546873104" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+
+</tbody> 
+ </table> 
+</div>
+<div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

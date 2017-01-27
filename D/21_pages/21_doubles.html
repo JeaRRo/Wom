@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Objets OSM multiples avec ref:mhs unique</title>
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  />
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#table_double").DataTable({
+            "columnDefs": [
+        {
+            "targets": [ 2 ],
+            "searchable": false,
+            "sortable" : false,
+        }],
+        "order": [[ 1, 'asc' ]],
+        "scrollX": true,
+        "pageLength": 25,
+        "language": {
+                "search": "Rechercher :",
+                "lengthMenu": "Voir _MENU_ monuments/page",
+                "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                "infoEmpty": "Aucun résultat",
+                "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                "paginate": {
+                    "first":      "Première",
+                    "last":       "Dernière",
+                    "next":       "Suivante",
+                    "previous":   "Précédente"
+                    },
+                    }
+        });
+        $("tr").click(function(){
+            $("tr").each(function(){
+            $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+        });
+});
+    </script>
+    <body>
+        <div id="bandeau"> <h4 class='Titre'> </h4></div>
+        <div id="menu">
+            <ul>
+                <li class="retour"><a href="21_merosmwip.html" title="" >Retour</a></li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    <table id="table_double" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Liste des Ref:Mhs correspondant à plusieurs objets OSM du département 21 </caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>lien WP</th>
+        </tr>
+    </thead>
+    
+<tbody><tr>
+ <td class="desc">Beaune - <b>Maison</b> - Lorraine (rue de) 18</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112121" target="_blank" title="La fiche dans la base Mérimée">PA00112121</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/117529619" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=117529619" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w117529619" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Beaune#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112121" target="_blank" title="La fiche dans la base Mérimée">PA00112121</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2929938813" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2929938813" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2929938813" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Beaune - <b>Maison</b> - Lorraine (rue de) 24</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112123" target="_blank" title="La fiche dans la base Mérimée">PA00112123</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/117530199" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=117530199" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w117530199" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Beaune#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112123" target="_blank" title="La fiche dans la base Mérimée">PA00112123</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2929938815" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2929938815" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2929938815" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Bussière-sur-Ouche (La) - <b>Ancienne Abbaye cistercienne de la Bussière, actuellement Centre d'accueil et de rencontre</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112167" target="_blank" title="La fiche dans la base Mérimée">PA00112167</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/70911043" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=70911043" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w70911043" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Côte-d'Or_(A-L)#Abbaye_Bussiere" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112167" target="_blank" title="La fiche dans la base Mérimée">PA00112167</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/70911093" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=70911093" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w70911093" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112167" target="_blank" title="La fiche dans la base Mérimée">PA00112167</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/123721955" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=123721955" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w123721955" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Bussière-sur-Ouche (La) - <b>Croix et grange dîmière de l'Oizerolle</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112168" target="_blank" title="La fiche dans la base Mérimée">PA00112168</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/123757305" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=123757305" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w123757305" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Côte-d'Or_(A-L)#Croix_et_grange_dimiere_Oizerolle" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112168" target="_blank" title="La fiche dans la base Mérimée">PA00112168</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2839217567" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2839217567" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2839217567" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Abbaye de Clairvaux (ancienne)</b> - James-Demontry (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112248" target="_blank" title="La fiche dans la base Mérimée">PA00112248</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/41820700" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=41820700" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w41820700" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Cellier_Abbaye_Clairvaux" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112248" target="_blank" title="La fiche dans la base Mérimée">PA00112248</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4266219120" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=4266219120" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4266219120" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Castel situé dans le lycée technique du Castel</b> - Charles-Dumont (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112252" target="_blank" title="La fiche dans la base Mérimée">PA00112252</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2648562752" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2648562752" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2648562752" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Lycee_Technique_Castel" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112252" target="_blank" title="La fiche dans la base Mérimée">PA00112252</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3691218213" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3691218213" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3691218213" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Hôtel de Vienne</b> - Chabot-Charny (rue) 32</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112332" target="_blank" title="La fiche dans la base Mérimée">PA00112332</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/257344265" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=257344265" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w257344265" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Hotel_Vienne" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112332" target="_blank" title="La fiche dans la base Mérimée">PA00112332</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2628992076" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2628992076" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2628992076" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Immeuble</b> - Libération (place de la) 6 ; anciennement place d'Armes</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112351" target="_blank" title="La fiche dans la base Mérimée">PA00112351</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2648532092" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2648532092" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2648532092" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Immeuble" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112351" target="_blank" title="La fiche dans la base Mérimée">PA00112351</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3757189418" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3757189418" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3757189418" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Immeuble</b> - Liberté (rue de la) 87bis</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112384" target="_blank" title="La fiche dans la base Mérimée">PA00112384</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/259444482" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=259444482" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w259444482" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Immeuble" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112384" target="_blank" title="La fiche dans la base Mérimée">PA00112384</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3691268166" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3691268166" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3691268166" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Maison dite Le Petit Cîteaux</b> - Condorcet (rue) 40</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112409" target="_blank" title="La fiche dans la base Mérimée">PA00112409</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2648562762" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2648562762" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2648562762" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Maison_Petit_Citeaux" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112409" target="_blank" title="La fiche dans la base Mérimée">PA00112409</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3691268162" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3691268162" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3691268162" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Maison</b> - Chaudronnerie (rue) 1 ; Verrerie (à l'angle de la rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112414" target="_blank" title="La fiche dans la base Mérimée">PA00112414</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/41890754" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=41890754" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w41890754" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Hotel_Benigne_Malyon" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Hôtel Bénigne Malyon" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112414" target="_blank" title="La fiche dans la base Mérimée">PA00112414</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/257975438" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=257975438" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w257975438" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Gilly-lès-Cîteaux - <b>Château des Abbés de Citeaux (ancien)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112478" target="_blank" title="La fiche dans la base Mérimée">PA00112478</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/182862024" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=182862024" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w182862024" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Côte-d'Or_(A-L)#Chateau_Abbes_Citeaux" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Château de Gilly-lès-Cîteaux" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112478" target="_blank" title="La fiche dans la base Mérimée">PA00112478</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/182862141" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=182862141" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w182862141" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Montigny-Montfort - <b>Château de Montfort (ruines)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112553" target="_blank" title="La fiche dans la base Mérimée">PA00112553</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/280041942" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=280041942" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w280041942" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Côte-d'Or_(M-Z)#Chateau_Montfort" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Château de Montfort (Côte-d'Or)" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112553" target="_blank" title="La fiche dans la base Mérimée">PA00112553</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2845483701" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2845483701" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2845483701" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Premeaux-Prissey - <b>Eglise de Prissey</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112599" target="_blank" title="La fiche dans la base Mérimée">PA00112599</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/324070678" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=324070678" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w324070678" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Côte-d'Or_(M-Z)#Eglise_Saint-Martin_Prissey" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Église de Prissey" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112599" target="_blank" title="La fiche dans la base Mérimée">PA00112599</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/324070816" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=324070816" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w324070816" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Philibert - <b>Eglise</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112635" target="_blank" title="La fiche dans la base Mérimée">PA00112635</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/41434954" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=41434954" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w41434954" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Côte-d'Or_(M-Z)#Eglise_Saint-Philibert-et-Saint-Bernard" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Philibert de Dijon" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00112635" target="_blank" title="La fiche dans la base Mérimée">PA00112635</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/41495874" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=41495874" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w41495874" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Immeuble</b> - Berbisey (rue) 29</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00132835" target="_blank" title="La fiche dans la base Mérimée">PA00132835</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/47148637" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=47148637" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w47148637" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Immeuble" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00132835" target="_blank" title="La fiche dans la base Mérimée">PA00132835</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2648562759" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=2648562759" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2648562759" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Ancienne poudrière</b> - Auxonne (rue d') 147</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00132965" target="_blank" title="La fiche dans la base Mérimée">PA00132965</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/125966156" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=125966156" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w125966156" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Poudriere" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00132965" target="_blank" title="La fiche dans la base Mérimée">PA00132965</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3757189416" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3757189416" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3757189416" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Dijon - <b>Lycée Carnot</b> - Thiers (boulevard) 16</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA21000058" target="_blank" title="La fiche dans la base Mérimée">PA21000058</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2634128232" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2634128232" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2634128232" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Dijon#Lycee_Carnot" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA21000058" target="_blank" title="La fiche dans la base Mérimée">PA21000058</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3691268163" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3691268163" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3691268163" target="_blank" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+
+</tbody> 
+ </table> 
+</div>
+<div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

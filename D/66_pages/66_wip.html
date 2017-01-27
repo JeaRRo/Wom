@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques des Pyrénées-Orientales (66) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département des Pyrénées-Orientales</b>, la base Mérimée Ouverte décrit <b>302 </b>monuments historiques.
+         <b>215 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>66 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="66_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">65</span> Mérimée, Osm, Wp</a></li><li><a  href="66_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm, Wp</a></li><li><a  href="66_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">235</span> Mérimée, Wp</a></li><li><a class="active" href="66_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">8</span> Wp </a></li><li><a href="66_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">2</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Banyuls-sur-Mer - <b>Maison Douzans</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#Maison_Douzans" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Maison_Douzans&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">La Bastide - <b>Sites miniers de la Pinouse, de Roque Jalère et des Manerots</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#Sites_miniers_de_la_Pinouse.2C_de_Roque_Jal.C3.A8re_et_des_Manerots" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Sites_miniers_de_la_Pinouse,_de_Roque_Jal%C3%A8re_et_des_Manerots&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Canet-en-Roussillon - <b>Villa Muchir</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#Villa_Muchir" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Villa_Muchir&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Fenouillet - <b>Château de Sabarda et ancienne église Saint-André</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Ch%C3%A2teau_de_Sabarda_et_ancienne_%C3%A9glise_Saint-Andr%C3%A9&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Fenouillet - <b>Castrum de Fenouillet</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Castrum_de_Fenouillet&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Montbolo - <b>Sites miniers de la Pinouse, de Roque Jalère et des Manerots</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#Sites_miniers_de_la_Pinouse.2C_de_Roque_Jal.C3.A8re_et_des_Manerots" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Sites_miniers_de_la_Pinouse,_de_Roque_Jal%C3%A8re_et_des_Manerots&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Saint-Marsal - <b>Sites miniers de la Pinouse, de Roque Jalère et des Manerots</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#Sites_miniers_de_la_Pinouse.2C_de_Roque_Jal.C3.A8re_et_des_Manerots" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Sites_miniers_de_la_Pinouse,_de_Roque_Jal%C3%A8re_et_des_Manerots&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Valmanya - <b>Sites miniers de la Pinouse, de Roque Jalère et des Manerots</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Orientales#Sites_miniers_de_la_Pinouse.2C_de_Roque_Jal.C3.A8re_et_des_Manerots" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Sites_miniers_de_la_Pinouse,_de_Roque_Jal%C3%A8re_et_des_Manerots&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
