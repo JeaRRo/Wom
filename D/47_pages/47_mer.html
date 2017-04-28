@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de Lot-et-Garonne (47) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de Lot-et-Garonne</b>, la base Mérimée Ouverte décrit <b>384 </b>monuments historiques.
+         <b>317 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>200 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="47_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">187</span> Mérimée, Osm, Wp</a></li><li><a  href="47_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a  href="47_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">176</span> Mérimée, Wp</a></li><li><a  href="47_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">38</span> Wp </a></li><li><a  href="47_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">10</span> Mérimée, Osm</a></li><li><a  href="47_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li><a class="active" href="47_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">11</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Agen - <b>Ruines de l'ancienne église Saint-Hilaire</b> - Scaliger (ruelle)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084040" target="_blank" title="La fiche dans la base Mérimée">PA00084040</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>ruins=yes</li><li>start_date=C11</li><li>ref:mhs=PA00084040</li><li>wikidata=Q19942059</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1950-06-20 </li><li></li><li>name=Ruines de l'ancienne église Saint-Hilaire</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Ancien Evêché</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084042" target="_blank" title="La fiche dans la base Mérimée">PA00084042</a></td><td id="info_bloc1" class="infoBloc" > Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>start_date=C18</li><li>ref:mhs=PA00084042</li><li>wikidata=Q18380093</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1947-05-09 </li><li></li><li>name=Ancien Evêché</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Hôtel Jean-Vergès</b> - Hôtel-de-Ville (place de l') ; Juifs (rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084044" target="_blank" title="La fiche dans la base Mérimée">PA00084044</a></td><td id="info_bloc2" class="infoBloc" > Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>historic=building</li><li>start_date=C16</li><li>ref:mhs=PA00084044</li><li>wikidata=Q22920466</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1941-05-05 </li><li></li><li>name=Hôtel Jean-Vergès</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Hôtels de Vaurs et d'Estrades</b> - Hôtel-de-Ville (place de l') ; Juifs (rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084047" target="_blank" title="La fiche dans la base Mérimée">PA00084047</a></td><td id="info_bloc3" class="infoBloc" > Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>start_date=C16</li><li>ref:mhs=PA00084047</li><li>wikidata=Q20020759</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1903-04-18 </li><li></li><li>name=Hôtels de Vaurs et d'Estrades</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Maison du Sénéchal</b> - Saumon (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084051" target="_blank" title="La fiche dans la base Mérimée">PA00084051</a></td><td id="info_bloc4" class="infoBloc" > Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>building=house</li><li>historic=building</li><li>start_date=C14</li><li>ref:mhs=PA00084051</li><li>wikidata=Q20020779</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1913-07-22 </li><li></li><li>name=Maison du Sénéchal</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Maison à pans de bois</b> - Moncorny (rue) 2</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084052" target="_blank" title="La fiche dans la base Mérimée">PA00084052</a></td><td id="info_bloc5" class="infoBloc" > Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>building=house</li><li>historic=building</li><li>start_date=C14</li><li>ref:mhs=PA00084052</li><li>wikidata=Q22920471</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1950-06-20 </li><li></li><li>name=Maison à pans de bois</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Palais de Justice</b> - Armand-Fallières (place)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084054" target="_blank" title="La fiche dans la base Mérimée">PA00084054</a></td><td id="info_bloc6" class="infoBloc" > Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>historic=castle</li><li>castle_type=palace</li><li>start_date=C19</li><li>ref:mhs=PA00084054</li><li>wikidata=Q20083803</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1979-03-02 </li><li></li><li>name=Palais de Justice</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Tour du Chapelet</b> - François-Arago (rue) 3</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084056" target="_blank" title="La fiche dans la base Mérimée">PA00084056</a></td><td id="info_bloc7" class="infoBloc" > Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>man_made=tower</li><li>historic=yes</li><li>start_date=C11</li><li>ref:mhs=PA00084056</li><li>wikidata=Q19947747</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1950-06-20 </li><li></li><li>name=Tour du Chapelet</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Amphithéâtre gallo-romain</b> - André-Mazeau (rue) ; Abreuvoir (rue de l') ; Jules-Cels (rue) ; Emile-Sentini (rue) ; Remparts-Sainte-Foy (rue des) ; Courtine-des-Arènes (impasse des) ; Cajarc (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084290" target="_blank" title="La fiche dans la base Mérimée">PA00084290</a></td><td id="info_bloc8" class="infoBloc" > Tags pour OSM   <div id="bloc8" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>ref:mhs=PA00084290</li><li>wikidata=Q19945448</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1991-01-31 </li><li></li><li>name=Amphithéâtre gallo-romain</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Pont-canal d'Agen sur la Garonne (également sur commune du Passage)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA47000059" target="_blank" title="La fiche dans la base Mérimée">PA47000059</a></td><td id="info_bloc9" class="infoBloc" > Tags pour OSM   <div id="bloc9" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>start_date=C19</li><li>ref:mhs=PA47000059</li><li>wikidata=Q2289662</li><li>heritage:operator=mhs</li><li></li><li>name=Pont-canal d'Agen sur la Garonne (également sur commune du Passage)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Agen - <b>Monument aux morts de la guerre 1914-1918</b> - Armand-Fallières (place)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA47000088" target="_blank" title="La fiche dans la base Mérimée">PA47000088</a></td><td id="info_bloc10" class="infoBloc" > Tags pour OSM   <div id="bloc10" class="dialogBloc">
+                                <iframe name="hide" style="display: None;"></iframe>
+                            <ul><li>start_date=C20</li><li>ref:mhs=PA47000088</li><li>wikidata=Q20669810</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2014-10-21 </li><li></li><li>name=Monument aux morts de la guerre 1914-1918</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
