@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques du Nord (59) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département du Nord</b>, la base Mérimée Ouverte décrit <b>788 </b>monuments historiques.
+         <b>218 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>416 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="59_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">410</span> Mérimée, Osm, Wp</a></li><li><a class="active" href="59_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">3</span> Osm, Wp</a></li><li><a href="59_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">375</span> Mérimée, Wp</a></li><li><a href="59_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">8</span> Wp </a></li><li><a href="59_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">3</span> Osm</a></li><li><a href="59_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">3</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans OpenStreetMap et Wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc"> - <b>Maison natale Charles de Gaulle </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA59000390" target="_blank" title="La fiche dans la base Mérimée">IA59000390</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/84451082" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=84451082" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w84451082" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Maison natale de Charles de Gaulle" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage:operator, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Saint-Étienne </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA59001591" target="_blank" title="La fiche dans la base Mérimée">IA59001591</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/42463151" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=42463151" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w42463151" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Étienne de Lille" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte">  </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Église Saint-André </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA59001592" target="_blank" title="La fiche dans la base Mérimée">IA59001592</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/84450866" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=84450866" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w84450866" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-André de Lille" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte">  </td> <td class="texte"></td> </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

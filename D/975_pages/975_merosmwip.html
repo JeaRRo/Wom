@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return false;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de Saint-Pierre-et-Miquelon (975) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de Saint-Pierre-et-Miquelon</b>, la base Mérimée Ouverte décrit <b>12 </b>monuments historiques.
+         <b>1 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>10 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a class="active" href="975_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">10</span> Mérimée, Osm, Wp</a></li><li><a href="975_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">2</span> Mérimée, Wp</a></li><li><a href="975_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Wp </a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans Mérimée, OpenStreetMap et Wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Miquelon-Langlade - <b>Eglise Notre-Dame des Ardilliers</b> - Ardilliers (place des) 4</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500001" target="_blank" title="La fiche dans la base Mérimée">PA97500001</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/206464504" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=206464504" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w206464504" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+          <a href="https://fr.wikipedia.org/wiki/fr:Église Notre-Dame-des-Ardilliers de Miquelon" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte">  </td> <td class="texte"></td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Forge Lebailly</b> - Commerce (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500002" target="_blank" title="La fiche dans la base Mérimée">PA97500002</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4513534689" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=4513534689" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4513534689" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Forge_Lebailly&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Maison Grise située sur l'île-aux-Marins</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500004" target="_blank" title="La fiche dans la base Mérimée">PA97500004</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/220423002" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=220423002" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w220423002" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Maison_Grise&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Maison et saline Morel situées sur l'île-aux-Marins</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500005" target="_blank" title="La fiche dans la base Mérimée">PA97500005</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4513534690" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=4513534690" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4513534690" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Saline_Morel&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Eglise Notre-Dame-des-Marins, située sur l'Ile-aux-Marins</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500007" target="_blank" title="La fiche dans la base Mérimée">PA97500007</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/220422999" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=220422999" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w220422999" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Notre-Dame-des-Marins&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Ancien presbytère de l'église Notre-Dame-des-Marins, situé sur l'Ile-aux-Marins</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500008" target="_blank" title="La fiche dans la base Mérimée">PA97500008</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/220423003" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=220423003" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w220423003" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Presbyt%C3%A8re_de_l%27%C3%A9glise_Notre-Dame-des-Marins&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Ancienne mairie de l'Ile-aux-Marins, située sur l'Ile-aux-Marins</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500009" target="_blank" title="La fiche dans la base Mérimée">PA97500009</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/220423004" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=220423004" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w220423004" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=H%C3%B4tel_de_ville_de_l%27%C3%8Ele-aux-Marins&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Saint-Pierre - <b>Maison dite " maison Jézéquel ", située sur l'Ile-aux-Marins</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500010" target="_blank" title="La fiche dans la base Mérimée">PA97500010</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/220423505" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=220423505" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w220423505" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Maison_J%C3%A9z%C3%A9quel&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Miquelon-Langlade - <b>Phare de Cap Blanc</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500011" target="_blank" title="La fiche dans la base Mérimée">PA97500011</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/484186505" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=484186505" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n484186505" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Phare_de_Cap_Blanc&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Miquelon-Langlade - <b>Phare de Pointe-Plate</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97500012" target="_blank" title="La fiche dans la base Mérimée">PA97500012</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/488879987" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=488879987" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n488879987" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Saint-Pierre-et-Miquelon#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Phare_de_Pointe-Plate&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr> </tbody>
+    </table>
+    </div>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
