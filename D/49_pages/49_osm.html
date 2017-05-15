@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -88,7 +88,16 @@
             <a href="http://www.openstreetmap.org/edit?editor=id&way=235707374" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w235707374" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

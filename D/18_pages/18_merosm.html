@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -82,9 +82,18 @@
     <tbody>
     <tr>           <td class="desc">Bourges - <b>Maison de bois dite Maison des Trois Flûtes</b> - Bourbonnoux (rue) 13 ; Joyeuse (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00096699" target="_blank" title="La fiche dans la base Mérimée">PA00096699</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/64598368" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=64598368" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w64598368" target="hide" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w64598368&addtags=wikidata=Q22940393" target="_hide" title="Ajout code wikidata avec Josm (Remote control)"> Q22940393 </a> </td> <td class="texte"></td> </tr> </tbody>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w64598368&addtags=wikidata=Q22940393" target="hide" title="Ajout code wikidata avec Josm (Remote control)"> Q22940393 </a> </td> <td class="texte"></td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

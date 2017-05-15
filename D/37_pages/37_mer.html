@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -80,12 +80,20 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Chargé - <b>Ancienne grange aux dîmes</b> - Julia (ure) 3 ; Alphose-Daudet (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00097640" target="_blank" title="La fiche dans la base Mérimée">PA00097640</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
-                                <iframe name="hide" style="display: None;"></iframe>
-                            <ul><li>start_date=C18</li><li>ref:mhs=PA00097640</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Ancienne grange aux dîmes</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+    <tr>           <td class="desc">Chargé - <b>Ancienne grange aux dîmes</b> - Julia (ure) 3 ; Alphose-Daudet (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00097640" target="_blank" title="La fiche dans la base Mérimée">PA00097640</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>start_date=C18</li><li>ref:mhs=PA00097640</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Ancienne grange aux dîmes</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
                         </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

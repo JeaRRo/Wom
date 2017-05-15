@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -83,7 +83,16 @@
     <tr>           <td class="desc">Bouxières-aux-Dames - <b>Église Saint-Martin</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Meurthe-et-Moselle#.C3.89glise_Bouxi.C3.A8res" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Martin_de_Bouxi%C3%A8res-aux-Dames&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent </td>  </tr><tr>           <td class="desc">Rehainviller - <b>Château d'Adoménil
 façades, toiture du logis et des communs, la chapelle en totalité, bâtiment du pressius et sa cave ; le parc et jardin en totalité incluant la fabrique et la serre.[5]</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Meurthe-et-Moselle#R" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Code MHS absent </td>  </tr><tr>           <td class="desc">Lunéville - <b>Église Saint-Léopold de Lunéville</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00121591" target="_blank" title="La fiche dans la base Mérimée">IA00121591</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Meurthe-et-Moselle#Eglise_Saint-Leopold_Luneville" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-L%C3%A9opold_de_Lun%C3%A9ville&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">Domgermain - <b>Chapelle Saint-Maurice</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA" target="_blank" title="La fiche dans la base Mérimée">PA</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Meurthe-et-Moselle#Chapelle_Saint-Maurice" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Chapelle_Saint-Maurice_de_Domgermain&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

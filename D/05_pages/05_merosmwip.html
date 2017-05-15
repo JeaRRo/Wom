@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -153,7 +153,7 @@
             <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Hautes-Alpes#Tour_Eygliers" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
           <a href="https://fr.wikipedia.org/wiki/fr:Tour dite Tour d'Eygliers" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage:operator </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Tour_d%27Eygliers&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td> </tr><tr>           <td class="desc">Lagrand - <b>Eglise</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00080578" target="_blank" title="La fiche dans la base Mérimée">PA00080578</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/112914489" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=112914489" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w112914489" target="hide" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Hautes-Alpes#L" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w112914489&addtags=wikipedia=fr:Église de la Nativité-de-Notre-Dame de Lagrand" target="_hide" title="Ajout tag wikipedia avec Josm (Remote control)"> wikipedia </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Molines-en-Queyras - <b>Eglise Saint-Romain</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00080579" target="_blank" title="La fiche dans la base Mérimée">PA00080579</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/67148668" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Hautes-Alpes#L" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w112914489&addtags=wikipedia=fr:Église de la Nativité-de-Notre-Dame de Lagrand" target="hide" title="Ajout tag wikipedia avec Josm (Remote control)"> wikipedia </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Molines-en-Queyras - <b>Eglise Saint-Romain</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00080579" target="_blank" title="La fiche dans la base Mérimée">PA00080579</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/67148668" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=67148668" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w67148668" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Hautes-Alpes#M" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
           <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Romain de Molines-en-Queyras" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte">  </td> <td class="texte"></td> </tr><tr>           <td class="desc">Monêtier-les-Bains (Le) - <b>Chapelle Saint-André</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00080581" target="_blank" title="La fiche dans la base Mérimée">PA00080581</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/54064832" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
@@ -281,7 +281,16 @@
             <a href="http://www.openstreetmap.org/edit?editor=id&node=2190026331" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2190026331" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Hautes-Alpes#Monument_Ange_Gardien" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Monument_de_l%27Ange_gardien&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

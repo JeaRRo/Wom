@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -82,7 +82,16 @@
     <tbody>
     <tr>           <td class="desc">Arcey - <b>Oratoire Notre-Dame de la Grêle</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Doubs#Oratoire_Notre_dame_de_Grele" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">Roset-Fluans - <b>Château de Roset-Fluans</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Doubs#Ch.C3.A2teau_Roset-Fluans" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Besançon - <b>Villa Zeltner</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Besançon#Villa_Zeltner" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Villa_Zeltner&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Le Bélieu - <b>Ferme</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA25000084" target="_blank" title="La fiche dans la base Mérimée">PA25000084</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Doubs#Ferme" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente, Image absente </td>  </tr><tr>           <td class="desc">Ornans - <b>Maison Granvelle</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA25000085" target="_blank" title="La fiche dans la base Mérimée">PA25000085</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Doubs#Maison_Granvelle" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

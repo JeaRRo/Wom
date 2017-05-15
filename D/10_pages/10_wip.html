@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -61,10 +61,10 @@
     </script>
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Aube (10) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Aube</b>, la base Mérimée Ouverte décrit <b>367 </b>monuments historiques.
-         <b>342 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>294 </b> de ces monuments.
+         <b>342 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>296 </b> de ces monuments.
 </div><div id="menu">
 <ul>
-<li><a  href="10_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">293</span> Mérimée, Osm, Wp</a></li><li><a  href="10_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">74</span> Mérimée, Wp</a></li><li><a class="active" href="10_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">4</span> Wp </a></li><li><a href="10_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+<li><a  href="10_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">295</span> Mérimée, Osm, Wp</a></li><li><a  href="10_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">72</span> Mérimée, Wp</a></li><li><a class="active" href="10_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">4</span> Wp </a></li><li><a href="10_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
         </div>
     <div id="container">
     <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
@@ -82,7 +82,16 @@
     <tbody>
     <tr>           <td class="desc">Géraudot - <b>Église de Géraudot</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#Eglise_G.C3.A9raudot" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr><tr>           <td class="desc">Lignol-le-Château - <b>Domaine de La Pipière</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#Domaine_de_La_Pipi.C3.A8re_Lignol-le-Ch.C3.A2teau" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Domaine_de_La_Pipi%C3%A8re&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Nogent-sur-Seine - <b>Ancien tribunal et prison de Nogent-sur-Seine</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Aube#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Ancien_tribunal_et_prison_de_Nogent-sur-Seine&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Troyes - <b>Ancien cimetière de l'église de la Madeleine</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Troyes#Jardin_des_innocents.3Cbr.3EAncien_cimeti.C3.A8re_l.27eglise_de_la_Madeleine" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent </td>  </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

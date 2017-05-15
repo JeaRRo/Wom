@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -84,9 +84,18 @@
             <a href="http://www.openstreetmap.org/edit?editor=id&way=113037532" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w113037532" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Cathédrale Saint-Étienne de Châlons" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Château de Louvois </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA51000628" target="_blank" title="La fiche dans la base Mérimée">IA51000628</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/224249502" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=224249502" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w224249502" target="hide" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Louvois" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w224249502&addtags=wikidata=Q2969743" target="_hide" title="Ajout code wikidata avec Josm (Remote control)"> Q2969743 </a> </td> <td class="texte"></td> </tr> </tbody>
+            <td class="lien">  <a href="https://fr.wikipedia.org/wiki/fr:Château de Louvois" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>heritage, heritage:operator, mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w224249502&addtags=wikidata=Q2969743" target="hide" title="Ajout code wikidata avec Josm (Remote control)"> Q2969743 </a> </td> <td class="texte"></td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

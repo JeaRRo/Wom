@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -170,7 +170,7 @@
             <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Loiret#Eglise_Saint-Mesmin_Chapelle-Saint-Mesmin" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
           <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Mesmin de La Chapelle-Saint-Mesmin" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte">  </td> <td class="texte"></td> </tr><tr>           <td class="desc">Châteauneuf-sur-Loire - <b>Château</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00098736" target="_blank" title="La fiche dans la base Mérimée">PA00098736</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/91175766" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=91175766" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w91175766" target="hide" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Loiret#Chateau_Chateauneuf-Loire" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>heritage, mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w91175766&addtags=wikipedia=fr:Château de Châteauneuf-sur-Loire" target="_hide" title="Ajout tag wikipedia avec Josm (Remote control)"> wikipedia </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Châteauneuf-sur-Loire - <b>Eglise Saint-Martial</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00098738" target="_blank" title="La fiche dans la base Mérimée">PA00098738</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/91173621" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Loiret#Chateau_Chateauneuf-Loire" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>heritage, mhs:inscription_date, <a href="http://localhost:8111/load_object?objects=w91175766&addtags=wikipedia=fr:Château de Châteauneuf-sur-Loire" target="hide" title="Ajout tag wikipedia avec Josm (Remote control)"> wikipedia </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Châteauneuf-sur-Loire - <b>Eglise Saint-Martial</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00098738" target="_blank" title="La fiche dans la base Mérimée">PA00098738</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/91173621" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=91173621" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w91173621" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Loiret#Eglise_Saint-Martial_Chateauneuf-Loire" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
           <a href="https://fr.wikipedia.org/wiki/fr:Église Saint-Martial de Châteauneuf-sur-Loire" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date </td> <td class="texte"></td> </tr><tr>           <td class="desc">Châteaurenard - <b>Eglise Saint-Etienne</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00098741" target="_blank" title="La fiche dans la base Mérimée">PA00098741</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/136933560" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
@@ -438,8 +438,17 @@
             <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Loiret#Abbaye_Notre-Dame_Beaugency" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
           <a href="https://fr.wikipedia.org/wiki/fr:Abbaye Notre-Dame de Beaugency" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td><td class="texte"> <b> Osm : </b>name, mhs:inscription_date </td> <td class="texte"></td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
-    <a href='./45_doubles.html' title='Monuments en double' target='blank'> Attention : monuments multiples dans OSM </a><div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+    <a href='./45_doubles.html' title='Monuments en double' target='blank'> Attention : monuments multiples dans OSM </a> <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>
     

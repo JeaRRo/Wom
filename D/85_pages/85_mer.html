@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -61,7 +61,7 @@
     </script>
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Vendée (85) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Vendée</b>, la base Mérimée Ouverte décrit <b>372 </b>monuments historiques.
-         <b>132 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>102 </b> de ces monuments.
+         <b>133 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>102 </b> de ces monuments.
 </div><div id="menu">
 <ul>
 <li><a  href="85_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">100</span> Mérimée, Osm, Wp</a></li><li><a  href="85_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm, Wp</a></li><li><a  href="85_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">269</span> Mérimée, Wp</a></li><li><a  href="85_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Wp </a></li><li><a  href="85_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li><a class="active" href="85_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">3</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
@@ -80,18 +80,24 @@
         </tr>
     </thead>
     <tbody>
-    <tr>           <td class="desc">Chahaignes - <b>Menhir de Gobianne</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00110065" target="_blank" title="La fiche dans la base Mérimée">PA00110065</a></td><td id="info_bloc0" class="infoBloc" > Tags pour OSM   <div id="bloc0" class="dialogBloc">
-                                <iframe name="hide" style="display: None;"></iframe>
-                            <ul><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00110065</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1984-02-08 </li><li></li><li>name=Menhir de Gobianne</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
-                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sables-d'Olonne (Les) - <b>Couvent des Bénédictines de Sainte-Croix (ancien)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00110221" target="_blank" title="La fiche dans la base Mérimée">PA00110221</a></td><td id="info_bloc1" class="infoBloc" > Tags pour OSM   <div id="bloc1" class="dialogBloc">
-                                <iframe name="hide" style="display: None;"></iframe>
-                            <ul><li>historic=monastery</li><li>monastery:type=convent</li><li>start_date=C17</li><li>ref:mhs=PA00110221</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1968-01-05 </li><li></li><li>name=Couvent des Bénédictines de Sainte-Croix (ancien)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
-                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Fontenay-le-Comte - <b>Moulin de La Roche</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA85000019" target="_blank" title="La fiche dans la base Mérimée">PA85000019</a></td><td id="info_bloc2" class="infoBloc" > Tags pour OSM   <div id="bloc2" class="dialogBloc">
-                                <iframe name="hide" style="display: None;"></iframe>
-                            <ul><li>start_date=C19</li><li>ref:mhs=PA85000019</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Moulin de La Roche</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li><p></ul>
+    <tr>           <td class="desc">Chahaignes - <b>Menhir de Gobianne</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00110065" target="_blank" title="La fiche dans la base Mérimée">PA00110065</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00110065</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1984-02-08 </li><li></li><li>name=Menhir de Gobianne</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sables-d'Olonne (Les) - <b>Couvent des Bénédictines de Sainte-Croix (ancien)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00110221" target="_blank" title="La fiche dans la base Mérimée">PA00110221</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>historic=monastery</li><li>monastery:type=convent</li><li>start_date=C17</li><li>ref:mhs=PA00110221</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1968-01-05 </li><li></li><li>name=Couvent des Bénédictines de Sainte-Croix (ancien)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Fontenay-le-Comte - <b>Moulin de La Roche</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA85000019" target="_blank" title="La fiche dans la base Mérimée">PA85000019</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>start_date=C19</li><li>ref:mhs=PA85000019</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Moulin de La Roche</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
                         </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

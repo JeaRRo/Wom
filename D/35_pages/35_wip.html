@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -82,7 +82,16 @@
     <tbody>
     <tr>           <td class="desc">Saint-Aubin-du-Cormier - <b>Église Saint-Aubin</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00006930" target="_blank" title="La fiche dans la base Mérimée">IA00006930</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Aubin_Saint-Aubin-Cormier" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Noyal-Châtillon-sur-Seiche - <b>Domaine de Mouillemuse</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00008020" target="_blank" title="La fiche dans la base Mérimée">IA00008020</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Domaine_Mouillemuse" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Gonlay - <b>Église Saint-Guillaume</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00130764" target="_blank" title="La fiche dans la base Mérimée">IA00130764</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Guillaume_Saint-Gonlay" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Guillaume_de_Saint-Gonlay&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td>  </tr><tr>           <td class="desc">La Fresnais - <b>Église Saint-Méen-et-Sainte-Croix</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35002419" target="_blank" title="La fiche dans la base Mérimée">IA35002419</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Malo-de-Phily - <b>Église Saint-Malo</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA35007385" target="_blank" title="La fiche dans la base Mérimée">IA35007385</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Eglise_Saint-Malo_Saint-Malo-Phily" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Longaulnay - <b>Château de Caradeuc[16]</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00089458" target="_blank" title="La fiche dans la base Mérimée">PA00089458</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ille-et-Vilaine#Ch.C3.A2teau_Caradeuc" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Page monument absente </td>  </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

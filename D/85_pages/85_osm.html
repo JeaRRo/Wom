@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -61,7 +61,7 @@
     </script>
     </head><body>
      <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Vendée (85) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Vendée</b>, la base Mérimée Ouverte décrit <b>372 </b>monuments historiques.
-         <b>132 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>102 </b> de ces monuments.
+         <b>133 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>102 </b> de ces monuments.
 </div><div id="menu">
 <ul>
 <li><a  href="85_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">100</span> Mérimée, Osm, Wp</a></li><li><a  href="85_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm, Wp</a></li><li><a  href="85_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">269</span> Mérimée, Wp</a></li><li><a  href="85_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Wp </a></li><li><a class="active" href="85_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li><a href="85_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">3</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
@@ -83,9 +83,18 @@
     <tr>           <td class="desc">Fougeré
  - <b>Église </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00109115" target="_blank" title="La fiche dans la base Mérimée">PA00109115</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2119971753" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&node=2119971753" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2119971753" target="hide" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=n2119971753&addtags=wikidata=Q3584788" target="_hide" title="Ajout code wikidata avec Josm (Remote control)"> Q3584788 </a> </td> <td class="texte"></td> </tr> </tbody>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=n2119971753&addtags=wikidata=Q3584788" target="hide" title="Ajout code wikidata avec Josm (Remote control)"> Q3584788 </a> </td> <td class="texte"></td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

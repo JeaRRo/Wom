@@ -30,7 +30,7 @@
                     opacity: 0.5,
                 },
             });
-            return false;
+            return true;
         });
 
             $("#table_data").DataTable({
@@ -82,7 +82,7 @@
     <tbody>
     <tr>           <td class="desc"> - <b>Hôtel-Dieu </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046443" target="_blank" title="La fiche dans la base Mérimée">IA00046443</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554164" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=63554164" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63554164" target="hide" title="Editer avec Josm"> Josm </a> </td>
-            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w63554164&addtags=wikidata=Q3348983" target="_hide" title="Ajout code wikidata avec Josm (Remote control)"> Q3348983 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046502" target="_blank" title="La fiche dans la base Mérimée">IA00046502</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554843" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w63554164&addtags=wikidata=Q3348983" target="hide" title="Ajout code wikidata avec Josm (Remote control)"> Q3348983 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc"></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046502" target="_blank" title="La fiche dans la base Mérimée">IA00046502</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/63554843" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&way=63554843" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w63554843" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr><tr>           <td class="desc"> - <b>Tour du Château </b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA00046513" target="_blank" title="La fiche dans la base Mérimée">IA00046513</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1401882510" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
             <a href="http://www.openstreetmap.org/edit?editor=id&node=1401882510" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1401882510" target="hide" title="Editer avec Josm"> Josm </a> </td>
@@ -92,7 +92,16 @@
             <a href="http://www.openstreetmap.org/edit?editor=id&way=39271145" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w39271145" target="hide" title="Editer avec Josm"> Josm </a> </td>
             <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia, wikidata </td> <td class="texte"></td> </tr> </tbody>
     </table>
+    <iframe name="hide" style="display: None;"></iframe>
     </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
     <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
         </body>
     </html>

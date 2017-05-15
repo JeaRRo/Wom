@@ -101,6 +101,8 @@ div.dataTables_wrapper {
  }
  td.infoBloc{
  	font-size: 0.9em;
+ 	color: blue;
+ 	text-decoration:underline;
  }
  div.dialogBloc {
      display:none;
