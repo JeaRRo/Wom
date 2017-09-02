@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Objets OSM multiples avec ref:mhs unique</title>
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  />
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#table_double").DataTable({
+            "columnDefs": [
+        {
+            "targets": [ 2 ],
+            "searchable": false,
+            "sortable" : false,
+        }],
+        "order": [[ 1, 'asc' ]],
+        "scrollX": true,
+        "pageLength": 25,
+        "language": {
+                "search": "Rechercher :",
+                "lengthMenu": "Voir _MENU_ monuments/page",
+                "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                "infoEmpty": "Aucun résultat",
+                "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                "paginate": {
+                    "first":      "Première",
+                    "last":       "Dernière",
+                    "next":       "Suivante",
+                    "previous":   "Précédente"
+                    },
+                    }
+        });
+        $("tr").click(function(){
+            $("tr").each(function(){
+            $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+        });
+});
+    </script>
+    <body>
+        <div id="bandeau"> <h4 class='Titre'> </h4></div>
+        <div id="menu">
+            <ul>
+                <li class="retour"><a href="973_merosmwip.html" title="" >Retour</a></li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    <table id="table_double" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Liste des Ref:Mhs correspondant à plusieurs objets OSM du département 973 </caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>lien WP</th>
+        </tr>
+    </thead>
+    
+<tbody><tr>
+ <td class="desc">Saint-Laurent-du-Maroni - <b>Ancien hôpital André-Bouron</b> - Général-de-Gaulle (avenue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105912" target="_blank" title="La fiche dans la base Mérimée">PA00105912</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075490469" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5075490469" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075490469" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guyane#Hopital_Andre-Bouron" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Hôpital André-Bouron" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105912" target="_blank" title="La fiche dans la base Mérimée">PA00105912</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075505610" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=5075505610" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075505610" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Laurent-du-Maroni - <b>Trésorerie</b> - Général-de-Gaulle (avenue du) 5</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105913" target="_blank" title="La fiche dans la base Mérimée">PA00105913</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/7534724" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&relation=7534724" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r7534724" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guyane#Tresorerie_Saint-Laurent-Maroni" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Trésorerie de Saint-Laurent-du-Maroni" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105913" target="_blank" title="La fiche dans la base Mérimée">PA00105913</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/7534745" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&relation=7534745" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r7534745" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Laurent-du-Maroni - <b>Subdivision de l'équipement</b> - Ponts-et-Chaussées (rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105915" target="_blank" title="La fiche dans la base Mérimée">PA00105915</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075490471" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5075490471" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075490471" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guyane#Subdivision_Equipement" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Subdivision de l'équipement (Saint-Laurent-du-Maroni)" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105915" target="_blank" title="La fiche dans la base Mérimée">PA00105915</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075505612" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=5075505612" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075505612" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Laurent-du-Maroni - <b>Résidence du Sous-Préfet</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105923" target="_blank" title="La fiche dans la base Mérimée">PA00105923</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075490470" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5075490470" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075490470" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guyane#Residence_Sous-Prefet" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Résidence du sous-préfet (Saint-Laurent-du-Maroni)" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105923" target="_blank" title="La fiche dans la base Mérimée">PA00105923</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075505611" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=5075505611" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075505611" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Cayenne - <b>Ancien Hôpital Jean Martial</b> - Léopold-Héder (avenue) 2 ; Fiedmont (rue) 8</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105930" target="_blank" title="La fiche dans la base Mérimée">PA00105930</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075490467" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5075490467" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075490467" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Cayenne#Hopital_Jean_Martial" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Hôpital Jean-Martial" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00105930" target="_blank" title="La fiche dans la base Mérimée">PA00105930</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075505608" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=5075505608" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075505608" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Matoury - <b>Ancien fort Trio</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00135689" target="_blank" title="La fiche dans la base Mérimée">PA00135689</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075490468" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5075490468" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075490468" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guyane#Fort_Trio" target="_blank" title="Description sur page Wp départementale">  WP1 </a> -
+      <a href="https://fr.wikipedia.org/wiki/fr:Fort Trio" target="_blank" title ="Lien direct à partir du tag wikipedia sur Osm" > WP2 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00135689" target="_blank" title="La fiche dans la base Mérimée">PA00135689</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5075505609" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=5075505609" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5075505609" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+
+</tbody> 
+ </table> 
+ <iframe name="hide" style="display: None;"></iframe> 
+ </div>
+<div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    
