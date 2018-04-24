@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques du Puy-de-Dôme (63) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département du Puy-de-Dôme</b>, la base Mérimée Ouverte décrit <b>848 </b>monuments historiques.
+         <b>183 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>662 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="63_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">541</span> Mérimée, Osm, Wp</a></li><li><a  href="63_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">168</span> Mérimée, Wp</a></li><li><a  href="63_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Wp </a></li><li><a  href="63_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">121</span> Mérimée, Osm</a></li><li><a class="active" href="63_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">18</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Clermont-Ferrand - <b>Ancien collège des Jésuites</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00091985" target="_blank" title="La fiche dans la base Mérimée">PA00091985</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>start_date=C17</li><li>ref:mhs=PA00091985</li><li>wikidata=Q15948425</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1962-10-25 </li><li></li><li>name=Ancien collège des Jésuites</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Galerie souterraine gallo-romaine (égout)</b> - Victoire (place de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00091996" target="_blank" title="La fiche dans la base Mérimée">PA00091996</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>ref:mhs=PA00091996</li><li>wikidata=Q22928180</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1952-04-01 </li><li></li><li>name=Galerie souterraine gallo-romaine (égout)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Maison</b> - Philippe-Marcombes (rue) 9, anciennement Hôtel-de-Ville (rue de l')</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092026" target="_blank" title="La fiche dans la base Mérimée">PA00092026</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>building=house</li><li>historic=building</li><li>ref:mhs=PA00092026</li><li>wikidata=Q22928228</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1926-07-17 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Menhir de la Sarre</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092034" target="_blank" title="La fiche dans la base Mérimée">PA00092034</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00092034</li><li>wikidata=Q22928246</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1965-04-21 </li><li></li><li>name=Menhir de la Sarre</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Menhir de Sainte-Anne, de Pierre-Longue ou de Beaulieu, dit borne milliaire</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092035" target="_blank" title="La fiche dans la base Mérimée">PA00092035</a></td><td id="info_bloc4" class="infoBloc" data-clipboard-target="#data4"> Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><div id="data4"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00092035</li><li>wikidata=Q22928247</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1924-01-17 </li><li></li><li>name=Menhir de Sainte-Anne, de Pierre-Longue ou de Beaulieu, dit borne milliaire</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Couvent du Bon Pasteur ou des Cordeliers, à Montferrand</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092042" target="_blank" title="La fiche dans la base Mérimée">PA00092042</a></td><td id="info_bloc5" class="infoBloc" data-clipboard-target="#data5"> Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><div id="data5"><li>historic=monastery</li><li>monastery:type=convent</li><li>start_date=C16</li><li>ref:mhs=PA00092042</li><li>wikidata=Q22928254</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1926-11-12 </li><li></li><li>name=Couvent du Bon Pasteur ou des Cordeliers, à Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Ancien couvent des Ursulines de Montferrand</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092043" target="_blank" title="La fiche dans la base Mérimée">PA00092043</a></td><td id="info_bloc6" class="infoBloc" data-clipboard-target="#data6"> Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><div id="data6"><li>start_date=C12</li><li>ref:mhs=PA00092043</li><li>wikidata=Q22928257</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1986-10-27 </li><li></li><li>name=Ancien couvent des Ursulines de Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Ancien couvent de la Visitation, à Montferrand</b> - Sainte-Marie (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092044" target="_blank" title="La fiche dans la base Mérimée">PA00092044</a></td><td id="info_bloc7" class="infoBloc" data-clipboard-target="#data7"> Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                            <ul><div id="data7"><li>start_date=C15</li><li>ref:mhs=PA00092044</li><li>wikidata=Q22928260</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1926-11-09 </li><li></li><li>name=Ancien couvent de la Visitation, à Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Fontaine du Lion, à Montferrand</b> - André-Malraux (place)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092046" target="_blank" title="La fiche dans la base Mérimée">PA00092046</a></td><td id="info_bloc8" class="infoBloc" data-clipboard-target="#data8"> Tags pour OSM   <div id="bloc8" class="dialogBloc">
+                            <ul><div id="data8"><li>amenity=fountain</li><li>historic=yes</li><li>start_date=C17</li><li>ref:mhs=PA00092046</li><li>wikidata=Q22928261</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1931-04-17 </li><li></li><li>name=Fontaine du Lion, à Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Maison, à Montferrand</b> - Jules-Guesde (rue) 21, anciennement Fontaine (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092070" target="_blank" title="La fiche dans la base Mérimée">PA00092070</a></td><td id="info_bloc9" class="infoBloc" data-clipboard-target="#data9"> Tags pour OSM   <div id="bloc9" class="dialogBloc">
+                            <ul><div id="data9"><li>start_date=C16</li><li>ref:mhs=PA00092070</li><li>wikidata=Q22928303</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1926-11-12 </li><li></li><li>name=Maison, à Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Hôtel de la Chanterie, à Montferrand</b> - Montorcier (rue) 2, 2 bis (anciennement 4)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092073" target="_blank" title="La fiche dans la base Mérimée">PA00092073</a></td><td id="info_bloc10" class="infoBloc" data-clipboard-target="#data10"> Tags pour OSM   <div id="bloc10" class="dialogBloc">
+                            <ul><div id="data10"><li>historic=building</li><li>start_date=C15</li><li>ref:mhs=PA00092073</li><li>wikidata=Q22928308</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1922-08-09 </li><li></li><li>name=Hôtel de la Chanterie, à Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Maison, à Montferrand</b> - Séminaire (rue du) 2 ; Jules-Guesde (à l'angle de la rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092079" target="_blank" title="La fiche dans la base Mérimée">PA00092079</a></td><td id="info_bloc11" class="infoBloc" data-clipboard-target="#data11"> Tags pour OSM   <div id="bloc11" class="dialogBloc">
+                            <ul><div id="data11"><li>ref:mhs=PA00092079</li><li>wikidata=Q22928320</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1926-11-09 </li><li></li><li>name=Maison, à Montferrand</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Hôtel de Montboissier</b> - Savaron (rue) 10</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092486" target="_blank" title="La fiche dans la base Mérimée">PA00092486</a></td><td id="info_bloc12" class="infoBloc" data-clipboard-target="#data12"> Tags pour OSM   <div id="bloc12" class="dialogBloc">
+                            <ul><div id="data12"><li>historic=building</li><li>start_date=C15</li><li>ref:mhs=PA00092486</li><li>wikidata=Q22992776</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1989-08-21 </li><li></li><li>name=Hôtel de Montboissier</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Plateau dit des Côtes de Clermont (également sur communes de Blanzat, Durtol et Nohanent)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092499" target="_blank" title="La fiche dans la base Mérimée">PA00092499</a></td><td id="info_bloc13" class="infoBloc" data-clipboard-target="#data13"> Tags pour OSM   <div id="bloc13" class="dialogBloc">
+                            <ul><div id="data13"><li>ref:mhs=PA00092499</li><li>wikidata=Q22992808</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1986-12-15 </li><li></li><li>name=Plateau dit des Côtes de Clermont (également sur communes de Blanzat, Durtol et Nohanent)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Ancien couvent de l'Oratoire</b> - Oratoire (rue de l') 8, 10, 10bis, 14, 16</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00092507" target="_blank" title="La fiche dans la base Mérimée">PA00092507</a></td><td id="info_bloc14" class="infoBloc" data-clipboard-target="#data14"> Tags pour OSM   <div id="bloc14" class="dialogBloc">
+                            <ul><div id="data14"><li>start_date=C17</li><li>ref:mhs=PA00092507</li><li>wikidata=Q22992864</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1990-03-23 </li><li></li><li>name=Ancien couvent de l'Oratoire</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Ancien hôpital-sanatorium Sabourin</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA63000030" target="_blank" title="La fiche dans la base Mérimée">PA63000030</a></td><td id="info_bloc15" class="infoBloc" data-clipboard-target="#data15"> Tags pour OSM   <div id="bloc15" class="dialogBloc">
+                            <ul><div id="data15"><li>start_date=C20</li><li>ref:mhs=PA63000030</li><li>wikidata=Q3145124</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2000-03-24 </li><li></li><li>name=Ancien hôpital-sanatorium Sabourin</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Hôtel-Dieu</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA63000072" target="_blank" title="La fiche dans la base Mérimée">PA63000072</a></td><td id="info_bloc16" class="infoBloc" data-clipboard-target="#data16"> Tags pour OSM   <div id="bloc16" class="dialogBloc">
+                            <ul><div id="data16"><li>start_date=C18</li><li>ref:mhs=PA63000072</li><li>wikidata=Q15950376</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2004-12-29 </li><li></li><li>name=Hôtel-Dieu</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clermont-Ferrand - <b>Sanctuaire de Trémonteix</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA63000111" target="_blank" title="La fiche dans la base Mérimée">PA63000111</a></td><td id="info_bloc17" class="infoBloc" data-clipboard-target="#data17"> Tags pour OSM   <div id="bloc17" class="dialogBloc">
+                            <ul><div id="data17"><li>ref:mhs=PA63000111</li><li>wikidata=Q22997583</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2012-11-06 </li><li></li><li>name=Sanctuaire de Trémonteix</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

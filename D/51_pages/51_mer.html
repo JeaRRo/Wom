@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Marne (51) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Marne</b>, la base Mérimée Ouverte décrit <b>398 </b>monuments historiques.
+         <b>62 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>341 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="51_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">278</span> Mérimée, Osm, Wp</a></li><li><a  href="51_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a  href="51_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">32</span> Mérimée, Wp</a></li><li><a  href="51_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">60</span> Mérimée, Osm</a></li><li><a  href="51_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li><a class="active" href="51_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">28</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Arcis-le-Ponsart - <b>Château</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078571" target="_blank" title="La fiche dans la base Mérimée">PA00078571</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>building=yes</li><li>historic=castle</li><li>ref:mhs=PA00078571</li><li>wikidata=Q22915523</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1931-09-24 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Avize - <b>Fontaine en grès, dans l'école de viticulture</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078577" target="_blank" title="La fiche dans la base Mérimée">PA00078577</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>amenity=fountain</li><li>historic=yes</li><li>start_date=C19</li><li>ref:mhs=PA00078577</li><li>wikidata=Q22915528</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1961-11-10 </li><li></li><li>name=Fontaine en grès, dans l'école de viticulture</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Avize - <b>Menhir de Haute-Borne (également sur communes de Cramant et Oiry)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078578" target="_blank" title="La fiche dans la base Mérimée">PA00078578</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00078578</li><li>wikidata=Q22915529</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1889 </li><li></li><li>name=Menhir de Haute-Borne (également sur communes de Cramant et Oiry)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Barbonne-Fayel - <b>Dolmen sous tumulus</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078581" target="_blank" title="La fiche dans la base Mérimée">PA00078581</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=dolmen</li><li>ref:mhs=PA00078581</li><li>wikidata=Q22915530</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1921-05-17 </li><li></li><li>name=Dolmen sous tumulus</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Baudement - <b>Tumulus</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078582" target="_blank" title="La fiche dans la base Mérimée">PA00078582</a></td><td id="info_bloc4" class="infoBloc" data-clipboard-target="#data4"> Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><div id="data4"><li>historic=archaeological_site</li><li>site_type=tumulus</li><li>ref:mhs=PA00078582</li><li>wikidata=Q19546026</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1934-11-19 </li><li></li><li>name=Tumulus</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Bussy-le-Château - <b>Tumulus</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078602" target="_blank" title="La fiche dans la base Mérimée">PA00078602</a></td><td id="info_bloc5" class="infoBloc" data-clipboard-target="#data5"> Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><div id="data5"><li>historic=archaeological_site</li><li>site_type=tumulus</li><li>ref:mhs=PA00078602</li><li>wikidata=Q18746221</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1930-03-13 </li><li></li><li>name=Tumulus</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Bussy-le-Château - <b>Tumulus</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078603" target="_blank" title="La fiche dans la base Mérimée">PA00078603</a></td><td id="info_bloc6" class="infoBloc" data-clipboard-target="#data6"> Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><div id="data6"><li>historic=archaeological_site</li><li>site_type=tumulus</li><li>ref:mhs=PA00078603</li><li>wikidata=Q18746221</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1930-07-25 </li><li></li><li>name=Tumulus</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Châtillon-sur-Marne - <b>Prieuré de Binson</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078663" target="_blank" title="La fiche dans la base Mérimée">PA00078663</a></td><td id="info_bloc7" class="infoBloc" data-clipboard-target="#data7"> Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                            <ul><div id="data7"><li>historic=monastery</li><li>start_date=C12</li><li>ref:mhs=PA00078663</li><li>wikidata=Q19570959</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1922-01-05 </li><li></li><li>name=Prieuré de Binson</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Cheppe (La) - <b>Camp romain</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078667" target="_blank" title="La fiche dans la base Mérimée">PA00078667</a></td><td id="info_bloc8" class="infoBloc" data-clipboard-target="#data8"> Tags pour OSM   <div id="bloc8" class="dialogBloc">
+                            <ul><div id="data8"><li>ref:mhs=PA00078667</li><li>wikidata=Q18749222</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1862 </li><li></li><li>name=Camp romain</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Chouilly - <b>Grotte néolithique, dite "Saran IV"</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078668" target="_blank" title="La fiche dans la base Mérimée">PA00078668</a></td><td id="info_bloc9" class="infoBloc" data-clipboard-target="#data9"> Tags pour OSM   <div id="bloc9" class="dialogBloc">
+                            <ul><div id="data9"><li>natural=cave_entrance</li><li>ref:mhs=PA00078668</li><li>wikidata=Q22915601</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1961-03-10 </li><li></li><li>name=Grotte néolithique, dite Saran IV</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Coizard-Joches - <b>Terrains et grottes préhistoriques</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078670" target="_blank" title="La fiche dans la base Mérimée">PA00078670</a></td><td id="info_bloc10" class="infoBloc" data-clipboard-target="#data10"> Tags pour OSM   <div id="bloc10" class="dialogBloc">
+                            <ul><div id="data10"><li>ref:mhs=PA00078670</li><li>wikidata=Q18785582</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1926-05-14 </li><li></li><li>name=Terrains et grottes préhistoriques</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Congy - <b>Menhir de l'étang de Chénevry</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078672" target="_blank" title="La fiche dans la base Mérimée">PA00078672</a></td><td id="info_bloc11" class="infoBloc" data-clipboard-target="#data11"> Tags pour OSM   <div id="bloc11" class="dialogBloc">
+                            <ul><div id="data11"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00078672</li><li>wikidata=Q16782615</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1889 </li><li></li><li>name=Menhir de l'étang de Chénevry</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Courjeonnet - <b>Terrain avec les grottes préhistoriques</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078680" target="_blank" title="La fiche dans la base Mérimée">PA00078680</a></td><td id="info_bloc12" class="infoBloc" data-clipboard-target="#data12"> Tags pour OSM   <div id="bloc12" class="dialogBloc">
+                            <ul><div id="data12"><li>ref:mhs=PA00078680</li><li>wikidata=Q22915610</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1926-05-14 </li><li></li><li>name=Terrain avec les grottes préhistoriques</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Cramant - <b>Menhir de Haute-Borne (également sur communes de Oiry et Avizé)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078685" target="_blank" title="La fiche dans la base Mérimée">PA00078685</a></td><td id="info_bloc13" class="infoBloc" data-clipboard-target="#data13"> Tags pour OSM   <div id="bloc13" class="dialogBloc">
+                            <ul><div id="data13"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00078685</li><li>wikidata=Q22915615</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1889 </li><li></li><li>name=Menhir de Haute-Borne (également sur communes de Oiry et Avizé)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Fontaine-Denis-Nuisy - <b>Dolmen de Nuisy dit "Les Pierres de Sainte-Geneviève"</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078712" target="_blank" title="La fiche dans la base Mérimée">PA00078712</a></td><td id="info_bloc14" class="infoBloc" data-clipboard-target="#data14"> Tags pour OSM   <div id="bloc14" class="dialogBloc">
+                            <ul><div id="data14"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=dolmen</li><li>ref:mhs=PA00078712</li><li>wikidata=Q48758967</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1889 </li><li></li><li>name=Dolmen de Nuisy dit Les Pierres de Sainte-Geneviève</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Maurupt-le-Montois - <b>Eglise</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078743" target="_blank" title="La fiche dans la base Mérimée">PA00078743</a></td><td id="info_bloc15" class="infoBloc" data-clipboard-target="#data15"> Tags pour OSM   <div id="bloc15" class="dialogBloc">
+                            <ul><div id="data15"><li>amenity=place_of_worship</li><li>religion=christian</li><li>building=church</li><li>ref:mhs=PA00078743</li><li>wikidata=Q22915661</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1875 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Montmirail - <b>Dolmen du Trou-du-Boeuf (restes)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078746" target="_blank" title="La fiche dans la base Mérimée">PA00078746</a></td><td id="info_bloc16" class="infoBloc" data-clipboard-target="#data16"> Tags pour OSM   <div id="bloc16" class="dialogBloc">
+                            <ul><div id="data16"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=dolmen</li><li>ref:mhs=PA00078746</li><li>wikidata=Q22915664</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1925-05-13 </li><li></li><li>name=Dolmen du Trou-du-Boeuf (restes)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Oiry - <b>Menhir de Haute-Borne (également sur communes de Cramant et Avizé)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078753" target="_blank" title="La fiche dans la base Mérimée">PA00078753</a></td><td id="info_bloc17" class="infoBloc" data-clipboard-target="#data17"> Tags pour OSM   <div id="bloc17" class="dialogBloc">
+                            <ul><div id="data17"><li>historic=archaeological_site</li><li>site_type=megalith</li><li>megalith_type=menhir</li><li>ref:mhs=PA00078753</li><li>wikidata=Q22915672</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1889 </li><li></li><li>name=Menhir de Haute-Borne (également sur communes de Cramant et Avizé)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sainte-Menehould - <b>Immeubles</b> - Austerlitz (place d')</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078843" target="_blank" title="La fiche dans la base Mérimée">PA00078843</a></td><td id="info_bloc18" class="infoBloc" data-clipboard-target="#data18"> Tags pour OSM   <div id="bloc18" class="dialogBloc">
+                            <ul><div id="data18"><li>ref:mhs=PA00078843</li><li>wikidata=Q22915740</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1952-02-27 </li><li></li><li>name=Immeubles</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sainte-Menehould - <b>Immeubles</b> - Général-Leclerc (place du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078844" target="_blank" title="La fiche dans la base Mérimée">PA00078844</a></td><td id="info_bloc19" class="infoBloc" data-clipboard-target="#data19"> Tags pour OSM   <div id="bloc19" class="dialogBloc">
+                            <ul><div id="data19"><li>start_date=C18</li><li>ref:mhs=PA00078844</li><li>wikidata=Q22915741</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1952-02-27 </li><li></li><li>name=Immeubles</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sommepy-Tahure - <b>Calvaire du Bois de Vignon</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078860" target="_blank" title="La fiche dans la base Mérimée">PA00078860</a></td><td id="info_bloc20" class="infoBloc" data-clipboard-target="#data20"> Tags pour OSM   <div id="bloc20" class="dialogBloc">
+                            <ul><div id="data20"><li>historic=wayside_cross</li><li>ref:mhs=PA00078860</li><li>wikidata=Q22915768</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1922-06-12 </li><li></li><li>name=Calvaire du Bois de Vignon</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Villeneuve-la-Lionne - <b>Eglise de Belleau (restes)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078897" target="_blank" title="La fiche dans la base Mérimée">PA00078897</a></td><td id="info_bloc21" class="infoBloc" data-clipboard-target="#data21"> Tags pour OSM   <div id="bloc21" class="dialogBloc">
+                            <ul><div id="data21"><li>amenity=place_of_worship</li><li>religion=christian</li><li>building=church</li><li>start_date=C14</li><li>ref:mhs=PA00078897</li><li>wikidata=Q22915798</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1932-10-04 </li><li></li><li>name=Église de Belleau (restes)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Villers-en-Argonne - <b>Eglise</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078903" target="_blank" title="La fiche dans la base Mérimée">PA00078903</a></td><td id="info_bloc22" class="infoBloc" data-clipboard-target="#data22"> Tags pour OSM   <div id="bloc22" class="dialogBloc">
+                            <ul><div id="data22"><li>amenity=place_of_worship</li><li>religion=christian</li><li>building=church</li><li>ref:mhs=PA00078903</li><li>wikidata=Q22915804</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1942-07-11 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Villevenard - <b>Grottes sépulcrales néolithiques</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00078906" target="_blank" title="La fiche dans la base Mérimée">PA00078906</a></td><td id="info_bloc23" class="infoBloc" data-clipboard-target="#data23"> Tags pour OSM   <div id="bloc23" class="dialogBloc">
+                            <ul><div id="data23"><li>ref:mhs=PA00078906</li><li>wikidata=Q22915807</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1926-05-14 </li><li></li><li>name=Grottes sépulcrales néolithiques</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Gueux - <b>Circuit automobile de Gueux</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA51000015" target="_blank" title="La fiche dans la base Mérimée">PA51000015</a></td><td id="info_bloc24" class="infoBloc" data-clipboard-target="#data24"> Tags pour OSM   <div id="bloc24" class="dialogBloc">
+                            <ul><div id="data24"><li>start_date=C20</li><li>ref:mhs=PA51000015</li><li>wikidata=Q171574</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2009-05-07 </li><li></li><li>name=Circuit automobile de Gueux</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Epernay - <b>Hôtel de Ville, ancien hôtel Auban-Moët</b> - Champagne (avenue de) 7</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA51000018" target="_blank" title="La fiche dans la base Mérimée">PA51000018</a></td><td id="info_bloc25" class="infoBloc" data-clipboard-target="#data25"> Tags pour OSM   <div id="bloc25" class="dialogBloc">
+                            <ul><div id="data25"><li>historic=building</li><li>start_date=C19</li><li>ref:mhs=PA51000018</li><li>wikidata=Q15950757</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2012-06-26 </li><li></li><li>name=Hôtel de Ville, ancien hôtel Auban-Moët</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Châtillon-sur-Marne - <b>Bâtiment de l'ancien tribunal du bailliage</b> - Hôtel-de-Ville (rue de l') 4</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA51000020" target="_blank" title="La fiche dans la base Mérimée">PA51000020</a></td><td id="info_bloc26" class="infoBloc" data-clipboard-target="#data26"> Tags pour OSM   <div id="bloc26" class="dialogBloc">
+                            <ul><div id="data26"><li>start_date=C17</li><li>ref:mhs=PA51000020</li><li>wikidata=Q22979595</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2012-12-06 </li><li></li><li>name=Bâtiment de l'ancien tribunal du bailliage</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Épernay - <b>Ancien établissement de viticulture de la maison Moët-et-Chandon, dit " Le Fort Chabrol "</b> - Mardeuil (avenue de) 1</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA51000021" target="_blank" title="La fiche dans la base Mérimée">PA51000021</a></td><td id="info_bloc27" class="infoBloc" data-clipboard-target="#data27"> Tags pour OSM   <div id="bloc27" class="dialogBloc">
+                            <ul><div id="data27"><li>start_date=C19</li><li>ref:mhs=PA51000021</li><li>wikidata=Q19753095</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2012-12-06 </li><li></li><li>name=Ancien établissement de viticulture de la maison Moët-et-Chandon, dit  Le Fort Chabrol </li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
