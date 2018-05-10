@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques du Loiret (45) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département du Loiret</b>, la base Mérimée Ouverte décrit <b>444 </b>monuments historiques.
+         <b>109 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>315 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="45_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">302</span> Mérimée, Osm, Wp</a></li><li><a  href="45_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">134</span> Mérimée, Wp</a></li><li><a  href="45_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">6</span> Wp </a></li><li><a  href="45_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">13</span> Osm</a></li><li><a class="active" href="45_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">8</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Ménestreau-en-Villette - <b>Église Notre-Dame</b> - 11 novembre (place du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000043" target="_blank" title="La fiche dans la base Mérimée">PA45000043</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>start_date=C12</li><li>ref:mhs=PA45000043</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-03-09 </li><li></li><li>name=Église Notre-Dame</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Hôtel Tassin de Montcour</b> - Bretonnerie (rue) 3</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000044" target="_blank" title="La fiche dans la base Mérimée">PA45000044</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>historic=building</li><li>start_date=C18</li><li>ref:mhs=PA45000044</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-03-09 </li><li></li><li>name=Hôtel Tassin de Montcour</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Hôtel Tassin de Villiers</b> - Bretonnerie (rue) 1b</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000045" target="_blank" title="La fiche dans la base Mérimée">PA45000045</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>historic=building</li><li>start_date=C18</li><li>ref:mhs=PA45000045</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-03-09 </li><li></li><li>name=Hôtel Tassin de Villiers</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Monument dit « Le premier toit »</b> - Pasteur (parc)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000047" target="_blank" title="La fiche dans la base Mérimée">PA45000047</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>ref:mhs=PA45000047</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-11-20</li><li></li><li>name=Monument dit « Le premier toit »</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Monument à Charles Péguy</b> - Charles Péguy (square)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000048" target="_blank" title="La fiche dans la base Mérimée">PA45000048</a></td><td id="info_bloc4" class="infoBloc" data-clipboard-target="#data4"> Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><div id="data4"><li>ref:mhs=PA45000048</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-11-20</li><li></li><li>name=Monument à Charles Péguy</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Monument à Jeanne dArc</b> - Tourelles (square de la rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000049" target="_blank" title="La fiche dans la base Mérimée">PA45000049</a></td><td id="info_bloc5" class="infoBloc" data-clipboard-target="#data5"> Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><div id="data5"><li>ref:mhs=PA45000049</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-11-20</li><li></li><li>name=Monument à Jeanne dArc</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Fontaine monumentale dite « La Source humaine »</b> - Pasteur (parc)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000050" target="_blank" title="La fiche dans la base Mérimée">PA45000050</a></td><td id="info_bloc6" class="infoBloc" data-clipboard-target="#data6"> Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><div id="data6"><li>amenity=fountain</li><li>historic=yes</li><li>ref:mhs=PA45000050</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-11-20</li><li></li><li>name=Fontaine monumentale dite « La Source humaine »</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Orléans - <b>Monument équestre à Jeanne dArc</b> - Martroi (place du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA45000051" target="_blank" title="La fiche dans la base Mérimée">PA45000051</a></td><td id="info_bloc7" class="infoBloc" data-clipboard-target="#data7"> Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                            <ul><div id="data7"><li>ref:mhs=PA45000051</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-11-20</li><li></li><li>name=Monument équestre à Jeanne dArc</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
