@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques des Hauts-de-Seine (92) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département des Hauts-de-Seine</b>, la base Mérimée Ouverte décrit <b>161 </b>monuments historiques.
+         <b>0 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>169 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="92_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">101</span> Mérimée, Osm, Wp</a></li><li><a  href="92_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">4</span> Osm, Wp</a></li><li><a  href="92_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">46</span> Mérimée, Osm</a></li><li><a  href="92_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">18</span> Osm</a></li><li><a class="active" href="92_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">14</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Antony - <b>Folie (ancienne)</b> - Prosper-Legouté (rue) 4</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088058" target="_blank" title="La fiche dans la base Mérimée">PA00088058</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>ref:mhs=PA00088058</li><li>wikidata=Q22924298</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1974-08-07 </li><li></li><li>name=Folie (ancienne)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Antony - <b>Maison de la Belle Levantine</b> - Auguste-Mounié (rue) 69</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088059" target="_blank" title="La fiche dans la base Mérimée">PA00088059</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>building=house</li><li>historic=building</li><li>start_date=C18</li><li>ref:mhs=PA00088059</li><li>wikidata=Q3278985</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1973-11-21 </li><li></li><li>name=Maison de la Belle Levantine</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Asnières-sur-Seine - <b>Dépôt de bois (ancien)</b> - Carbonnets (impasse des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088063" target="_blank" title="La fiche dans la base Mérimée">PA00088063</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>start_date=C19</li><li>ref:mhs=PA00088063</li><li>wikidata=Q2780619</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1985-08-13 </li><li></li><li>name=Dépôt de bois (ancien)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Bagneux - <b>Cadran solaire</b> - Sceaux (rue de) 6</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088066" target="_blank" title="La fiche dans la base Mérimée">PA00088066</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>start_date=C17</li><li>ref:mhs=PA00088066</li><li>wikidata=Q22924301</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1935-06-30 </li><li></li><li>name=Cadran solaire</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Rueil-Malmaison - <b>Hippodrome de Saint-Cloud (également sur commune de Saint-Cloud)</b> - Yser (rue de l') 22 à 30 ; Lieutenant-Colonel-de-Montbrison (rue du) 99 à 111</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088139" target="_blank" title="La fiche dans la base Mérimée">PA00088139</a></td><td id="info_bloc4" class="infoBloc" data-clipboard-target="#data4"> Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><div id="data4"><li>start_date=C20</li><li>ref:mhs=PA00088139</li><li>wikidata=Q3135925</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1986-06-06 </li><li></li><li>name=Hippodrome de Saint-Cloud (également sur commune de Saint-Cloud)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Cloud - <b>Domaine national de Saint-Cloud (également sur communes de Sèvres, Ville-d'Avray, Marnes-la-Coquette)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088141" target="_blank" title="La fiche dans la base Mérimée">PA00088141</a></td><td id="info_bloc5" class="infoBloc" data-clipboard-target="#data5"> Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><div id="data5"><li>start_date=C17</li><li>ref:mhs=PA00088141</li><li>heritage:operator=mhs</li><li></li><li>name=Domaine national de Saint-Cloud (également sur communes de Sèvres, Ville-d'Avray, Marnes-la-Coquette)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Suresnes - <b>Ecole de plein air</b> - Landes (avenue des) 58-60 ; Procession (rue de la) 96 ; Pas-Saint-Maurice (rue du) 70 ; Motte (chemin) 15</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088156" target="_blank" title="La fiche dans la base Mérimée">PA00088156</a></td><td id="info_bloc6" class="infoBloc" data-clipboard-target="#data6"> Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><div id="data6"><li>start_date=C20</li><li>ref:mhs=PA00088156</li><li>wikidata=Q3577903</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=2002-04-24 </li><li></li><li>name=Ecole de plein air</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sèvres - <b>Domaine national de Saint-Cloud : ancienne école nationale de céramique</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088174" target="_blank" title="La fiche dans la base Mérimée">PA00088174</a></td><td id="info_bloc7" class="infoBloc" data-clipboard-target="#data7"> Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                            <ul><div id="data7"><li>ref:mhs=PA00088174</li><li>wikidata=Q653307</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Domaine national de Saint-Cloud : ancienne école nationale de céramique</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Sèvres - <b>Domaine national de Saint-Cloud (manufacture nationale de porcelaine)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088176" target="_blank" title="La fiche dans la base Mérimée">PA00088176</a></td><td id="info_bloc8" class="infoBloc" data-clipboard-target="#data8"> Tags pour OSM   <div id="bloc8" class="dialogBloc">
+                            <ul><div id="data8"><li>ref:mhs=PA00088176</li><li>wikidata=Q653307</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Domaine national de Saint-Cloud (manufacture nationale de porcelaine)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Nanterre - <b>Ancienne usine du Docteur Pierre, actuellement usine Natalys</b> - Général-Galliéni (avenue du) 18</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00088180" target="_blank" title="La fiche dans la base Mérimée">PA00088180</a></td><td id="info_bloc9" class="infoBloc" data-clipboard-target="#data9"> Tags pour OSM   <div id="bloc9" class="dialogBloc">
+                            <ul><div id="data9"><li>start_date=C20</li><li>ref:mhs=PA00088180</li><li>wikidata=Q22924386</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1992-12-08 </li><li></li><li>name=Ancienne usine du Docteur Pierre, actuellement usine Natalys</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Marnes-la-Coquette - <b>Domaine national de Saint-Cloud</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00133025" target="_blank" title="La fiche dans la base Mérimée">PA00133025</a></td><td id="info_bloc10" class="infoBloc" data-clipboard-target="#data10"> Tags pour OSM   <div id="bloc10" class="dialogBloc">
+                            <ul><div id="data10"><li>ref:mhs=PA00133025</li><li>wikidata=Q2030715</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Domaine national de Saint-Cloud</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Ville-d'Avray - <b>Domaine national de Saint-Cloud</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00133026" target="_blank" title="La fiche dans la base Mérimée">PA00133026</a></td><td id="info_bloc11" class="infoBloc" data-clipboard-target="#data11"> Tags pour OSM   <div id="bloc11" class="dialogBloc">
+                            <ul><div id="data11"><li>ref:mhs=PA00133026</li><li>wikidata=Q2030715</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Domaine national de Saint-Cloud</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Boulogne-Billancourt - <b>Domaine dit d'Albert Kahn</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA92000023" target="_blank" title="La fiche dans la base Mérimée">PA92000023</a></td><td id="info_bloc12" class="infoBloc" data-clipboard-target="#data12"> Tags pour OSM   <div id="bloc12" class="dialogBloc">
+                            <ul><div id="data12"><li>start_date=C20</li><li>ref:mhs=PA92000023</li><li>wikidata=Q3330509</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-12-16 </li><li></li><li>name=Domaine dit d'Albert Kahn</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Clamart - <b>Maison</b> - Chef de Ville (rue) 9 ; Pierre et Marie Curie (rue) 10</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA92000160" target="_blank" title="La fiche dans la base Mérimée">PA92000160</a></td><td id="info_bloc13" class="infoBloc" data-clipboard-target="#data13"> Tags pour OSM   <div id="bloc13" class="dialogBloc">
+                            <ul><div id="data13"><li>building=house</li><li>historic=building</li><li>ref:mhs=PA92000160</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-11-30</li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

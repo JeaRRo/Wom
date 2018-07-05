@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Aisne (02) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Aisne</b>, la base Mérimée Ouverte décrit <b>621 </b>monuments historiques.
+         <b>60 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>558 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="02_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">537</span> Mérimée, Osm, Wp</a></li><li><a  href="02_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm, Wp</a></li><li><a  href="02_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">8</span> Mérimée, Wp</a></li><li><a class="active" href="02_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">18</span> Mérimée, Osm</a></li><li><a href="02_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a href="02_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">58</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans Mérimée et OpenStreetMap</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Belleu - <b>Ancien manoir dit Fief des Tournelles</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115525" target="_blank" title="La fiche dans la base Mérimée">PA00115525</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/223769889" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=223769889" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w223769889" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Bucy-le-Long - <b>Maison, en face du chemin de l'église</b> - C.I.C. 45 ; Chemin-des-Dames (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115567" target="_blank" title="La fiche dans la base Mérimée">PA00115567</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/260825022" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=260825022" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w260825022" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Courcelles-sur-Vesles - <b>Ancienne église</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115627" target="_blank" title="La fiche dans la base Mérimée">PA00115627</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/478123109" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=478123109" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w478123109" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Essômes-sur-Marne - <b>Terrain</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115664" target="_blank" title="La fiche dans la base Mérimée">PA00115664</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5426384614" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5426384614" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5426384614" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Fère (La) - <b>Immeuble</b> - Henri-Martin (rue) 3</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115668" target="_blank" title="La fiche dans la base Mérimée">PA00115668</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/84372687" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=84372687" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w84372687" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Ferté-Milon (La) - <b>Parcelle située dans le champ de visibilité du château et de l'église</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115677" target="_blank" title="La fiche dans la base Mérimée">PA00115677</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/2343004297" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=2343004297" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n2343004297" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>heritage, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Largny-sur-Automne - <b>Ancien manoir dit Fief Goret</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115774" target="_blank" title="La fiche dans la base Mérimée">PA00115774</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/159259292" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=159259292" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w159259292" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Saint-Quentin - <b>Hôtel</b> - Isle (rue d') 46</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115911" target="_blank" title="La fiche dans la base Mérimée">PA00115911</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/130236689" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=130236689" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w130236689" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Saint-Quentin - <b>Puits</b> - Gaspard-de-Coligny (place)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00115915" target="_blank" title="La fiche dans la base Mérimée">PA00115915</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/389685266" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=389685266" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w389685266" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Villers-Cotterêts - <b>Pavillon Henri II</b> - Manège (passage du) 15</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00135571" target="_blank" title="La fiche dans la base Mérimée">PA00135571</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/159441461" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=159441461" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w159441461" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Liesse-Notre-Dame - <b>Maison en pan de bois</b> - Général-de-Gaulle (rue du) 7-9</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000003" target="_blank" title="La fiche dans la base Mérimée">PA02000003</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/relation/8046597" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&relation=8046597" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=r8046597" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Guise - <b>Maison</b> - Citadelle (rue de la) 18</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000015" target="_blank" title="La fiche dans la base Mérimée">PA02000015</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/128317183" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=128317183" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w128317183" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Tergnier - <b>Place Carnegie de Fargniers</b> - Carnegie-de-Fargniers (place)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000018" target="_blank" title="La fiche dans la base Mérimée">PA02000018</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/40032294" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=40032294" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w40032294" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Saint-Christophe-à-Berry - <b>P.C. Reboul</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000023" target="_blank" title="La fiche dans la base Mérimée">PA02000023</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5323894075" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5323894075" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5323894075" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Chauny - <b>Pâtisserie du Marché couvert</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000061" target="_blank" title="La fiche dans la base Mérimée">PA02000061</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/120346397" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=120346397" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w120346397" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Saint-Quentin - <b>Château de la Pilule</b> - République (avenue de la) 110</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000085" target="_blank" title="La fiche dans la base Mérimée">PA02000085</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/130237441" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=130237441" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w130237441" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Lemé - <b>Cimetière franco-allemand de Le Sourd</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000089" target="_blank" title="La fiche dans la base Mérimée">PA02000089</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/338953073" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=338953073" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w338953073" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w338953073&addtags=wikidata=Q20973837" target="hide" title="Ajout code wikidata avec Josm (Remote control)"> Q20973837 </a> </td> <td class="texte"></td> </tr><tr>           <td class="desc">Ferté-Chevresis(La) - <b>Ancienne salle de spectacles dite Casino</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA02000090" target="_blank" title="La fiche dans la base Mérimée">PA02000090</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/143952926" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=143952926" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w143952926" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia, wikidata </td> <td class="texte"></td> </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

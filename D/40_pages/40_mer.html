@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques des Landes (40) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département des Landes</b>, la base Mérimée Ouverte décrit <b>218 </b>monuments historiques.
+         <b>0 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>214 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="40_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">141</span> Mérimée, Osm, Wp</a></li><li><a  href="40_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">73</span> Mérimée, Osm</a></li><li><a class="active" href="40_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">4</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Aire-sur-l'Adour - <b>Ancien évêché et hôtel de ville</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA40000090" target="_blank" title="La fiche dans la base Mérimée">PA40000090</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>start_date=C17</li><li>ref:mhs=PA40000090</li><li>wikidata=Q51730373</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-05-11 </li><li></li><li>name=Ancien évêché et hôtel de ville</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Lencouacq - <b>Eglise paroissiale Saint Jean-l'Evangéliste</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA40000092" target="_blank" title="La fiche dans la base Mérimée">PA40000092</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>amenity=place_of_worship</li><li>religion=christian</li><li>building=church</li><li>start_date=C18</li><li>ref:mhs=PA40000092</li><li>wikidata=Q38641867</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-05-11 </li><li></li><li>name=Église paroissiale Saint Jean-l'Evangéliste</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Losse - <b>Eglise de Lussolle</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA40000093" target="_blank" title="La fiche dans la base Mérimée">PA40000093</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>amenity=place_of_worship</li><li>religion=christian</li><li>building=church</li><li>start_date=C13</li><li>ref:mhs=PA40000093</li><li>wikidata=Q3581573</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-11-06 </li><li></li><li>name=Église de Lussolle</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Julien-d'Armagnac - <b>Eglise et ancienne motte castrale</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA40000094" target="_blank" title="La fiche dans la base Mérimée">PA40000094</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>amenity=place_of_worship</li><li>religion=christian</li><li>building=church</li><li>ref:mhs=PA40000094</li><li>wikidata=Q38648803</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2016-04-21 </li><li></li><li>name=Église et ancienne motte castrale</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

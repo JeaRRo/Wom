@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Ain (01) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Ain</b>, la base Mérimée Ouverte décrit <b>383 </b>monuments historiques.
+         <b>0 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>380 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="01_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">366</span> Mérimée, Osm, Wp</a></li><li><a  href="01_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a  href="01_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">10</span> Mérimée, Osm</a></li><li><a  href="01_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a class="active" href="01_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">7</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Pérouges - <b>Maisons et remparts qui en dépendent</b> - Rondes (rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116514" target="_blank" title="La fiche dans la base Mérimée">PA00116514</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>building=house</li><li>historic=building</li><li>start_date=C15</li><li>ref:mhs=PA00116514</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1921-11-24 </li><li></li><li>name=Maisons et remparts qui en dépendent</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Pérouges - <b>Maisons et remparts qui en dépendent</b> - Rondes (rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116515" target="_blank" title="La fiche dans la base Mérimée">PA00116515</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>building=house</li><li>historic=building</li><li>start_date=C15</li><li>ref:mhs=PA00116515</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1921-11-24 </li><li></li><li>name=Maisons et remparts qui en dépendent</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Pérouges - <b>Maison et remparts</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116516" target="_blank" title="La fiche dans la base Mérimée">PA00116516</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>building=house</li><li>historic=building</li><li>start_date=C15</li><li>ref:mhs=PA00116516</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1929-10-11 </li><li></li><li>name=Maison et remparts</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Etienne-sur-Chalaronne - <b>Moulin de Tallard</b> - Tallard (chemin de) 389</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA01000040" target="_blank" title="La fiche dans la base Mérimée">PA01000040</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>start_date=C17</li><li>ref:mhs=PA01000040</li><li>wikidata=Q27603030</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-10-08 </li><li></li><li>name=Moulin de Tallard</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Cerdon - <b>Moulin à farine situé sur le cours de la rivière dénommée La Suisse</b> - René Lyot (rue)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA01000041" target="_blank" title="La fiche dans la base Mérimée">PA01000041</a></td><td id="info_bloc4" class="infoBloc" data-clipboard-target="#data4"> Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><div id="data4"><li>start_date=C20</li><li>ref:mhs=PA01000041</li><li>wikidata=Q27957349</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-09-18 </li><li></li><li>name=Moulin à farine situé sur le cours de la rivière dénommée La Suisse</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Vesancy - <b>Château de Vesancy</b> - Château (place du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA01000043" target="_blank" title="La fiche dans la base Mérimée">PA01000043</a></td><td id="info_bloc5" class="infoBloc" data-clipboard-target="#data5"> Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><div id="data5"><li>building=yes</li><li>historic=castle</li><li>start_date=C14</li><li>ref:mhs=PA01000043</li><li>wikidata=Q28769733</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2016-05-04 </li><li></li><li>name=Château de Vesancy</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Ambérieu-en-Bugey - <b>castrum de Saint-Germain</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA01000045" target="_blank" title="La fiche dans la base Mérimée">PA01000045</a></td><td id="info_bloc6" class="infoBloc" data-clipboard-target="#data6"> Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><div id="data6"><li>ref:mhs=PA01000045</li><li>wikidata=Q2970514</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2017-05-04</li><li></li><li>name=castrum de Saint-Germain</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

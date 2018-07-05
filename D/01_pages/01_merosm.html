@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Ain (01) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Ain</b>, la base Mérimée Ouverte décrit <b>383 </b>monuments historiques.
+         <b>0 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>380 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="01_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">366</span> Mérimée, Osm, Wp</a></li><li><a  href="01_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm, Wp</a></li><li><a class="active" href="01_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">10</span> Mérimée, Osm</a></li><li><a href="01_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">2</span> Osm</a></li><li><a href="01_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">7</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans Mérimée et OpenStreetMap</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Pérouges - <b>Maison</b> - Prince (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116499" target="_blank" title="La fiche dans la base Mérimée">PA00116499</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/5188836045" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=5188836045" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n5188836045" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison</b> - Rondes (rue des)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116501" target="_blank" title="La fiche dans la base Mérimée">PA00116501</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/442382454" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=442382454" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w442382454" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison</b> - Rondes (rue des) ; For (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116502" target="_blank" title="La fiche dans la base Mérimée">PA00116502</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/50653944" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=50653944" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w50653944" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison</b> - Rondes (rue des) ; Tambour (rue du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116504" target="_blank" title="La fiche dans la base Mérimée">PA00116504</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/50653939" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=50653939" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w50653939" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison</b> - Tilleuls (place des) ; Halle-au-For (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116505" target="_blank" title="La fiche dans la base Mérimée">PA00116505</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/442409860" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=442409860" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w442409860" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116509" target="_blank" title="La fiche dans la base Mérimée">PA00116509</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4595338360" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=4595338360" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4595338360" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116511" target="_blank" title="La fiche dans la base Mérimée">PA00116511</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/485516886" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=485516886" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w485516886" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maison (restes)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116512" target="_blank" title="La fiche dans la base Mérimée">PA00116512</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4595338361" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=4595338361" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4595338361" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Pérouges - <b>Maisons et remparts qui en dépendent</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00116513" target="_blank" title="La fiche dans la base Mérimée">PA00116513</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/50693848" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=50693848" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w50693848" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>name, wikipedia </td> <td class="texte"></td> </tr><tr>           <td class="desc">Vonnas - <b>Domaine de Béost</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA01000044" target="_blank" title="La fiche dans la base Mérimée">PA01000044</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/111619799" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=111619799" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w111619799" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien">  ---- </td><td class="texte"> <b> Osm : </b>wikipedia, <a href="http://localhost:8111/load_object?objects=w111619799&addtags=wikidata=Q28769505" target="hide" title="Ajout code wikidata avec Josm (Remote control)"> Q28769505 </a> </td> <td class="texte"></td> </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de l'Isère (38) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de l'Isère</b>, la base Mérimée Ouverte décrit <b>322 </b>monuments historiques.
+         <b>0 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>302 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="38_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">92</span> Mérimée, Osm, Wp</a></li><li><a  href="38_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">210</span> Mérimée, Osm</a></li><li><a class="active" href="38_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">20</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans Mérimée</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Bourgoin-Jallieu - <b>Mur de terrasse antique</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117127" target="_blank" title="La fiche dans la base Mérimée">PA00117127</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>ref:mhs=PA00117127</li><li>wikidata=Q22966941</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1987-09-11 </li><li></li><li>name=Mur de terrasse antique</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Crémieu - <b>Hôpital</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117159" target="_blank" title="La fiche dans la base Mérimée">PA00117159</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>ref:mhs=PA00117159</li><li>wikidata=Q22966967</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1928-09-19 </li><li></li><li>name=Hôpital</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Savin - <b>Maison</b> - Hameau de Damptézieu</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117276" target="_blank" title="La fiche dans la base Mérimée">PA00117276</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>building=house</li><li>historic=building</li><li>start_date=C16</li><li>ref:mhs=PA00117276</li><li>wikidata=Q22967049</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1933-06-23 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Septème - <b>Mosaïque gallo-romaine</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117286" target="_blank" title="La fiche dans la base Mérimée">PA00117286</a></td><td id="info_bloc3" class="infoBloc" data-clipboard-target="#data3"> Tags pour OSM   <div id="bloc3" class="dialogBloc">
+                            <ul><div id="data3"><li>ref:mhs=PA00117286</li><li>wikidata=Q22967058</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1954-09-17 </li><li></li><li>name=Mosaïque gallo-romaine</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Docteur-Valois (place du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117302" target="_blank" title="La fiche dans la base Mérimée">PA00117302</a></td><td id="info_bloc4" class="infoBloc" data-clipboard-target="#data4"> Tags pour OSM   <div id="bloc4" class="dialogBloc">
+                            <ul><div id="data4"><li>building=house</li><li>historic=building</li><li>start_date=C17</li><li>ref:mhs=PA00117302</li><li>wikidata=Q22967069</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1963-12-31 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Halle (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117304" target="_blank" title="La fiche dans la base Mérimée">PA00117304</a></td><td id="info_bloc5" class="infoBloc" data-clipboard-target="#data5"> Tags pour OSM   <div id="bloc5" class="dialogBloc">
+                            <ul><div id="data5"><li>building=house</li><li>historic=building</li><li>start_date=C17</li><li>ref:mhs=PA00117304</li><li>wikidata=Q22967071</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1964-02-11 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Halle (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117305" target="_blank" title="La fiche dans la base Mérimée">PA00117305</a></td><td id="info_bloc6" class="infoBloc" data-clipboard-target="#data6"> Tags pour OSM   <div id="bloc6" class="dialogBloc">
+                            <ul><div id="data6"><li>building=house</li><li>historic=building</li><li>start_date=C17</li><li>ref:mhs=PA00117305</li><li>wikidata=Q22967072</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1963-12-31 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Halle (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117306" target="_blank" title="La fiche dans la base Mérimée">PA00117306</a></td><td id="info_bloc7" class="infoBloc" data-clipboard-target="#data7"> Tags pour OSM   <div id="bloc7" class="dialogBloc">
+                            <ul><div id="data7"><li>building=house</li><li>historic=building</li><li>start_date=C17</li><li>ref:mhs=PA00117306</li><li>wikidata=Q22967073</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1963-12-31 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Halle (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117307" target="_blank" title="La fiche dans la base Mérimée">PA00117307</a></td><td id="info_bloc8" class="infoBloc" data-clipboard-target="#data8"> Tags pour OSM   <div id="bloc8" class="dialogBloc">
+                            <ul><div id="data8"><li>building=house</li><li>historic=building</li><li>start_date=C17</li><li>ref:mhs=PA00117307</li><li>wikidata=Q22967074</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1963-12-31 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Halle (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117308" target="_blank" title="La fiche dans la base Mérimée">PA00117308</a></td><td id="info_bloc9" class="infoBloc" data-clipboard-target="#data9"> Tags pour OSM   <div id="bloc9" class="dialogBloc">
+                            <ul><div id="data9"><li>building=house</li><li>historic=building</li><li>start_date=C16</li><li>ref:mhs=PA00117308</li><li>wikidata=Q22967075</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1963-12-31 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Tullins - <b>Maison</b> - Halle (rue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117309" target="_blank" title="La fiche dans la base Mérimée">PA00117309</a></td><td id="info_bloc10" class="infoBloc" data-clipboard-target="#data10"> Tags pour OSM   <div id="bloc10" class="dialogBloc">
+                            <ul><div id="data10"><li>building=house</li><li>historic=building</li><li>start_date=C17</li><li>ref:mhs=PA00117309</li><li>wikidata=Q22967077</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1963-12-31 </li><li></li><li></li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Vienne - <b>Mur romain</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117341" target="_blank" title="La fiche dans la base Mérimée">PA00117341</a></td><td id="info_bloc11" class="infoBloc" data-clipboard-target="#data11"> Tags pour OSM   <div id="bloc11" class="dialogBloc">
+                            <ul><div id="data11"><li>ref:mhs=PA00117341</li><li>wikidata=Q22967124</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=1942-03-23 </li><li></li><li>name=Mur romain</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Vienne - <b>Murs romains (restes)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117342" target="_blank" title="La fiche dans la base Mérimée">PA00117342</a></td><td id="info_bloc12" class="infoBloc" data-clipboard-target="#data12"> Tags pour OSM   <div id="bloc12" class="dialogBloc">
+                            <ul><div id="data12"><li>start_date=C 2</li><li>ref:mhs=PA00117342</li><li>wikidata=Q22967126</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1927-03-26 </li><li></li><li>name=Murs romains (restes)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Vienne - <b>Oppidum romain du Pipet (ancien)</b> - Pipet (quartier du)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117344" target="_blank" title="La fiche dans la base Mérimée">PA00117344</a></td><td id="info_bloc13" class="infoBloc" data-clipboard-target="#data13"> Tags pour OSM   <div id="bloc13" class="dialogBloc">
+                            <ul><div id="data13"><li>historic=archaeological_site</li><li>site_type=fortification</li><li>fortification_type=hill_fort</li><li>start_date=C</li><li>ref:mhs=PA00117344</li><li>wikidata=Q22967128</li><li>heritage:operator=mhs</li><li></li><li>name=Oppidum romain du Pipet (ancien)</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Isle-d'Abeau (L') - <b>Etablissement antique du Gua, ou du Gâ</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117366" target="_blank" title="La fiche dans la base Mérimée">PA00117366</a></td><td id="info_bloc14" class="infoBloc" data-clipboard-target="#data14"> Tags pour OSM   <div id="bloc14" class="dialogBloc">
+                            <ul><div id="data14"><li>ref:mhs=PA00117366</li><li>wikidata=Q22967144</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1989-09-19 </li><li></li><li>name=Etablissement antique du Gua, ou du Gâ</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Vienne - <b>Mont Salomon</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00135646" target="_blank" title="La fiche dans la base Mérimée">PA00135646</a></td><td id="info_bloc15" class="infoBloc" data-clipboard-target="#data15"> Tags pour OSM   <div id="bloc15" class="dialogBloc">
+                            <ul><div id="data15"><li>ref:mhs=PA00135646</li><li>wikidata=Q22995236</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=1995-12-04 </li><li></li><li>name=Mont Salomon</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Claix - <b>Vieux pont sur le Drac</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA38000028" target="_blank" title="La fiche dans la base Mérimée">PA38000028</a></td><td id="info_bloc16" class="infoBloc" data-clipboard-target="#data16"> Tags pour OSM   <div id="bloc16" class="dialogBloc">
+                            <ul><div id="data16"><li>ref:mhs=PA38000028</li><li>wikidata=Q3396621</li><li>heritage:operator=mhs</li><li>heritage=</li><li>mhs:inscription_date=</li><li></li><li>name=Vieux pont sur le Drac</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Panossas - <b>Site antique ou villa antique dit des Buissières</b> - Frontenas (chemin)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA38000035" target="_blank" title="La fiche dans la base Mérimée">PA38000035</a></td><td id="info_bloc17" class="infoBloc" data-clipboard-target="#data17"> Tags pour OSM   <div id="bloc17" class="dialogBloc">
+                            <ul><div id="data17"><li>start_date=C 4</li><li>ref:mhs=PA38000035</li><li>wikidata=Q24940574</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-09-11 </li><li></li><li>name=Site antique ou villa antique dit des Buissières</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Saint-Pierre-d'Entremont - <b>Tournerie du bois de Saint-Même sise à Saint-Même-Le-Bas</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA38000036" target="_blank" title="La fiche dans la base Mérimée">PA38000036</a></td><td id="info_bloc18" class="infoBloc" data-clipboard-target="#data18"> Tags pour OSM   <div id="bloc18" class="dialogBloc">
+                            <ul><div id="data18"><li>start_date=C20</li><li>ref:mhs=PA38000036</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2015-09-11 </li><li></li><li>name=Tournerie du bois de Saint-Même sise à Saint-Même-Le-Bas</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr><tr>           <td class="desc">Renage - <b>Ancienne grande fabrique</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA38000037" target="_blank" title="La fiche dans la base Mérimée">PA38000037</a></td><td id="info_bloc19" class="infoBloc" data-clipboard-target="#data19"> Tags pour OSM   <div id="bloc19" class="dialogBloc">
+                            <ul><div id="data19"><li>start_date=C19</li><li>ref:mhs=PA38000037</li><li>wikidata=Q15958081</li><li>heritage:operator=mhs</li><li>heritage=3</li><li>mhs:inscription_date=2016-03-16 </li><li></li><li>name=Ancienne grande fabrique</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p></ul>
+                        </div></td> <td class="lien">  ---- </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
