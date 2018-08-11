@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Objets OSM multiples avec ref:mhs unique</title>
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  />
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#table_double").DataTable({
+            "columnDefs": [
+        {
+            "targets": [ 2 ],
+            "searchable": false,
+            "sortable" : false,
+        }],
+        "order": [[ 1, 'asc' ]],
+        "scrollX": true,
+        "pageLength": 25,
+        "language": {
+                "search": "Rechercher :",
+                "lengthMenu": "Voir _MENU_ monuments/page",
+                "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                "infoEmpty": "Aucun résultat",
+                "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                "paginate": {
+                    "first":      "Première",
+                    "last":       "Dernière",
+                    "next":       "Suivante",
+                    "previous":   "Précédente"
+                    },
+                    }
+        });
+        $("tr").click(function(){
+            $("tr").each(function(){
+            $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+        });
+});
+    </script>
+    <body>
+        <div id="bandeau"> <h4 class='Titre'> </h4></div>
+        <div id="menu">
+            <ul>
+                <li class="retour"><a href="38_merosmwip.html" title="" >Retour</a></li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    <table id="table_double" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Liste des Ref:Mhs correspondant à plusieurs objets OSM du département 38 </caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>lien WP</th>
+        </tr>
+    </thead>
+    
+<tbody><tr>
+ <td class="desc">Beauvoir-en-Royans - <b>Château de Beauvoir (ruines)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117121" target="_blank" title="La fiche dans la base Mérimée">PA00117121</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/185190923" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=185190923" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w185190923" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Isère#Chateau_Beauvoir_Beauvoir-Royans" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117121" target="_blank" title="La fiche dans la base Mérimée">PA00117121</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1957514820" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=1957514820" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1957514820" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117121" target="_blank" title="La fiche dans la base Mérimée">PA00117121</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1957514865" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=1957514865" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1957514865" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Domène - <b>Prieuré (ruines de l'ancien)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117176" target="_blank" title="La fiche dans la base Mérimée">PA00117176</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/512794330" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=512794330" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w512794330" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Isère#Prieure_Domene" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117176" target="_blank" title="La fiche dans la base Mérimée">PA00117176</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/512794332" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=512794332" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w512794332" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Grenoble - <b>Caserne Vinoy</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117177" target="_blank" title="La fiche dans la base Mérimée">PA00117177</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/223403614" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=223403614" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w223403614" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_Grenoble#" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117177" target="_blank" title="La fiche dans la base Mérimée">PA00117177</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/490570800" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=490570800" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w490570800" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Pierre-de-Chartreuse - <b>Pont Perent sur le Guiers-Mort</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117269" target="_blank" title="La fiche dans la base Mérimée">PA00117269</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/430809063" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=430809063" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w430809063" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Isère#Pont_Peirant" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117269" target="_blank" title="La fiche dans la base Mérimée">PA00117269</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4300869724" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=4300869724" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4300869724" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Saint-Romain-de-Jalionas - <b>Villa gallo-romaine (vestiges)</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117273" target="_blank" title="La fiche dans la base Mérimée">PA00117273</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/425642913" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=425642913" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w425642913" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Isère#Villa_Gallo-romaine_Saint-Romain-Jalionas" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117273" target="_blank" title="La fiche dans la base Mérimée">PA00117273</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4421890290" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=4421890290" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4421890290" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Soleymieu - <b>Château de Montagnieu</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117289" target="_blank" title="La fiche dans la base Mérimée">PA00117289</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/143728216" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=143728216" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w143728216" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Isère#Chateau_Montagnieu" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117289" target="_blank" title="La fiche dans la base Mérimée">PA00117289</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4421696590" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=4421696590" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4421696590" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Vernas - <b>Château de Verna</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117312" target="_blank" title="La fiche dans la base Mérimée">PA00117312</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/191362663" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=191362663" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w191362663" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_l'Isère#Chateau_Verna" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00117312" target="_blank" title="La fiche dans la base Mérimée">PA00117312</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/4421681890" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=4421681890" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n4421681890" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+
+</tbody> 
+ </table> 
+ <iframe name="hide" style="display: None;"></iframe> 
+ </div>
+<div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

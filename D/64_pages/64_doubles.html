@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <title>Objets OSM multiples avec ref:mhs unique</title>
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  />
+        <script src="../../js/jquery.js"></script>
+        <script src="../../js/jquery.dataTables.min.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#table_double").DataTable({
+            "columnDefs": [
+        {
+            "targets": [ 2 ],
+            "searchable": false,
+            "sortable" : false,
+        }],
+        "order": [[ 1, 'asc' ]],
+        "scrollX": true,
+        "pageLength": 25,
+        "language": {
+                "search": "Rechercher :",
+                "lengthMenu": "Voir _MENU_ monuments/page",
+                "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                "infoEmpty": "Aucun résultat",
+                "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                "paginate": {
+                    "first":      "Première",
+                    "last":       "Dernière",
+                    "next":       "Suivante",
+                    "previous":   "Précédente"
+                    },
+                    }
+        });
+        $("tr").click(function(){
+            $("tr").each(function(){
+            $(this).removeClass("selected");
+            });
+            $(this).addClass("selected");
+        });
+});
+    </script>
+    <body>
+        <div id="bandeau"> <h4 class='Titre'> </h4></div>
+        <div id="menu">
+            <ul>
+                <li class="retour"><a href="64_merosmwip.html" title="" >Retour</a></li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    <table id="table_double" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Liste des Ref:Mhs correspondant à plusieurs objets OSM du département 64 </caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>lien WP</th>
+        </tr>
+    </thead>
+    
+<tbody><tr>
+ <td class="desc">Bilhères - <b>Cromlechs</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084361" target="_blank" title="La fiche dans la base Mérimée">PA00084361</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3027145235" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=3027145235" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3027145235" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Atlantiques_(A-L)#Cromlechs_Bilheres" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084361" target="_blank" title="La fiche dans la base Mérimée">PA00084361</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3027145236" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3027145236" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3027145236" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Navarrenx - <b>Enceinte bastionnée</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/62595552" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=62595552" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w62595552" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Atlantiques_(M-Z)#Enceinte_Bastionnee_Navarrenx" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146065" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146065" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146065" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146074" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146074" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146074" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146077" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146077" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146077" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146090" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146090" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146090" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146091" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146091" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146091" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146092" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146092" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146092" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146094" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146094" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146094" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146095" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146095" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146095" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146109" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146109" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146109" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146110" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146110" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146110" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146111" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146111" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146111" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146112" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146112" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146112" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/395146113" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=395146113" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w395146113" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00084462" target="_blank" title="La fiche dans la base Mérimée">PA00084462</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3980345286" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=3980345286" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3980345286" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Salies-de-Béarn - <b>Hôtel Bellevue</b> - Gare (avenue de la)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00135198" target="_blank" title="La fiche dans la base Mérimée">PA00135198</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/218140418" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=218140418" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w218140418" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Atlantiques_(M-Z)#Hotel_Bellevue_Salies-Bearn" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA00135198" target="_blank" title="La fiche dans la base Mérimée">PA00135198</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/1640575626" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&node=1640575626" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n1640575626" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">Bidache - <b>Pont ancien et Moulin de Heugas situés sur le Lihoury</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA64000047" target="_blank" title="La fiche dans la base Mérimée">PA64000047</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/169353396" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=169353396" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w169353396" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_des_Pyrénées-Atlantiques_(A-L)#Pont_Gramont_Bidache" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td></tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA64000047" target="_blank" title="La fiche dans la base Mérimée">PA64000047</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/187144255" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=187144255" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w187144255" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+<tr>
+ <td class="desc">---------------BIS </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA64000047" target="_blank" title="La fiche dans la base Mérimée">PA64000047</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/538588208" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+                <a href="http://www.openstreetmap.org/edit?editor=id&way=538588208" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w538588208" target="hide" title="Editer avec Josm"> Josm </a> </td>
+                 <td> --------------- </td>
+</tr>
+
+</tbody> 
+ </table> 
+ <iframe name="hide" style="display: None;"></iframe> 
+ </div>
+<div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body
+    </html>
+    

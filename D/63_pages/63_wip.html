@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques du Puy-de-Dôme (63) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département du Puy-de-Dôme</b>, la base Mérimée Ouverte décrit <b>857 </b>monuments historiques.
+         <b>226 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>662 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="63_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">662</span> Mérimée, Osm, Wp</a></li><li><a  href="63_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">191</span> Mérimée, Wp</a></li><li><a class="active" href="63_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">3</span> Wp </a></li><li><a href="63_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">4</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents seulement dans wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">La Roche-Blanche - <b>bataille de Gergovie</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Puy-de-Dôme_(M-Z)#Petit_Camp_Cesar_bataille_Gergovie" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b>Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">Royat - <b>Taillerie de Royat</b></td> <td class="lien">  ----  </td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Puy-de-Dôme_(M-Z)#Taillerie_Royat" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Taillerie_de_Royat&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Géolocalisation absente, Code MHS absent, Image absente </td>  </tr><tr>           <td class="desc">La Bourboule - <b>Casino Chardon</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=IA63000696" target="_blank" title="La fiche dans la base Mérimée">IA63000696</a></td><td class="lien">  ----  </td><td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_du_Puy-de-Dôme_(A-L)#Casino_Chardon" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte" ></td><td class="texte"></td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Corse-du-Sud (2A) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Corse-du-Sud</b>, la base Mérimée Ouverte décrit <b>124 </b>monuments historiques.
+         <b>20 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>121 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="2A_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">119</span> Mérimée, Osm, Wp</a></li><li><a class="active" href="2A_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">3</span> Mérimée, Wp</a></li><li><a href="2A_merosm.html" title="Monuments à créer dans Wikipédia" ><span class="emphase">1</span> Mérimée, Osm</a></li><li><a href="2A_osm.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">1</span> Osm</a></li><li><a href="2A_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">1</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans Mérimée et Wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Ajaccio - <b>Monument commémoratif Napoléon et ses frères</b> - De Gaulle (place), Casone (place du), Austerlitz (place d)</td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA2A000017" target="_blank" title="La fiche dans la base Mérimée">PA2A000017</a></td><td id="info_bloc0" class="infoBloc" data-clipboard-target="#data0"> Tags pour OSM   <div id="bloc0" class="dialogBloc">
+                            <ul><div id="data0"><li>ref:mhs=PA2A000017</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=2017-06-22 </li><li></li><li>name=Monument commémoratif Napoléon et ses frères</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p><li><b><a href="http://www.openstreetmap.org/?mlat=41.9176&mlon=8.7362#map=19/41.9176/8.7362" title="Géocodage fourni par Wikipédia :                         à vérifier" target="__blank">Position estimée</a></b></li><p><li><b><a href="http://localhost:8111/add_node?lon=8.7362&lat=41.9176&addtags=ref:mhs=PA2A000017%7Cname=Monument commémoratif Napoléon et ses frères%7Cheritage:operator=mhs%7Cheritage=2%7Cmhs:inscription_date=2017-06-22 %7Csource:heritage=data.gouv.fr, Ministère de la Culture - 2016" title="Création d'un node dans JOSM (remoteControl) : Vérifier la position et les tags ! ATTENTION : un calque doit déjà être ouvert dans JOSM."
+                        target="hide" >Créer un point dans JOSM</a></b></li><li><b><a href="http://localhost:8111/load_and_zoom?left=8.735475000000001&right=8.736925&top=41.91803&bottom=41.91717&zoom_mode=download"
+                            title="Les tags ci-dessus ont été copiés dans le presse-papier. Cliquer sur le lien (remoteControl), puis dans JOSM, sélectionner le bâtiment correspondant et coller les tags (Ctrl-shift-V)?"
+                            target = "hide">Charger la zone dans JOSM</a></b></li></ul>
+                        </div></td> <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d%27Ajaccio#Monument_commemoratif_Napoleon_freres" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Napol%C3%A9on_et_ses_fr%C3%A8res&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ajaccio#Monument_commemoratif_Napoleon_freres" target="_blank"                         title="Monument en double dans WP"> Double WP </a> </td>  </tr><tr>           <td class="desc">Ajaccio - <b>Statue du cardinal Fesch</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA2A000018" target="_blank" title="La fiche dans la base Mérimée">PA2A000018</a></td><td id="info_bloc1" class="infoBloc" data-clipboard-target="#data1"> Tags pour OSM   <div id="bloc1" class="dialogBloc">
+                            <ul><div id="data1"><li>historic=memorial</li><li>memorial_type=statue</li><li>ref:mhs=PA2A000018</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=2017-06-22 </li><li></li><li>name=Statue du cardinal Fesch</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p><li><b><a href="http://www.openstreetmap.org/?mlat=41.921952&mlon=8.738632#map=19/41.921952/8.738632" title="Géocodage fourni par Wikipédia :                         à vérifier" target="__blank">Position estimée</a></b></li><p><li><b><a href="http://localhost:8111/add_node?lon=8.738632&lat=41.921952&addtags=historic=memorial%7Cmemorial_type=statue%7Cref:mhs=PA2A000018%7Cname=Statue du cardinal Fesch%7Cheritage:operator=mhs%7Cheritage=2%7Cmhs:inscription_date=2017-06-22 %7Csource:heritage=data.gouv.fr, Ministère de la Culture - 2016" title="Création d'un node dans JOSM (remoteControl) : Vérifier la position et les tags ! ATTENTION : un calque doit déjà être ouvert dans JOSM."
+                        target="hide" >Créer un point dans JOSM</a></b></li><li><b><a href="http://localhost:8111/load_and_zoom?left=8.737907000000002&right=8.739357&top=41.922382&bottom=41.921521999999996&zoom_mode=download"
+                            title="Les tags ci-dessus ont été copiés dans le presse-papier. Cliquer sur le lien (remoteControl), puis dans JOSM, sélectionner le bâtiment correspondant et coller les tags (Ctrl-shift-V)?"
+                            target = "hide">Charger la zone dans JOSM</a></b></li></ul>
+                        </div></td> <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d%27Ajaccio#Statue_cardinal_Fesch" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Statue_du_cardinal_Fesch&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ajaccio#Statue_cardinal_Fesch" target="_blank"                         title="Monument en double dans WP"> Double WP </a> </td>  </tr><tr>           <td class="desc">Ajaccio - <b>Citadelle Miollis</b> - </td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA2A000020" target="_blank" title="La fiche dans la base Mérimée">PA2A000020</a></td><td id="info_bloc2" class="infoBloc" data-clipboard-target="#data2"> Tags pour OSM   <div id="bloc2" class="dialogBloc">
+                            <ul><div id="data2"><li>ref:mhs=PA2A000020</li><li>heritage:operator=mhs</li><li>heritage=2</li><li>mhs:inscription_date=2017-10-09 </li><li></li><li>name=Citadelle Miollis</li><li>source:heritage=data.gouv.fr, Ministère de la Culture - 2016</li></div><p><li><b><a href="http://www.openstreetmap.org/?mlat=41.9166&mlon=8.740359#map=19/41.9166/8.740359" title="Géocodage fourni par Wikipédia :                         à vérifier" target="__blank">Position estimée</a></b></li><p><li><b><a href="http://localhost:8111/add_node?lon=8.740359&lat=41.9166&addtags=ref:mhs=PA2A000020%7Cname=Citadelle Miollis%7Cheritage:operator=mhs%7Cheritage=2%7Cmhs:inscription_date=2017-10-09 %7Csource:heritage=data.gouv.fr, Ministère de la Culture - 2016" title="Création d'un node dans JOSM (remoteControl) : Vérifier la position et les tags ! ATTENTION : un calque doit déjà être ouvert dans JOSM."
+                        target="hide" >Créer un point dans JOSM</a></b></li><li><b><a href="http://localhost:8111/load_and_zoom?left=8.739634&right=8.741083999999999&top=41.917030000000004&bottom=41.91617&zoom_mode=download"
+                            title="Les tags ci-dessus ont été copiés dans le presse-papier. Cliquer sur le lien (remoteControl), puis dans JOSM, sélectionner le bâtiment correspondant et coller les tags (Ctrl-shift-V)?"
+                            target = "hide">Charger la zone dans JOSM</a></b></li></ul>
+                        </div></td> <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d%27Ajaccio#Citadelle_Miollis" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"></td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Citadelle_Miollis&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente, <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_d'Ajaccio#Citadelle_Miollis" target="_blank"                         title="Monument en double dans WP"> Double WP </a> </td>  </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
