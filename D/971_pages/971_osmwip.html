@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title> Wom : Mérimée, OpenStreetMap, Wikipédia</title>
+	<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
+                <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+                <link rel="stylesheet" type="text/css" href="../../css/jquery.dataTables_mod.css"  /><script src="../../js/jquery.js"></script>
+                <script src="../../js/jquery.dataTables.min.js"></script>
+               <script src="../../js/jquery-ui.min.js"></script>  
+    <script>
+    $(document).ready(function(){
+         $("tr").click(function(){
+             $("tr").each(function(){
+             $(this).removeClass("selected");
+             });
+             $(this).addClass("selected");
+         });
+
+        $(".infoBloc").click(function(){
+            $("#"+this.id.slice(5)).dialog({
+                title: "Pour créer le monument dans OSM",
+                draggable: false,
+                resizable: false,
+                width:550,
+                height:400,
+                modal: true,
+                overlay: {
+                    backgroundColor: '#000',
+                    opacity: 0.5,
+                },
+            });
+            return true;
+        });
+
+            $("#table_data").DataTable({
+                "columnDefs": [
+            {
+                "targets": [ 2 ],
+                "searchable": false,
+                "sortable" : false,
+            }],
+            "scrollX": true,
+            "pageLength": 25,
+            "language": {
+                    "search": "Rechercher :",
+                    "lengthMenu": "Voir _MENU_ monuments/page",
+                    "zeroRecords": "Aucun résultat pour cette recherche - désolé",
+                    "info": "Monuments visibles : de _START_ à _END_ sur _TOTAL_ ",
+                    "infoEmpty": "Aucun résultat",
+                    "infoFiltered": " sélectionnés parmi _MAX_ enregistrements",
+                    "paginate": {
+                        "first":      "Première",
+                        "last":       "Dernière",
+                        "next":       "Suivante",
+                        "previous":   "Précédente"
+                        },
+                        }
+            });
+    });
+    </script>
+    </head><body>
+     <div id="bandeau"> <h4 class='Titre'>Etat comparé des monuments historiques de la Guadeloupe (971) dans les bases Mérimée, OSM et WikiPédia</h4> <p><b>Pour le département de la Guadeloupe</b>, la base Mérimée Ouverte décrit <b>111 </b>monuments historiques.
+         <b>87 </b> d'entre eux ont une page dédiée dans Wikipédia.<p> OpenStreetMap connait <b>73 </b> de ces monuments.
+</div><div id="menu">
+<ul>
+<li><a  href="971_merosmwip.html" title="Monuments présents dans les trois bases." ><span class="emphase">68</span> Mérimée, Osm, Wp</a></li><li><a class="active" href="971_osmwip.html" title="Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">5</span> Osm, Wp</a></li><li><a href="971_merwip.html" title="Monuments à créer dans OpenStreetMap" ><span class="emphase">41</span> Mérimée, Wp</a></li><li><a href="971_wip.html" title="Monuments non présents dans la base Mérimée Ouverte ou Erreur de géolocalisation du monument dans OSM ou Erreur de code MHS" ><span class="emphase">11</span> Wp </a></li><li><a href="971_mer.html" title="Monuments à créer dans Wikipédia et dans OpenstreetMap" ><span class="emphase">2</span> Mérimée</a></li><li class="retour"><a href="../../index.html" title="Autres départements" > Menu général </a></li></ul>
+        </div>
+    <div id="container">
+    <table id="table_data" class="display nowrap" cellspacing="0" width="100%">
+    <caption id='titre'> Monuments historiques présents dans OpenStreetMap et Wikipédia</caption>
+    <thead class='heading'>
+        <tr>
+            <th>Description</th>
+            <th>Mérimée</th>
+            <th>OSM</th>
+            <th>WP</th>
+            <th>Remarques OSM</th>
+            <th>Remarques WP</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>           <td class="desc">Anse-Bertrand - <b>Monument aux morts d'Anse-Bertrand</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100068" target="_blank" title="La fiche dans la base Mérimée">PA97100068</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/563862068" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=563862068" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n563862068" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Monument_aux_morts_Anse-Bertrand" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Monument_aux_morts_d%27Anse-Bertrand&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Baie-Mahault - <b>Monument aux morts de Baie-Mahault</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100069" target="_blank" title="La fiche dans la base Mérimée">PA97100069</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/131127683" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=131127683" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w131127683" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Monument_aux_morts_Baie-Mahault" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Monument_aux_morts_de_Baie-Mahault&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr><tr>           <td class="desc">Basse-Terre - <b>Monument aux morts de Basse-Terre</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100070" target="_blank" title="La fiche dans la base Mérimée">PA97100070</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/3660371410" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=3660371410" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n3660371410" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Monument_aux_morts_Basse-Terre" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>mhs:inscription_date, wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Monument_aux_morts_de_Basse-Terre&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td> </tr><tr>           <td class="desc">Petit-Canal - <b>Monument aux morts de Petit-Canal</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100071" target="_blank" title="La fiche dans la base Mérimée">PA97100071</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/way/364200624" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&way=364200624" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=w364200624" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Monument_aux_morts_Petit-Canal" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Monument_aux_morts_de_Petit-Canal&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a> </td> </tr><tr>           <td class="desc">Sainte-Anne - <b>Monument aux morts de Sainte-Anne</b></td> <td class="lien"><a href="http://www.culture.gouv.fr/public/mistral/mersri_fr?ACTION=CHERCHER&FIELD_1=REF&VALUE_1=PA97100072" target="_blank" title="La fiche dans la base Mérimée">PA97100072</a></td><td class="lien"><a href="http://www.openstreetmap.org/browse/node/6689808214" target="_blank" title="Voir sur OpenStreetMap.org"> ORG </a> -
+            <a href="http://www.openstreetmap.org/edit?editor=id&node=6689808214" target="_blank" title="Editer avec ID"> ID </a> - <a href="http://localhost:8111/load_object?objects=n6689808214" target="hide" title="Editer avec Josm"> Josm </a> </td>
+            <td class="lien"> <a href="https://fr.wikipedia.org/wiki/Liste_des_monuments_historiques_de_la_Guadeloupe#Monument_aux_morts_Sainte-Anne" target="_blank" title="Description sur page Wp départementale">  WP1 </a> </td><td class="texte"> <b> Osm : </b>wikipedia </td> <td class="texte"> <b> Wp : </b><a href="http://fr.wikipedia.org/w/index.php?title=Monument_aux_morts_de_Sainte-Anne&action=edit&redlink=1" target="_blank" title = "Page wikipédia à créer">A créer</a>, Image absente </td> </tr> </tbody>
+    </table>
+    <iframe name="hide" style="display: None;"></iframe>
+    </div>
+     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script>
+    var clipboard = new Clipboard('.infoBloc');
+    clipboard.on('success', function(e) {
+       console.log(e);});
+    clipboard.on('error', function(e) {
+        console.log(e);});
+    </script>
+    <div id="footer"> Page proposée par <a href="http://wiki.openstreetmap.org/wiki/User:JeaRRo">JeaRRo</a>, contributeur OSM </div>
+        </body>
+    </html>
+    
